@@ -1,0 +1,32 @@
+{
+  "ammo": [
+    {
+      "id": "arrow",
+      "name": "Arrow",
+      "category": "ammo",
+      "stackable": true,
+      "max_stack": 128,
+      "damage": 2,
+      "weight": 0.1,
+      "description": "A basic arrow."
+    },
+    {
+      "id": "fire_arrow",
+      "name": "Fire Arrow",
+      "category": "ammo",
+      "stackable": true,
+      "max_stack": 128,
+      "damage": 4,
+      "weight": 0.1,
+      "description": "An arrow tipped with fire."
+    },
+    {
+      "id": "iron_arrow",
+      "name": "Iron Arrow",
+      "category": "ammo",
+      "damage": 3,
+      "weight": 0.2,
+      "description": "An iron-tipped arrow."
+    }
+  ]
+}

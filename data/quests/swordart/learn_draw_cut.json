@@ -1,0 +1,28 @@
+{
+  "id": "learn_draw_cut",
+  "title": "Lesson: Draw Cut",
+  "giver": "swordswoman",
+  "participants": ["swordswoman"],
+  "prerequisites": [],
+  "description": "Seraphina will teach you Draw Cut, a swift drawing strike that excels against marked targets. To learn this technique, you must demonstrate proficiency with your sword by dealing 1000 total damage in combat.",
+  "completion_conditions": [
+    { "type": "stat", "target": "total_sword_damage", "count": 1000 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "draw_cut",
+    "reputation": { "actor": { "swordswoman": 50 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["sword", "technique", "draw", "cut", "learn", "seraphina", "training"],
+  "steps": [
+    {"description": "Deal 1000 damage with sword attacks", "type": "stat", "target": "total_sword_damage", "count": 1000, "current": 0},
+    {"description": "Speak to Seraphina to learn Draw Cut", "type": "talk", "target": "swordswoman", "current": 0}
+  ],
+  "completion_npc": "swordswoman",
+  "completion_topic": "draw_cut"
+}

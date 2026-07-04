@@ -1,0 +1,20 @@
+{
+  "id": "learn_pacify_prey",
+  "title": "Lesson: Pacify Prey",
+  "giver": "huntsman",
+  "prerequisites": ["learn_large_trap"],
+  "description": "Learn to calm aggressive creatures.",
+  "completion_conditions": [
+    { "type": "stat", "target": "creatures_pacified", "count": 5 }
+  ],
+  "rewards": {
+    "technique": "pacify_prey",
+    "reputation": { "actor": { "huntsman": 200 } }
+  },
+  "steps": [
+    {"description": "Pacify 5 creatures", "type": "stat", "target": "creatures_pacified", "count": 5},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman"}
+  ],
+  "completion_npc": "hunter",
+  "completion_topic": "pacify_prey"
+}

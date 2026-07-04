@@ -1,0 +1,49 @@
+{
+  "swords": [
+    {
+      "id": "copper_sword",
+      "name": "Copper Sword",
+      "category": "weapon",
+      "subtype": "sword",
+      "damage": 20,
+      "weight": 3,
+      "description": "A simple copper sword."
+    },
+    {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "category": "weapon",
+      "subtype": "sword",
+      "damage": 6,
+      "weight": 3,
+      "description": "A sturdy iron sword."
+    },
+    {
+      "id": "steel_sword",
+      "name": "Steel Sword",
+      "category": "weapon",
+      "subtype": "sword",
+      "damage": 9,
+      "weight": 3,
+      "description": "A finely crafted steel sword."
+    },
+    {
+      "id": "mithril_sword",
+      "name": "Mithril Sword",
+      "category": "weapon",
+      "subtype": "sword",
+      "damage": 12,
+      "weight": 2,
+      "description": "A lightweight mithril sword."
+    },
+    {
+      "id": "titran_sword",
+      "name": "Titran Sword",
+      "category": "weapon",
+      "subtype": "sword",
+      "damage": 15,
+      "weight": 2,
+      "description": "A legendary titran sword."
+    }
+  ]
+}

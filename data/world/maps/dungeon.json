@@ -1,0 +1,37 @@
+{
+  "id": "dungeon",
+  "name": "Dungeon Depth",
+  "description": "A dark, foreboding dungeon beneath the earth.",
+  "nodes": {
+    "dungeon_entrance": {
+      "id": "dungeon_entrance",
+      "name": "Dungeon Entrance Interior",
+      "description": "The entry threshold inside the dark dungeon, damp and drafty.",
+      "exits": {  "down": "dungeon_level_1" },
+      "entities": [],
+      "tags": ["dungeon", "entrance"],
+      "discovery_text": "You step inside. The darkness swallows you.",
+      "ambient_text": "Cold air seeps from below."
+    },
+    "dungeon_level_1": {
+      "id": "dungeon_level_1",
+      "name": "Dungeon Level 1",
+      "description": "The first level of the dungeon. Torches flicker on the walls, casting long shadows. You hear distant dripping water.",
+      "exits": { "up": "dungeon_entrance", "down": "dungeon_level_2" },
+      "entities": ["chest", "barrel", "door"],
+      "tags": ["dungeon", "exploration"],
+      "discovery_text": "Torches gutter as you descend. The air is thick.",
+      "ambient_text": "Water drips steadily in the distance."
+    },
+    "dungeon_level_2": {
+      "id": "dungeon_level_2",
+      "name": "Dungeon Level 2",
+      "description": "The deepest level of the dungeon. The air is thick and oppressive. Something powerful lurks here.",
+      "exits": { "up": "dungeon_level_1" },
+      "entities": ["treasure_chest", "altar"],
+      "tags": ["dungeon", "boss", "dangerous"],
+      "discovery_text": "The deepest darkness. The air itself feels hostile.",
+      "ambient_text": "A low growl echoes from the shadows."
+    }
+  }
+}

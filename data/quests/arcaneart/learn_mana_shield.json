@@ -1,0 +1,28 @@
+{
+  "id": "learn_mana_shield",
+  "title": "Lesson: Mana Shield",
+  "giver": "archmage",
+  "participants": ["archmage"],
+  "prerequisites": ["learn_magic_missile"],
+  "description": "Eldric will teach you Mana Shield, a defensive spell that creates a protective barrier of arcane energy. To master this, you must demonstrate control over your arcane reserves by casting 20 spells without being interrupted.",
+  "completion_conditions": [
+    { "type": "stat", "target": "spells_cast", "count": 20 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "mana_shield",
+    "reputation": { "actor": { "archmage": 75 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["magic", "shield", "defense", "arcane", "spell", "learn", "eldric", "training"],
+  "steps": [
+    {"description": "Cast 20 arcane spells", "type": "stat", "target": "spells_cast", "count": 20, "current": 0},
+    {"description": "Speak to Eldric to learn Mana Shield", "type": "talk", "target": "archmage", "current": 0}
+  ],
+  "completion_npc": "archmage",
+  "completion_topic": "mana_shield"
+}

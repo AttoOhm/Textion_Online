@@ -1,0 +1,152 @@
+{
+  "id": "Father_Benedict",
+  "name": "Father Benedict",
+  "race": "human",
+  "subtype": "priest",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["church"],
+
+  "appearance": {
+    "unknown_name": "a robed priest",
+    "known_name": "Father Benedict",
+    "full_name": "Father Benedict, the village priest",
+    "description": "A kind-faced priest in simple robes. He carries a wooden staff and radiates a gentle warmth."
+  },
+
+  "attributes": {
+    "strength": 40,
+    "dexterity": 50,
+    "knowledge": 80,
+    "constitution": 60,
+    "observation": 70,
+    "willpower": 90,
+    "reactiveness": 50,
+    "arcana": 85
+  },
+
+  "skills": {
+    "melee": 20,
+    "stealth": 30,
+    "perception": 60
+  },
+
+  "techniques": ["heal", "bless", "purify", "divine_shield", "holy_light", "resurrection"],
+
+  "schedule": [
+    { "from": 6, "to": 12, "map_id": "village", "node_id": "church" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "tavern" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "church" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "church" },
+    { "from": 22, "to": 6, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 400, "respect": 300, "friendship": 350, "fear": 0 },
+    "elias": { "trust": 500, "respect": 400, "friendship": 400, "fear": 0 },
+    "meadow": { "trust": 600, "respect": 500, "friendship": 500, "fear": 0 },
+    "bertha": { "trust": 400, "respect": 300, "friendship": 300, "fear": 0 },
+    "aldric": { "trust": 500, "respect": 400, "friendship": 400, "fear": 0 }
+  },
+
+  "knowledge": {
+    "village_blessings": {
+      "importance": 800,
+      "stages": [
+        {
+          "id": "blessing_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["The church offers free healing to all who seek it. No payment required."]
+        }
+      ]
+    },
+    "graveyard_secrets": {
+      "importance": 600,
+      "stages": [
+        {
+          "id": "graveyard_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["Those who fall in battle awaken in the graveyard, restored by divine light."]
+        }
+      ]
+    },
+    "divine_arts": {
+      "importance": 1000,
+      "stages": [
+        {
+          "id": "divine_intro",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": [
+            "I am a priest of the Divine Light, keeper of the sacred healing arts.",
+            "The Divine Light grants us power to heal the wounded, protect the faithful, and smite the unholy.",
+            "Heal restores life. Bless strengthens the spirit. Purify cleanses corruption.",
+            "Divine Shield guards against harm. Holy Light banishes darkness. Resurrection conquers death itself.",
+            "All divine techniques require holy water - blessed water from the church altar.",
+            "Come, my child. Let me teach you the ways of the Light."
+          ]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["learn_heal", "learn_bless", "learn_purify", "learn_divine_shield", "learn_holy_light", "learn_resurrection"],
+    "progresses": [],
+    "completes": ["learn_heal", "learn_bless", "learn_purify", "learn_divine_shield", "learn_holy_light", "learn_resurrection"]
+  },
+
+  "shop": {
+    "visible_for_sale": ["holy_water", "consecrated_holy_water"],
+    "hidden_for_sale": []
+  },
+
+  "conversation": {
+    "personality": "kind",
+    "first_greeting": "The priest smiles warmly, his eyes gentle. 'Welcome, my child. I am Father Benedict, servant of the Divine Light. The light is always here for those who seek it.'",
+    "greeting": "Father Benedict smiles warmly. 'Welcome, child. The light of the Divine is always here for you.'",
+    "farewell": "May the Divine watch over you, my child. Return whenever you need healing.",
+    "dialogue_interest": ["heal", "blessing", "church", "prayer", "help", "hurt", "wounded"],
+    "dialogue_bored": ["violence", "weapons", "fighting", "greed"],
+    "topics": {
+      "heal": {
+        "greeting": "Father Benedict nods with compassion. 'I sense the weight of your wounds, my child. Come, let the Divine light restore you.'",
+        "farewell": "You are fully restored. Go in peace, and may your path be blessed.",
+        "keywords": ["heal", "hurt", "wounded", "restore", "help", "blessing", "light"],
+        "action": "heal_player"
+      }
+    }
+  },
+
+  "world": {
+    "job": "priest",
+    "shop": {
+      "visible_for_sale": ["holy_water", "consecrated_holy_water"],
+      "hidden_for_sale": []
+    },
+    "specialty": "divine_techniques",
+    "teaching_style": "spiritual"
+  },
+
+  "is_hostile": false,
+  "hp": 60,
+  "max_hp": 60,
+  "behaviors": {
+    "hostile": false,
+    "aggressive": false,
+    "flee_threshold": 0.0
+  },
+  "relationships": {
+    "player": "friendly",
+    "human": "friendly",
+    "goblin": "neutral",
+    "wolf": "neutral"
+  },
+  "spawn_locations": ["church"],
+  "respawn_time": 300,
+  "is_alive": true
+}

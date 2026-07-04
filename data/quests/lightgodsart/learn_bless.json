@@ -1,0 +1,28 @@
+{
+  "id": "learn_bless",
+  "title": "Lesson: Bless",
+  "giver": "father_benedict",
+  "participants": ["father_benedict"],
+  "prerequisites": [],
+  "description": "Father Benedict will teach you Bless, a divine technique that enhances combat abilities.",
+  "completion_conditions": [
+    { "type": "action_count", "target": "pray", "count": 10 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": ["holy_water"],
+    "technique": "bless",
+    "reputation": { "actor": { "father_benedict": 50 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["divine", "bless", "holy", "learn", "benedict"],
+  "steps": [
+    {"description": "Pray 10 times", "type": "action_count", "target": "pray", "count": 10, "current": 0},
+    {"description": "Speak to Father Benedict", "type": "talk", "target": "father_benedict", "current": 0}
+  ],
+  "completion_npc": "father_benedict",
+  "completion_topic": "bless"
+}

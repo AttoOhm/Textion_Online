@@ -1,0 +1,22 @@
+{
+  "id": "learn_blacksmithing",
+  "title": "Lesson: Blacksmithing",
+  "giver": "grim",
+  "prerequisites": ["learn_smelting"],
+  "description": "Learn to forge weapons and armor at the anvil.",
+  "completion_conditions": [
+    { "type": "item_delivery", "target": "copper_ingot", "count": 4 },
+    { "type": "item_delivery", "target": "iron_ingot", "count": 2 }
+  ],
+  "rewards": {
+    "technique": "blacksmithing",
+    "reputation": { "actor": { "grim": 150 } }
+  },
+  "steps": [
+    {"description": "Bring 4 copper ingots to Grim", "type": "deliver", "target": "copper_ingot", "count": 4},
+    {"description": "Bring 2 iron ingots to Grim", "type": "deliver", "target": "iron_ingot", "count": 2},
+    {"description": "Speak to Grim", "type": "talk", "target": "grim"}
+  ],
+  "completion_npc": "grim",
+  "completion_topic": "blacksmithing"
+}

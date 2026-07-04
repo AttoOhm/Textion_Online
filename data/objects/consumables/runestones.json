@@ -1,0 +1,24 @@
+{
+  "runestones": [
+    {
+      "id": "runestone",
+      "name": "Arcane Runestone",
+      "category": "consumable",
+      "subtype": "arcane_fuel",
+      "description": "A glowing crystal infused with arcane energy. Used to power magical techniques.",
+      "stackable": true,
+      "max_stack": 50,
+      "weight": 0.1
+    },
+    {
+      "id": "greater_runestone",
+      "name": "Greater Arcane Runestone",
+      "category": "consumable",
+      "subtype": "arcane_fuel",
+      "description": "A large, pulsing crystal crackling with raw magical energy. Powers advanced spells.",
+      "stackable": true,
+      "max_stack": 20,
+      "weight": 0.5
+    }
+  ]
+}

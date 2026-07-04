@@ -1,0 +1,112 @@
+{
+  "armor": [
+    {
+      "id": "cloth_robe",
+      "name": "Cloth Robe",
+      "type": "armor",
+      "subtype": "cloth",
+      "armor_type": "cloth",
+      "slot": "armor",
+      "value": 5,
+      "weight": 2,
+      "durability": 30,
+      "max_durability": 30
+    },
+    {
+      "id": "padded_armor",
+      "name": "Padded Armor",
+      "type": "armor",
+      "subtype": "padded",
+      "armor_type": "padded",
+      "slot": "armor",
+      "value": 15,
+      "weight": 10,
+      "durability": 50,
+      "max_durability": 50
+    },
+    {
+      "id": "leather_armor",
+      "name": "Leather Armor",
+      "type": "armor",
+      "subtype": "leather",
+      "armor_type": "leather",
+      "slot": "armor",
+      "value": 25,
+      "weight": 15,
+      "durability": 70,
+      "max_durability": 70
+    },
+    {
+      "id": "studded_leather",
+      "name": "Studded Leather",
+      "type": "armor",
+      "subtype": "studded_leather",
+      "armor_type": "studded_leather",
+      "slot": "armor",
+      "value": 40,
+      "weight": 20,
+      "durability": 80,
+      "max_durability": 80
+    },
+    {
+      "id": "hide_armor",
+      "name": "Hide Armor",
+      "type": "armor",
+      "subtype": "hide",
+      "armor_type": "hide",
+      "slot": "armor",
+      "value": 20,
+      "weight": 18,
+      "durability": 60,
+      "max_durability": 60
+    },
+    {
+      "id": "chainmail",
+      "name": "Chainmail",
+      "type": "armor",
+      "subtype": "chainmail",
+      "armor_type": "chainmail",
+      "slot": "armor",
+      "value": 75,
+      "weight": 40,
+      "durability": 100,
+      "max_durability": 100
+    },
+    {
+      "id": "scale_mail",
+      "name": "Scale Mail",
+      "type": "armor",
+      "subtype": "scale",
+      "armor_type": "scale",
+      "slot": "armor",
+      "value": 60,
+      "weight": 35,
+      "durability": 90,
+      "max_durability": 90
+    },
+    {
+      "id": "brigandine",
+      "name": "Brigandine",
+      "type": "armor",
+      "subtype": "brigandine",
+      "armor_type": "brigandine",
+      "slot": "armor",
+      "value": 55,
+      "weight": 30,
+      "durability": 85,
+      "max_durability": 85
+    },
+    {
+      "id": "plate_armor",
+      "name": "Plate Armor",
+      "type": "armor",
+      "subtype": "plate",
+      "armor_type": "plate",
+      "slot": "armor",
+      "value": 100,
+      "weight": 50,
+      "durability": 120,
+      "max_durability": 120
+    }
+  ]
+}

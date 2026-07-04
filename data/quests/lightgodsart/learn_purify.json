@@ -1,0 +1,28 @@
+{
+  "id": "learn_purify",
+  "title": "Lesson: Purify",
+  "giver": "father_benedict",
+  "participants": ["father_benedict"],
+  "prerequisites": ["learn_bless"],
+  "description": "Father Benedict will teach you Purify, a technique to remove negative effects.",
+  "completion_conditions": [
+    { "type": "stat", "target": "status_effects_removed", "count": 10 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "purify",
+    "reputation": { "actor": { "father_benedict": 75 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["divine", "purify", "cleanse", "learn", "benedict"],
+  "steps": [
+    {"description": "Remove 10 negative status effects", "type": "stat", "target": "status_effects_removed", "count": 10, "current": 0},
+    {"description": "Speak to Father Benedict", "type": "talk", "target": "father_benedict", "current": 0}
+  ],
+  "completion_npc": "father_benedict",
+  "completion_topic": "purify"
+}

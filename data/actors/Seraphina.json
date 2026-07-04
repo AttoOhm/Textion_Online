@@ -1,0 +1,110 @@
+{
+  "id": "Seraphina",
+  "name": "Seraphina",
+  "race": "human",
+  "subtype": "swordmaster",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["adventure_guild"],
+
+  "appearance": {
+    "unknown_name": "a tall woman in practical leather armor",
+    "known_name": "Seraphina",
+    "full_name": "Seraphina, Blade of the Guild",
+    "description": "A tall, athletic woman with silver-streaked hair and piercing blue eyes. She wears practical leather armor and carries an elegant longsword at her hip. Her posture speaks of years of disciplined training."
+  },
+
+  "attributes": {
+    "strength": 150,
+    "dexterity": 180,
+    "knowledge": 140,
+    "constitution": 130,
+    "observation": 170,
+    "willpower": 120,
+    "reactiveness": 160,
+    "arcana": 80
+  },
+
+  "skills": {
+    "melee": 200,
+    "swordsmanship": 250,
+    "perception": 150,
+    "teaching": 120
+  },
+
+  "techniques": ["draw_cut", "riposte", "sword_dance", "perfect_cut", "whirlwind"],
+
+  "schedule": [
+    { "from": 9, "to": 12, "map_id": "village", "node_id": "adventure_guild" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "tavern" },
+    { "from": 14, "to": 17, "map_id": "village", "node_id": "adventure_guild" },
+    { "from": 17, "to": 9, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 500, "respect": 600, "friendship": 400, "fear": 0 },
+    "aldric": { "trust": 400, "respect": 500, "friendship": 300, "fear": 0 },
+    "player": { "trust": 0, "respect": 0, "friendship": 0, "fear": 0 }
+  },
+
+  "knowledge": {
+    "sword_arts": {
+      "importance": 1000,
+      "stages": [
+        {
+          "id": "sword_arts_intro",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": [
+            "I am a master of the sword. I can teach you the ancient techniques of bladesmanship.",
+            "Each technique requires dedication and practice to master.",
+            "Draw Cut teaches precision. Riposte teaches counter-attack. Perfect Cut teaches armor penetration.",
+            "Come to me when you are ready to learn, and I will set you on the path."
+          ]
+        }
+      ]
+    },
+    "training_methods": {
+      "importance": 900,
+      "stages": [
+        {
+          "id": "training_intro",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": [
+            "To learn Draw Cut, you must prove your skill with accumulated sword damage.",
+            "To learn Riposte, you must demonstrate versatility against many foes.",
+            "To learn Perfect Cut, you must show patience and precision.",
+            "To learn Whirlwind, you must prove your mastery in chaotic combat."
+          ]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["learn_draw_cut", "learn_riposte", "learn_perfect_cut", "learn_whirlwind"],
+    "progresses": [],
+    "completes": ["learn_draw_cut", "learn_riposte", "learn_perfect_cut", "learn_whirlwind"]
+  },
+
+  "shop": null,
+
+  "conversation": {
+    "personality": "disciplined",
+    "first_greeting": "the tall woman nods respectfully, her hand resting lightly on her sword hilt. 'I am Seraphina, Blade of the Guild. Master of the sword arts. What brings you here?'",
+    "greeting": "Seraphina nods respectfully, her hand resting lightly on her sword hilt. 'I am Seraphina, master of the blade. What brings you to the guild?'",
+    "farewell": "She gives a slight bow. 'Train hard, and the blade will serve you well.'",
+    "dialogue_interest": ["sword", "technique", "training", "combat", "skill", "learn"],
+    "dialogue_bored": ["gossip", "politics", "money"]
+  },
+
+  "world": {
+    "job": "swordmaster",
+    "location": "adventure_guild",
+    "specialty": "sword_techniques",
+    "teaching_style": "practical"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "armor_types": {
+    "cloth": {
+      "slash": 5,
+      "pierce": 0,
+      "bludgeon": 0
+    },
+    "padded": {
+      "slash": 15,
+      "pierce": 5,
+      "bludgeon": 25
+    },
+    "leather": {
+      "slash": 30,
+      "pierce": 20,
+      "bludgeon": 10
+    },
+    "studded_leather": {
+      "slash": 40,
+      "pierce": 35,
+      "bludgeon": 15
+    },
+    "hide": {
+      "slash": 25,
+      "pierce": 15,
+      "bludgeon": 35
+    },
+    "chainmail": {
+      "slash": 70,
+      "pierce": 40,
+      "bludgeon": 15
+    },
+    "scale": {
+      "slash": 60,
+      "pierce": 50,
+      "bludgeon": 30
+    },
+    "brigandine": {
+      "slash": 55,
+      "pierce": 60,
+      "bludgeon": 40
+    },
+    "plate": {
+      "slash": 80,
+      "pierce": 75,
+      "bludgeon": 35
+    }
+  }
+}

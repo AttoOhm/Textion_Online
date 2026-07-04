@@ -1,0 +1,30 @@
+{
+  "id": "patrol_perimeter",
+  "title": "Patrol the Perimeter",
+  "giver": "aldric",
+  "participants": ["aldric"],
+  "prerequisites": [],
+  "description": "I need someone to help patrol the village perimeter. Strange noises have been reported at night.",
+  "completion_conditions": [
+    { "type": "explore", "target": "village_walls" },
+    { "type": "investigate", "target": "noise_source" },
+    { "type": "talk", "target": "aldric", "topic": "patrol" }
+  ],
+    "rewards": {
+      "gold": 25,
+      "items": ["guard_shield"],
+      "reputation": { "actor": { "aldric": 30 } }
+    },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["patrol", "guard", "wall", "night", "noise", "help"],
+  "steps": [
+    {"description": "Patrol the village walls at night", "type": "explore", "target": "village_walls", "current": 0},
+    {"description": "Investigate strange noises", "type": "investigate", "target": "noise_source", "current": 0},
+    {"description": "Report findings to Aldric", "type": "talk", "target": "guard", "current": 0}
+  ],
+  "completion_npc": "aldric",
+  "completion_topic": "patrol"
+}

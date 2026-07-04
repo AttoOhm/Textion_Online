@@ -1,0 +1,28 @@
+{
+  "id": "herb_collection",
+  "title": "Herb Collection",
+  "giver": "bertha",
+  "participants": ["bertha"],
+  "prerequisites": [],
+  "description": "I need someone to gather some rare herbs from the forest for my special recipes.",
+  "completion_conditions": [
+    { "type": "collect", "target": "healing_herb", "count": 5 },
+    { "type": "talk", "target": "bertha", "topic": "herb" }
+  ],
+    "rewards": {
+      "gold": 40,
+      "items": ["minor_healing_potion"],
+      "reputation": { "actor": { "meadow": 30 } }
+    },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["herb", "plant", "forest", "gather", "help", "quest", "recipe"],
+  "steps": [
+    {"description": "Find 5 Healing Herbs in the forest", "type": "collect", "target": "healing_herb", "count": 5, "current": 0},
+    {"description": "Return the herbs to Bertha", "type": "talk", "target": "farmer", "current": 0}
+  ],
+  "completion_npc": "bertha",
+  "completion_topic": "herb"
+}

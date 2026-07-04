@@ -1,0 +1,31 @@
+{
+  "bows": [
+    {
+      "id": "oak_bow",
+      "name": "Oak Bow",
+      "category": "weapon",
+      "subtype": "bow",
+      "damage": 5,
+      "weight": 2,
+      "description": "A bow crafted from oak wood."
+    },
+    {
+      "id": "ash_bow",
+      "name": "Ash Bow",
+      "category": "weapon",
+      "subtype": "bow",
+      "damage": 6,
+      "weight": 2,
+      "description": "A bow crafted from ash wood."
+    },
+    {
+      "id": "yew_bow",
+      "name": "Yew Bow",
+      "category": "weapon",
+      "subtype": "bow",
+      "damage": 7,
+      "weight": 2,
+      "description": "A bow crafted from yew wood."
+    }
+  ]
+}

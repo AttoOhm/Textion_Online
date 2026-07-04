@@ -1,0 +1,19 @@
+{
+  "id": "learn_heal",
+  "title": "Lesson: Heal",
+  "giver": "father_benedict",
+  "prerequisites": [],
+  "description": "Learn the basic healing technique from Father Benedict.",
+  "completion_conditions": [
+    { "type": "talk", "target": "father_benedict", "topic": "heal" }
+  ],
+  "rewards": {
+    "technique": "heal",
+    "reputation": { "actor": { "father_benedict": 25 } }
+  },
+  "steps": [
+    {"description": "Speak to Father Benedict about healing", "type": "talk", "target": "father_benedict"}
+  ],
+  "completion_npc": "father_benedict",
+  "completion_topic": "heal"
+}

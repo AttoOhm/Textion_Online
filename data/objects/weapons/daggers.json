@@ -1,0 +1,49 @@
+{
+  "daggers": [
+    {
+      "id": "copper_dagger",
+      "name": "Copper Dagger",
+      "category": "weapon",
+      "subtype": "dagger",
+      "damage": 3,
+      "weight": 1,
+      "description": "A simple copper dagger."
+    },
+    {
+      "id": "iron_dagger",
+      "name": "Iron Dagger",
+      "category": "weapon",
+      "subtype": "dagger",
+      "damage": 4,
+      "weight": 1,
+      "description": "A sturdy iron dagger."
+    },
+    {
+      "id": "steel_dagger",
+      "name": "Steel Dagger",
+      "category": "weapon",
+      "subtype": "dagger",
+      "damage": 6,
+      "weight": 1,
+      "description": "A finely crafted steel dagger."
+    },
+    {
+      "id": "mithril_dagger",
+      "name": "Mithril Dagger",
+      "category": "weapon",
+      "subtype": "dagger",
+      "damage": 8,
+      "weight": 1,
+      "description": "A lightweight mithril dagger."
+    },
+    {
+      "id": "titran_dagger",
+      "name": "Titran Dagger",
+      "category": "weapon",
+      "subtype": "dagger",
+      "damage": 10,
+      "weight": 1,
+      "description": "A legendary titran dagger."
+    }
+  ]
+}

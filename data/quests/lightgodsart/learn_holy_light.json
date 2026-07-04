@@ -1,0 +1,28 @@
+{
+  "id": "learn_holy_light",
+  "title": "Lesson: Holy Light",
+  "giver": "father_benedict",
+  "participants": ["father_benedict"],
+  "prerequisites": ["learn_divine_shield"],
+  "description": "Father Benedict will teach you Holy Light, a damaging spell effective against undead and demons.",
+  "completion_conditions": [
+    { "type": "kill", "target": "undead", "count": 15 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "holy_light",
+    "reputation": { "actor": { "father_benedict": 125 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["divine", "holy", "light", "attack", "learn", "benedict"],
+  "steps": [
+    {"description": "Defeat 15 undead creatures", "type": "kill", "target": "undead", "count": 15, "current": 0},
+    {"description": "Speak to Father Benedict", "type": "talk", "target": "father_benedict", "current": 0}
+  ],
+  "completion_npc": "father_benedict",
+  "completion_topic": "holy_light"
+}

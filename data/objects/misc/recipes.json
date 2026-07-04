@@ -1,0 +1,265 @@
+{
+  "recipes": [
+    {
+      "id": "recipe_copper_sword",
+      "name": "Recipe: Copper Sword",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a copper sword.",
+      "recipe_teaches": "copper_sword",
+      "value": 25
+    },
+    {
+      "id": "recipe_copper_dagger",
+      "name": "Recipe: Copper Dagger",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a copper dagger.",
+      "recipe_teaches": "copper_dagger",
+      "value": 15
+    },
+    {
+      "id": "recipe_iron_sword",
+      "name": "Recipe: Iron Sword",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge an iron sword.",
+      "recipe_teaches": "iron_sword",
+      "value": 50
+    },
+    {
+      "id": "recipe_iron_dagger",
+      "name": "Recipe: Iron Dagger",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge an iron dagger.",
+      "recipe_teaches": "iron_dagger",
+      "value": 35
+    },
+    {
+      "id": "recipe_bronze_sword",
+      "name": "Recipe: Bronze Sword",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a bronze sword.",
+      "recipe_teaches": "bronze_sword",
+      "value": 40
+    },
+    {
+      "id": "recipe_bronze_dagger",
+      "name": "Recipe: Bronze Dagger",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a bronze dagger.",
+      "recipe_teaches": "bronze_dagger",
+      "value": 25
+    },
+    {
+      "id": "recipe_bronze_axe",
+      "name": "Recipe: Bronze Axe",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a bronze axe.",
+      "recipe_teaches": "bronze_axe",
+      "value": 45
+    },
+    {
+      "id": "recipe_bronze_hammer",
+      "name": "Recipe: Bronze Hammer",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a bronze hammer.",
+      "recipe_teaches": "bronze_hammer",
+      "value": 50
+    },
+    {
+      "id": "recipe_steel_sword",
+      "name": "Recipe: Steel Sword",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a steel sword.",
+      "recipe_teaches": "steel_sword",
+      "value": 75
+    },
+    {
+      "id": "recipe_steel_dagger",
+      "name": "Recipe: Steel Dagger",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a steel dagger.",
+      "recipe_teaches": "steel_dagger",
+      "value": 55
+    },
+    {
+      "id": "recipe_steel_axe",
+      "name": "Recipe: Steel Axe",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a steel axe.",
+      "recipe_teaches": "steel_axe",
+      "value": 85
+    },
+    {
+      "id": "recipe_steel_hammer",
+      "name": "Recipe: Steel Hammer",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a steel hammer.",
+      "recipe_teaches": "steel_hammer",
+      "value": 90
+    },
+    {
+      "id": "recipe_mithril_sword",
+      "name": "Recipe: Mithril Sword",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a mithril sword.",
+      "recipe_teaches": "mithril_sword",
+      "value": 150
+    },
+    {
+      "id": "recipe_mithril_dagger",
+      "name": "Recipe: Mithril Dagger",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a mithril dagger.",
+      "recipe_teaches": "mithril_dagger",
+      "value": 120
+    },
+    {
+      "id": "recipe_mithril_axe",
+      "name": "Recipe: Mithril Axe",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a mithril axe.",
+      "recipe_teaches": "mithril_axe",
+      "value": 160
+    },
+    {
+      "id": "recipe_mithril_hammer",
+      "name": "Recipe: Mithril Hammer",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe page showing how to forge a mithril hammer.",
+      "recipe_teaches": "mithril_hammer",
+      "value": 170
+    },
+    {
+      "id": "recipe_titran_sword",
+      "name": "Recipe: Titran Sword",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A legendary recipe page showing how to forge a titran sword.",
+      "recipe_teaches": "titran_sword",
+      "value": 250
+    },
+    {
+      "id": "recipe_titran_dagger",
+      "name": "Recipe: Titran Dagger",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A legendary recipe page showing how to forge a titran dagger.",
+      "recipe_teaches": "titran_dagger",
+      "value": 200
+    },
+    {
+      "id": "recipe_titran_axe",
+      "name": "Recipe: Titran Axe",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A legendary recipe page showing how to forge a titran axe.",
+      "recipe_teaches": "titran_axe",
+      "value": 260
+    },
+    {
+      "id": "recipe_titran_hammer",
+      "name": "Recipe: Titran Hammer",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A legendary recipe page showing how to forge a titran hammer.",
+      "recipe_teaches": "titran_hammer",
+      "value": 270
+    },
+    {
+      "id": "recipe_oak_bow",
+      "name": "Recipe: Oak Bow",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft an oak bow.",
+      "recipe_teaches": "oak_bow",
+      "value": 45
+    },
+    {
+      "id": "recipe_ash_bow",
+      "name": "Recipe: Ash Bow",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft an ash bow.",
+      "recipe_teaches": "ash_bow",
+      "value": 60
+    },
+    {
+      "id": "recipe_yew_bow",
+      "name": "Recipe: Yew Bow",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft a yew bow.",
+      "recipe_teaches": "yew_bow",
+      "value": 80
+    },
+    {
+      "id": "recipe_oak_staff",
+      "name": "Recipe: Oak Staff",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft an oak staff.",
+      "recipe_teaches": "oak_staff",
+      "value": 50
+    },
+    {
+      "id": "recipe_ash_staff",
+      "name": "Recipe: Ash Staff",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft an ash staff.",
+      "recipe_teaches": "ash_staff",
+      "value": 65
+    },
+    {
+      "id": "recipe_yew_staff",
+      "name": "Recipe: Yew Staff",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft a yew staff.",
+      "recipe_teaches": "yew_staff",
+      "value": 85
+    },
+    {
+      "id": "recipe_oak_wand",
+      "name": "Recipe: Oak Wand",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft an oak wand.",
+      "recipe_teaches": "oak_wand",
+      "value": 30
+    },
+    {
+      "id": "recipe_ash_wand",
+      "name": "Recipe: Ash Wand",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft an ash wand.",
+      "recipe_teaches": "ash_wand",
+      "value": 40
+    },
+    {
+      "id": "recipe_yew_wand",
+      "name": "Recipe: Yew Wand",
+      "category": "misc",
+      "subtype": "recipe",
+      "description": "A recipe scroll showing how to craft a yew wand.",
+      "recipe_teaches": "yew_wand",
+      "value": 55
+    }
+  ]
+}

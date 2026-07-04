@@ -1,0 +1,49 @@
+{
+  "axes": [
+    {
+      "id": "copper_axe",
+      "name": "Copper Axe",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 5,
+      "weight": 4,
+      "description": "A simple copper axe."
+    },
+    {
+      "id": "iron_axe",
+      "name": "Iron Axe",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 7,
+      "weight": 4,
+      "description": "A sturdy iron axe."
+    },
+    {
+      "id": "steel_axe",
+      "name": "Steel Axe",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 10,
+      "weight": 4,
+      "description": "A finely crafted steel axe."
+    },
+    {
+      "id": "mithril_axe",
+      "name": "Mithril Axe",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 13,
+      "weight": 3,
+      "description": "A lightweight mithril axe."
+    },
+    {
+      "id": "titran_axe",
+      "name": "Titran Axe",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 16,
+      "weight": 3,
+      "description": "A legendary titran axe."
+    }
+  ]
+}

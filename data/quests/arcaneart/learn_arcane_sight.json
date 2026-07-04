@@ -1,0 +1,28 @@
+{
+  "id": "learn_arcane_sight",
+  "title": "Lesson: Arcane Sight",
+  "giver": "archmage",
+  "participants": ["archmage"],
+  "prerequisites": ["learn_mana_shield"],
+  "description": "Eldric will teach you Arcane Sight, a perception spell that reveals hidden magical auras. To master this, you must demonstrate keen observation by identifying 15 hidden objects or secrets in the world.",
+  "completion_conditions": [
+    { "type": "stat", "target": "hidden_objects_found", "count": 15 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "arcane_sight",
+    "reputation": { "actor": { "archmage": 100 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["magic", "sight", "perception", "arcane", "spell", "learn", "eldric", "training"],
+  "steps": [
+    {"description": "Find 15 hidden objects or secrets", "type": "stat", "target": "hidden_objects_found", "count": 15, "current": 0},
+    {"description": "Speak to Eldric to learn Arcane Sight", "type": "talk", "target": "archmage", "current": 0}
+  ],
+  "completion_npc": "archmage",
+  "completion_topic": "arcane_sight"
+}

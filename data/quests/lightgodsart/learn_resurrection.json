@@ -1,0 +1,28 @@
+{
+  "id": "learn_resurrection",
+  "title": "Lesson: Resurrection",
+  "giver": "father_benedict",
+  "participants": ["father_benedict"],
+  "prerequisites": ["learn_holy_light"],
+  "description": "Father Benedict will teach you Resurrection, the most sacred divine technique that can restore life to the fallen.",
+  "completion_conditions": [
+    { "type": "stat", "target": "allies_revived", "count": 5 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": ["consecrated_holy_water"],
+    "technique": "resurrection",
+    "reputation": { "actor": { "father_benedict": 200 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["divine", "resurrection", "revive", "life", "learn", "benedict"],
+  "steps": [
+    {"description": "Revive 5 fallen allies", "type": "stat", "target": "allies_revived", "count": 5, "current": 0},
+    {"description": "Speak to Father Benedict", "type": "talk", "target": "father_benedict", "current": 0}
+  ],
+  "completion_npc": "father_benedict",
+  "completion_topic": "resurrection"
+}

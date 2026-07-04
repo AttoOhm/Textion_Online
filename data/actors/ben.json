@@ -1,0 +1,244 @@
+{
+  "id": "huntsman",
+  "name": "Ben",
+  "race": "human",
+  "subtype": "hunter",
+  "max_distance": 0,
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common", "goblin"]
+  },
+  "factions": ["hunter_guild"],
+  "appearance": {
+    "unknown_name": "a rugged hunter",
+    "known_name": "Huntsman",
+    "full_name": "Huntsman, Master Tracker",
+    "description": "A weathered hunter with keen eyes and a scar across his cheek. He moves with quiet grace and carries an array of traps and tracking tools."
+  },
+  "attributes": {
+    "strength": 80,
+    "dexterity": 120,
+    "knowledge": 90,
+    "constitution": 100,
+    "observation": 140,
+    "willpower": 85,
+    "reactiveness": 110,
+    "arcana": 40
+  },
+  "skills": {
+    "tracking": 95,
+    "trap_crafting": 90,
+    "stealth": 85,
+    "survival": 80
+  },
+  "techniques": ["death_mark", "track_prey", "bear_trap", "silent_step", "large_trap", "pacify_prey", "loot"],
+  "schedule": [
+    { "from": 6, "to": 10, "map_id": "village", "node_id": "tavern" },
+    { "from": 10, "to": 14, "map_id": "village", "node_id": "tavern" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "tavern" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "tavern" },
+    { "from": 22, "to": 6, "map_id": null, "node_id": null }
+  ],
+  "relations": {
+    "grim": { "trust": 400, "respect": 500, "friendship": 350, "fear": 0 },
+    "elias": { "trust": 500, "respect": 400, "friendship": 450, "fear": 0 },
+    "meadow": { "trust": 600, "respect": 500, "friendship": 550, "fear": 0 },
+    "thorin": { "trust": 700, "respect": 600, "friendship": 500, "fear": 0 }
+  },
+  "knowledge": {
+    "hunting_techniques": {
+      "importance": 900,
+      "stages": [
+        {
+          "id": "hunting_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["I can teach you the art of the hunt. Track prey, set traps, and strike from the shadows."]
+        }
+      ]
+    },
+    "wilderness": {
+      "importance": 800,
+      "stages": [
+        {
+          "id": "wilderness_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["The wilderness is unforgiving. Learn to move silently and you'll have the advantage."]
+        }
+      ]
+    }
+  },
+  "quests": {
+    "starts": ["learn_death_mark", "learn_track_prey", "learn_bear_trap", "learn_silent_step", "learn_large_trap", "learn_pacify_prey", "learn_loot"],
+    "completes": ["learn_death_mark", "learn_track_prey", "learn_bear_trap", "learn_silent_step", "learn_large_trap", "learn_pacify_prey", "learn_loot"]
+  },
+  "shop": {
+    "visible_for_sale": ["hunting_trap", "bear_trap_kit"]
+  },
+  "conversation": {
+    "personality": "gruff",
+    "first_greeting": "The Huntsman nods at you, his eyes sharp and alert. 'Name's Ben. I'm the huntsman. Looking to learn the ways of the hunt?'",
+    "greeting": "Ben nods at you, his eyes sharp and alert. 'Looking to learn the ways of the hunt?'",
+    "farewell": "Ben gives you a respectful nod. 'May your aim be true and your steps silent.'",
+    "dialogue_interest": ["hunt", "track", "trap", "prey", "stealth", "survival", "wilderness"],
+    "dialogue_bored": ["politics", "gossip", "refinement", "luxury"]
+  },
+  "world": {
+    "job": "hunter",
+    "location": "tavern",
+    "specialty": "hunting_techniques",
+    "available_quests": [
+      {
+        "id": "learn_death_mark",
+        "name": "Learn Death Mark",
+        "description": "The hunter will teach you Death Mark, a technique to mark targets for increased damage.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Defeat 10 creatures", "type": "kill", "target": "creature", "count": 10, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "death_mark",
+        "keywords": ["hunter", "death", "mark", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "death_mark",
+          "reputation": 50
+        }
+      },
+      {
+        "id": "learn_track_prey",
+        "name": "Learn Track Prey",
+        "description": "Learn to track prey from the huntsman.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Track 5 creatures in the wild", "type": "explore", "target": "forest", "count": 5, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "track_prey",
+        "keywords": ["hunter", "track", "prey", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "track_prey",
+          "reputation": 50
+        }
+      },
+      {
+        "id": "learn_bear_trap",
+        "name": "Learn Bear Trap",
+        "description": "Learn to craft and use bear traps.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Set 5 traps in hunting grounds", "type": "craft", "target": "bear_trap", "count": 5, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "bear_trap",
+        "keywords": ["hunter", "bear", "trap", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "bear_trap",
+          "reputation": 50
+        }
+      },
+      {
+        "id": "learn_silent_step",
+        "name": "Learn Silent Step",
+        "description": "Learn to move silently like a hunter.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Sneak past 10 enemies undetected", "type": "stealth", "target": "enemy", "count": 10, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "silent_step",
+        "keywords": ["hunter", "silent", "step", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "silent_step",
+          "reputation": 50
+        }
+      },
+      {
+        "id": "learn_large_trap",
+        "name": "Learn Large Trap",
+        "description": "Learn to craft larger, more effective traps.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Craft 5 large traps", "type": "craft", "target": "large_trap", "count": 5, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "large_trap",
+        "keywords": ["hunter", "large", "trap", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "large_trap",
+          "reputation": 50
+        }
+      },
+      {
+        "id": "learn_pacify_prey",
+        "name": "Learn Pacify Prey",
+        "description": "Learn to pacify prey before the kill.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Use calming techniques on 5 creatures", "type": "use", "target": "calm", "count": 5, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "pacify_prey",
+        "keywords": ["hunter", "pacify", "prey", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "pacify_prey",
+          "reputation": 50
+        }
+      },
+      {
+        "id": "learn_loot",
+        "name": "Learn Loot",
+        "description": "Learn to find better loot from your kills.",
+        "giver": "huntsman",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Loot 10 creatures", "type": "loot", "target": "creature", "count": 10, "current": 0},
+          {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+        ],
+        "completion_npc": "huntsman",
+        "completion_topic": "loot",
+        "keywords": ["hunter", "loot", "learn"],
+        "rewards": {
+          "gold": 0,
+          "technique": "loot",
+          "reputation": 50
+        }
+      }
+    ]
+  },
+  "is_hostile": false,
+  "hp": 100,
+  "max_hp": 100,
+  "behaviors": {
+    "hostile": false,
+    "aggressive": false,
+    "flee_threshold": 0.0
+  },
+  "relationships": {
+    "player": "friendly",
+    "human": "friendly",
+    "goblin": "hostile",
+    "wolf": "neutral"
+  },
+  "spawn_locations": ["tavern"],
+  "respawn_time": 300,
+  "is_alive": true
+}

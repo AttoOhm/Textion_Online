@@ -1,0 +1,27 @@
+{
+  "id": "wolves_menace",
+  "title": "Wolves Menace",
+  "giver": "grim",
+  "participants": ["grim"],
+  "prerequisites": ["guard_advice"],
+  "description": "The wolves in the forest have been getting bolder. Kill 5 of them and I'll reward you handsomely.",
+  "completion_conditions": [
+    { "type": "kill", "target": "wolf", "count": 5 }
+  ],
+  "rewards": {
+    "gold": 50,
+    "items": ["enchanted_blade"],
+    "reputation": { "actor": { "grim": 50 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["wolves", "forest", "danger", "hunt", "kill", "reward"],
+  "steps": [
+    {"description": "Kill 5 wolves in the forest", "type": "kill", "target": "wolf", "count": 5, "current": 0},
+    {"description": "Return to Grim", "type": "talk", "target": "blacksmith", "current": 0}
+  ],
+  "completion_npc": "grim",
+  "completion_topic": "wolves"
+}

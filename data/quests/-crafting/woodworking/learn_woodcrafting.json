@@ -1,0 +1,22 @@
+{
+  "id": "learn_woodcrafting",
+  "title": "Lesson: Woodcrafting",
+  "giver": "elias",
+  "prerequisites": ["learn_saw"],
+  "description": "Learn to craft bows and staves from wood at the workbench.",
+  "completion_conditions": [
+    { "type": "item_delivery", "target": "oak_plank", "count": 8 },
+    { "type": "item_delivery", "target": "ash_plank", "count": 4 }
+  ],
+  "rewards": {
+    "technique": "woodcrafting",
+    "reputation": { "actor": { "elias": 150 } }
+  },
+  "steps": [
+    {"description": "Bring 8 oak planks to Elias", "type": "deliver", "target": "oak_plank", "count": 8},
+    {"description": "Bring 4 ash planks to Elias", "type": "deliver", "target": "ash_plank", "count": 4},
+    {"description": "Speak to Elias", "type": "talk", "target": "elias"}
+  ],
+  "completion_npc": "elias",
+  "completion_topic": "woodcrafting"
+}

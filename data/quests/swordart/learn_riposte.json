@@ -1,0 +1,28 @@
+{
+  "id": "learn_riposte",
+  "title": "Lesson: Riposte",
+  "giver": "swordswoman",
+  "participants": ["swordswoman"],
+  "prerequisites": ["learn_draw_cut"],
+  "description": "Seraphina will teach you Riposte, a counter-attack technique that taunts your opponent. To master this, you must prove your adaptability by defeating 20 different creature types.",
+  "completion_conditions": [
+    { "type": "kill_unique", "target": "creature_types", "count": 20 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "riposte",
+    "reputation": { "actor": { "swordswoman": 75 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["sword", "technique", "riposte", "counter", "learn", "seraphina", "training"],
+  "steps": [
+    {"description": "Defeat 20 different types of creatures", "type": "kill_unique", "target": "creature_types", "count": 20, "current": 0},
+    {"description": "Speak to Seraphina to learn Riposte", "type": "talk", "target": "swordswoman", "current": 0}
+  ],
+  "completion_npc": "swordswoman",
+  "completion_topic": "riposte"
+}

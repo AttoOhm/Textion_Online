@@ -1,0 +1,158 @@
+{
+  "id": "aldric",
+  "name": "Aldric",
+  "race": "human",
+  "subtype": "guard",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["village"],
+
+  "appearance": {
+    "unknown_name": "a guard in silver armor",
+    "known_name": "Aldric",
+    "full_name": "Aldric, the village guard",
+    "description": "A disciplined guard wearing polished silver armor."
+  },
+
+  "attributes": {
+    "strength": 150,
+    "dexterity": 120,
+    "knowledge": 100,
+    "constitution": 140,
+    "observation": 130,
+    "willpower": 50,
+    "reactiveness": 50,
+    "arcana": 50
+  },
+
+  "skills": {
+    "melee": 65,
+    "perception": 55,
+    "leadership": 40
+  },
+
+  "techniques": ["shield_bash", "alert"],
+
+  "schedule": [
+    { "from": 8, "to": 12, "map_id": "village", "node_id": "village_center" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "village_center" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "village_center" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "village_center" },
+    { "from": 22, "to": 8, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 700, "respect": 600, "friendship": 500, "fear": 0 },
+    "elias": { "trust": 500, "respect": 400, "friendship": 300, "fear": 0 },
+    "meadow": { "trust": 400, "respect": 300, "friendship": 400, "fear": 0 },
+    "bertha": { "trust": 300, "respect": 200, "friendship": 200, "fear": 0 },
+    "wolf": { "trust": 0, "respect": 0, "friendship": 0, "fear": 500 },
+    "goblin": { "trust": 0, "respect": 0, "friendship": 0, "fear": 600 }
+  },
+
+  "knowledge": {
+    "village_defenses": {
+      "importance": 700,
+      "stages": [
+        {
+          "id": "defense_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["The village walls are sturdy but we're short on patrols at night."]
+        }
+      ]
+    },
+    "forest_dangers": {
+      "importance": 600,
+      "stages": [
+        {
+          "id": "forest_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["Wolves and goblins stalk the forest paths. Travel carefully after dark."]
+        }
+      ]
+    },
+    "criminal_activity": {
+      "importance": 500,
+      "stages": [
+        {
+          "id": "crime_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["There have been some thefts reported. Bandits operating nearby."]
+        }
+      ]
+    },
+    "traveler_rumors": {
+      "importance": 400,
+      "stages": [
+        {
+          "id": "rumor_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["Strange lights at a ruined castle north of here. Travelers speak of ghostly figures."]
+        }
+      ]
+    },
+    "village_history": {
+      "importance": 400,
+      "stages": [
+        {
+          "id": "history_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["This village was founded over 300 years ago by settlers from the south."]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["patrol_perimeter"],
+    "progresses": [],
+    "completes": ["guard_advice"]
+  },
+
+  "shop": null,
+
+  "conversation": {
+    "personality": "dutiful",
+    "greeting": "The guard stands tall, hand resting on his sword. 'State your business, traveler.'",
+    "farewell": "Aldric nods firmly. 'Stay safe.'",
+    "dialogue_interest": ["guard", "patrol", "danger", "protect", "village", "safety"],
+    "dialogue_bored": ["violence", "fighting", "weapons", "gossip"],
+    "topics": {
+      "sword_techniques": {
+        "greeting": "Aldric's eyes light up. 'Ah, interested in the art of the sword? I can teach you five fundamental techniques if you've proven yourself.'",
+        "farewell": "Remember, technique is nothing without practice. Train hard, and you'll become a true swordsman.",
+        "keywords": ["sword", "technique", "combat", "training", "mastery", "art"]
+      }
+    }
+  },
+
+  "world": {
+    "job": "guard",
+    "shop": null,
+    "available_quests": [
+      {
+        "id": "patrol_perimeter",
+        "name": "Patrol the Perimeter",
+        "description": "I need someone to help patrol the village perimeter. Strange noises have been reported at night.",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Patrol the village walls at night", "type": "explore", "target": "village_walls", "current": 0},
+          {"description": "Investigate strange noises", "type": "investigate", "target": "noise_source", "current": 0},
+          {"description": "Report findings to Aldric", "type": "talk", "target": "guard", "current": 0}
+        ],
+        "rewards": {
+          "gold": 30,
+          "item": "Guard Badge",
+          "reputation": 5
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "containers": [
+    {
+      "id": "small_quiver",
+      "name": "Small Quiver",
+      "category": "container",
+      "subtype": "quiver",
+      "capacity": 3,
+      "weight": 1,
+      "description": "A small quiver that holds up to 3 arrows."
+    },
+    {
+      "id": "medium_quiver",
+      "name": "Medium Quiver",
+      "category": "container",
+      "subtype": "quiver",
+      "capacity": 6,
+      "weight": 1.5,
+      "description": "A medium quiver that holds up to 6 arrows."
+    },
+    {
+      "id": "large_quiver",
+      "name": "Large Quiver",
+      "category": "container",
+      "subtype": "quiver",
+      "capacity": 9,
+      "weight": 2,
+      "description": "A large quiver that holds up to 9 arrows."
+    }
+  ]
+}

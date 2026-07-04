@@ -1,0 +1,25 @@
+{
+  "id": "sword_mastery",
+  "title": "The Art of the Sword",
+  "giver": "aldric",
+  "participants": ["aldric"],
+  "prerequisites": ["patrol_perimeter"],
+  "description": "Aldric offers to teach you advanced sword techniques if you prove yourself worthy.",
+  "completion_conditions": [
+    { "type": "talk", "target": "aldric", "topic": "sword_techniques" }
+  ],
+  "rewards": {
+    "techniques": ["draw_cut", "riposte", "sword_dance", "perfect_cut", "whirlwind"],
+    "reputation": { "actor": { "aldric": 50 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": { "aldric": 30 }
+  },
+  "keywords": ["sword", "technique", "combat", "training", "aldric", "mastery"],
+  "steps": [
+    {"description": "Speak to Aldric about sword techniques", "type": "talk", "target": "aldric", "topic": "sword_techniques", "current": 0}
+  ],
+  "completion_npc": "aldric",
+  "completion_topic": "sword_techniques"
+}

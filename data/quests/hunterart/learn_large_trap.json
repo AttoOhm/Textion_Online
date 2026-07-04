@@ -1,0 +1,20 @@
+{
+  "id": "learn_large_trap",
+  "title": "Lesson: Large Trap",
+  "giver": "huntsman",
+  "prerequisites": ["learn_silent_step"],
+  "description": "Learn advanced multi-target traps.",
+  "completion_conditions": [
+    { "type": "stat", "target": "multi_target_traps", "count": 5 }
+  ],
+  "rewards": {
+    "technique": "large_trap",
+    "reputation": { "actor": { "huntsman": 150 } }
+  },
+  "steps": [
+    {"description": "Place 5 large traps", "type": "stat", "target": "multi_target_traps", "count": 5},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman"}
+  ],
+  "completion_npc": "huntsman",
+  "completion_topic": "large_trap"
+}

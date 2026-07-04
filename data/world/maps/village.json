@@ -1,0 +1,97 @@
+{
+  "id": "village",
+  "name": "Village of Oakhaven",
+  "description": "A peaceful medieval village nestled in a valley.",
+  "nodes": {
+    "village_center": {
+      "id": "village_center",
+      "name": "Village Square",
+      "description": "The heart of the village. A weathered stone fountain stands in the center, and villagers go about their daily business.",
+      "exits": { "to the blacksmith": "blacksmith", "to the tavern": "tavern", "to the market": "market", "to the village gate": "gate_exit", "to the church": "church", "to the adventure guild": "adventure_guild", "to the arcane tower": "arcane_tower" },
+      "entities": ["fountain", "notice_board"],
+      "tags": ["village", "safe", "hub"],
+      "discovery_text": "You enter the village square. A fountain gurgles at its center.",
+      "ambient_text": "Villagers chat quietly by the fountain."
+    },
+    "blacksmith": {
+      "id": "blacksmith",
+      "name": "Blacksmith Shop",
+      "description": "The ring of hammer on anvil echoes from this sturdy stone building. Weapons and tools line the walls.",
+      "exits": { "to the village center": "village_center" },
+      "entities": ["anvil", "weapon_rack","furnace", "copper_deposit"],
+      "tags": ["village", "shop", "craft"],
+      "discovery_text": "Heat washes over you as you step into the smithy.",
+      "ambient_text": "Sparks fly as hammer strikes steel."
+    },
+    "tavern": {
+      "id": "tavern",
+      "name": "The Rusty Tankard Tavern",
+      "description": "Warm light spills from the windows. The smell of ale and hearty stew fills the air. A rugged hunter sits in the corner, cleaning his gear.",
+      "exits": { "to the village center": "village_center" },
+      "entities": ["bar", "tables", "fireplace", "mortar"],
+      "tags": ["village", "social", "rest", "hunter"],
+      "discovery_text": "The tavern door swings open, releasing a wave of warmth and laughter.",
+      "ambient_text": "A fire crackles in the hearth. A hunter sharpens his knife in the corner."
+    },
+    "market": {
+      "id": "market",
+      "name": "Marketplace",
+      "description": "Colorful tents and stalls crowd the marketplace. Merchants call out to passersby.",
+      "exits": { "to the village center": "village_center" },
+      "entities": ["stalls", "crates", "saw_table", "workbench"],
+      "tags": ["village", "shop", "trade"],
+      "discovery_text": "The marketplace buzzes with activity.",
+      "ambient_text": "A merchant haggles loudly over spices."
+    },
+    "gate_exit": {
+      "id": "gate_exit",
+      "name": "Oakhaven Gates Exit",
+      "description": "Just inside the massive gates of Oakhaven, looking out to the forest.",
+      "exits": { "to the village center": "village_center" },
+      "entities": ["overworld_entrance"],
+      "tags": ["village", "entrance", "safe"],
+      "discovery_text": "The village gates stand open, leading to the wild beyond.",
+      "ambient_text": "A guard leans against the gatepost."
+    },
+    "church": {
+      "id": "church",
+      "name": "Church of the Divine Light",
+      "description": "A serene stone church with stained glass windows depicting holy symbols. The air smells of incense and peace. An elderly archmage studies ancient tomes in a corner alcove.",
+      "exits": { "to the village center": "village_center", "to the graveyard": "graveyard" },
+      "entities": ["altar", "pews", "holy_symbol", "arcane_tomes"],
+      "tags": ["village", "church", "safe", "heal", "magic"],
+      "discovery_text": "You step into the quiet sanctuary. Sunlight streams through stained glass.",
+      "ambient_text": "Soft chanting echoes from the choir loft. An archmage mutters arcane formulas nearby."
+    },
+    "graveyard": {
+      "id": "graveyard",
+      "name": "Village Graveyard",
+      "description": "A peaceful graveyard with weathered tombstones and blooming wildflowers. The church stands to the north.",
+      "exits": { "to the church": "church" },
+      "entities": ["tombstones", "wildflowers", "old_oak"],
+      "tags": ["village", "graveyard", "respawn"],
+      "discovery_text": "You enter the quiet graveyard. The air is still and peaceful.",
+      "ambient_text": "A gentle breeze rustles the leaves of the old oak tree."
+    },
+    "adventure_guild": {
+      "id": "adventure_guild",
+      "name": "Adventure Guild Hall",
+      "description": "A sturdy wooden building with a prominent sign bearing a sword and shield. Inside, a large bulletin board displays various quests. A tall woman in leather armor practices sword forms in the corner.",
+      "exits": { "to the village center": "village_center" },
+      "entities": ["bulletin_board", "reception_desk", "quest_boards", "training_dummy"],
+      "tags": ["village", "guild", "quests"],
+      "discovery_text": "You push open the heavy oak door of the guild hall. The smell of parchment and adventure fills the air.",
+      "ambient_text": "Adventurers mill about, discussing their latest exploits. A swordswoman practices her forms nearby."
+    },
+    "arcane_tower": {
+      "id": "arcane_tower",
+      "name": "Arcane Tower",
+      "description": "A tall, cylindrical tower of polished white stone that seems to shimmer with magical energy. Arcane symbols are carved into the walls, and a soft blue light glows from the windows. The air crackles with raw magical power.",
+      "exits": { "to the village center": "village_center" },
+      "entities": ["arcane_circles", "floating_books", "crystal_ball", "arcane_library"],
+      "tags": ["village", "magic", "arcane", "tower"],
+      "discovery_text": "You stand before the Arcane Tower, feeling the magical energy thrumming through the stone. The heavy oak door stands slightly ajar.",
+      "ambient_text": "Arcane energy hums in the air. You can hear the distant sound of pages turning and arcane formulas being recited."
+    }
+  }
+}

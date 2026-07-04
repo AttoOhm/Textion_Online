@@ -1,0 +1,28 @@
+{
+  "id": "learn_divine_shield",
+  "title": "Lesson: Divine Shield",
+  "giver": "father_benedict",
+  "participants": ["father_benedict"],
+  "prerequisites": ["learn_purify"],
+  "description": "Father Benedict will teach you Divine Shield, a protective barrier of holy light.",
+  "completion_conditions": [
+    { "type": "stat", "target": "damage_absorbed", "count": 100 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "divine_shield",
+    "reputation": { "actor": { "father_benedict": 100 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["divine", "shield", "protection", "learn", "benedict"],
+  "steps": [
+    {"description": "Absorb 100 damage with shields", "type": "stat", "target": "damage_absorbed", "count": 100, "current": 0},
+    {"description": "Speak to Father Benedict", "type": "talk", "target": "father_benedict", "current": 0}
+  ],
+  "completion_npc": "father_benedict",
+  "completion_topic": "divine_shield"
+}

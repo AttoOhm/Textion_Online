@@ -1,0 +1,91 @@
+{
+  "id": "wolf",
+  "name": "Wolf",
+  "race": "wolf",
+  "subtype": "gray_wolf",
+  "languages": {
+    "speak": [],
+    "understand": []
+  },
+  "factions": [],
+
+  "appearance": {
+    "unknown_name": "a gray wolf with piercing yellow eyes",
+    "known_name": "Wolf",
+    "full_name": "Gray Wolf",
+    "description": "A gray wolf with piercing yellow eyes. It bares its fangs at you."
+  },
+
+  "attributes": {
+    "strength": 20,
+    "dexterity": 20,
+    "knowledge": 60,
+    "constitution": 10,
+    "observation": 13,
+    "willpower": 50,
+    "reactiveness": 20,
+    "arcana": 50
+  },
+
+  "skills": {
+    "melee": 45,
+    "stealth": 60,
+    "perception": 55
+  },
+
+  "techniques": ["bite", "claw", "howl"],
+
+  "schedule": [
+    { "from": 0, "to": 24, "map_id": "overworld", "node_id": "forest_path_start" }
+  ],
+
+  "relations": {},
+  "relationships": {
+    "player": "enemies",
+    "wolf": "pack",
+    "goblin": "neutral"
+  },
+
+  "knowledge": {},
+
+  "quests": {
+    "starts": [],
+    "progresses": [],
+    "completes": []
+  },
+
+  "shop": null,
+
+  "conversation": null,
+
+  "is_hostile": true,
+  "loot": [
+    {"id": "wolf_pelt", "name": "Wolf Pelt", "chance": 0.7},
+    {"id": "wolf_fang", "name": "Wolf Fang", "chance": 0.5}
+  ],
+
+  "world": {},
+  "type": "creature",
+  "can_converse": false,
+  "species": "wolf",
+  "descriptor": "feral",
+  "location": "forest_path",
+  "personality": "aggressive, territorial, cunning",
+  "emotions": {
+    "aggressive": 0.7,
+    "fearful": 0.2
+  },
+  "hp": 55,
+  "max_hp": 55,
+  "damage": 15,
+  "behaviors": {
+    "hostile": true,
+    "aggressive": true,
+    "poursuit": true,
+    "flee": 20,
+    "patrol_radius": 3
+  },
+  "spawn_locations": ["forest_path", "deep_forest"],
+  "respawn_time": 300,
+  "is_alive": true
+}

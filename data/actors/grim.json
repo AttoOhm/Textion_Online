@@ -1,0 +1,190 @@
+{
+  "id": "grim",
+  "name": "Grim",
+  "race": "human",
+  "subtype": "blacksmith",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["village"],
+
+  "appearance": {
+    "unknown_name": "A blacksmith at his forge",
+    "known_name": "Grim",
+    "full_name": "Grim, the village blacksmith",
+    "description": "A broad-shouldered man with soot-stained hands and a thick leather apron."
+  },
+
+  "attributes": {
+    "strength": 140,
+    "dexterity": 100,
+    "knowledge": 120,
+    "constitution": 130,
+    "observation": 110,
+    "willpower": 50,
+    "reactiveness": 50,
+    "arcana": 50
+  },
+
+  "skills": {
+    "smithing": 75,
+    "appraisal": 60,
+    "negotiation": 30
+  },
+
+  "techniques": ["power_strike", "forge_mastery"],
+
+  "schedule": [
+    { "from": 8, "to": 9, "map_id": "village", "node_id": "blacksmith" },
+    { "from": 9, "to": 14, "map_id": "village", "node_id": "tavern" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "blacksmith" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "blacksmith" },
+    { "from": 22, "to": 8, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "aldric": { "trust": 600, "respect": 700, "friendship": 400, "fear": 0 },
+    "elias": { "trust": 400, "respect": 300, "friendship": 200, "fear": 0 },
+    "meadow": { "trust": 500, "respect": 400, "friendship": 500, "fear": 0 },
+    "bertha": { "trust": 300, "respect": 200, "friendship": 100, "fear": 0 },
+    "wolf": { "trust": 0, "respect": 0, "friendship": 0, "fear": 600 },
+    "goblin": { "trust": 0, "respect": 0, "friendship": 0, "fear": 700 }
+  },
+
+  "knowledge": {
+    "blacksmithing": {
+      "importance": 800,
+      "stages": [
+        {
+          "id": "blacksmith_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["I work iron and steel here. Good ore comes from the east."]
+        }
+      ]
+    },
+    "village_history": {
+      "importance": 400,
+      "stages": [
+        {
+          "id": "history_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["This village was founded over 300 years ago. Settlers came from the south."]
+        }
+      ]
+    },
+    "iron_deposits": {
+      "importance": 700,
+      "stages": [
+        {
+          "id": "iron_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["There are iron deposits in the eastern hills. The mines are dangerous but rich."]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["guard_advice", "wolves_menace", "alpha_wolf_hunt", "learn_smelting", "learn_blacksmithing"],
+    "progresses": [],
+    "completes": ["guard_advice", "wolves_menace", "alpha_wolf_hunt", "learn_smelting", "learn_blacksmithing"]
+  },
+
+  "shop": {
+    "visible_for_sale": ["copper_sword", "iron_sword", "recipe_copper_sword", "recipe_copper_dagger", "recipe_copper_axe", "recipe_copper_hammer", "recipe_iron_sword", "recipe_iron_dagger", "recipe_bronze_sword", "recipe_bronze_dagger", "recipe_bronze_axe", "recipe_bronze_hammer", "recipe_steel_sword", "recipe_steel_dagger", "recipe_steel_axe", "recipe_steel_hammer", "recipe_mithril_sword", "recipe_mithril_dagger", "recipe_mithril_axe", "recipe_mithril_hammer", "recipe_titran_sword", "recipe_titran_dagger", "recipe_titran_axe", "recipe_titran_hammer", "copper_ingot", "iron_ingot", "bronze_ingot", "steel_ingot", "oak_plank", "ash_plank", "yew_plank"],
+    "hidden_for_sale": ["fang_of_aldric"]
+  },
+
+  "conversation": {
+    "personality": "dutiful",
+    "first_greeting": "The blacksmith looks up from his anvil, wiping sweat from his brow. 'Name's Grim. I'm the village blacksmith. Need something forged or repaired?'",
+    "greeting": "Grim looks up from his anvil, wiping sweat from his brow. 'Need something forged or repaired?'",
+    "farewell": "Grim nods and returns to his work.",
+    "dialogue_interest": ["forge", "steel", "weapon", "ore", "smith"],
+    "dialogue_bored": ["weather", "gossip", "politics"]
+  },
+
+  "world": {
+    "job": "blacksmith",
+    "shop": {
+      "items": [
+        {"name": "Copper Sword", "stats": "ATK: 8", "price": 200, "secret": false},
+        {"name": "Iron Sword", "stats": "ATK: 12", "price": 300, "secret": false},
+        {"name": "Recipe: Copper Sword", "stats": "Teaches: Copper Sword", "price": 25, "secret": false},
+        {"name": "Recipe: Copper Dagger", "stats": "Teaches: Copper Dagger", "price": 15, "secret": false},
+        {"name": "Recipe: Copper Axe", "stats": "Teaches: Copper Axe", "price": 30, "secret": false},
+        {"name": "Recipe: Copper Hammer", "stats": "Teaches: Copper Hammer", "price": 35, "secret": false},
+        {"name": "Recipe: Iron Sword", "stats": "Teaches: Iron Sword", "price": 50, "secret": false},
+        {"name": "Recipe: Iron Dagger", "stats": "Teaches: Iron Dagger", "price": 35, "secret": false},
+        {"name": "Recipe: Bronze Sword", "stats": "Teaches: Bronze Sword", "price": 40, "secret": false},
+        {"name": "Recipe: Bronze Dagger", "stats": "Teaches: Bronze Dagger", "price": 25, "secret": false},
+        {"name": "Recipe: Bronze Axe", "stats": "Teaches: Bronze Axe", "price": 45, "secret": false},
+        {"name": "Recipe: Bronze Hammer", "stats": "Teaches: Bronze Hammer", "price": 50, "secret": false},
+        {"name": "Recipe: Steel Sword", "stats": "Teaches: Steel Sword", "price": 75, "secret": false},
+        {"name": "Recipe: Steel Dagger", "stats": "Teaches: Steel Dagger", "price": 55, "secret": false},
+        {"name": "Recipe: Steel Axe", "stats": "Teaches: Steel Axe", "price": 85, "secret": false},
+        {"name": "Recipe: Steel Hammer", "stats": "Teaches: Steel Hammer", "price": 90, "secret": false},
+        {"name": "Recipe: Mithril Sword", "stats": "Teaches: Mithril Sword", "price": 150, "secret": false},
+        {"name": "Recipe: Mithril Dagger", "stats": "Teaches: Mithril Dagger", "price": 120, "secret": false},
+        {"name": "Recipe: Mithril Axe", "stats": "Teaches: Mithril Axe", "price": 160, "secret": false},
+        {"name": "Recipe: Mithril Hammer", "stats": "Teaches: Mithril Hammer", "price": 170, "secret": false},
+        {"name": "Recipe: Titran Sword", "stats": "Teaches: Titran Sword", "price": 250, "secret": false},
+        {"name": "Recipe: Titran Dagger", "stats": "Teaches: Titran Dagger", "price": 200, "secret": false},
+        {"name": "Recipe: Titran Axe", "stats": "Teaches: Titran Axe", "price": 260, "secret": false},
+        {"name": "Recipe: Titran Hammer", "stats": "Teaches: Titran Hammer", "price": 270, "secret": false},
+        {"name": "Copper Ingot", "stats": "Smithing material", "price": 10, "secret": false},
+        {"name": "Iron Ingot", "stats": "Smithing material", "price": 20, "secret": false},
+        {"name": "Bronze Ingot", "stats": "Smithing material", "price": 30, "secret": false},
+        {"name": "Steel Ingot", "stats": "Smithing material", "price": 50, "secret": false},
+        {"name": "Oak Plank", "stats": "Smithing material", "price": 8, "secret": false},
+        {"name": "Ash Plank", "stats": "Smithing material", "price": 12, "secret": false},
+        {"name": "Yew Plank", "stats": "Smithing material", "price": 18, "secret": false},
+        {"name": "old Pickaxe", "stats": "ATK: 4", "price": 20, "secret": false},
+        {"name": "Enchanted Blade", "stats": "ATK: 12", "price": 100, "secret": true, "quest_required": "wolves_menace"}
+      ],
+      "buy_prices": {
+        "weapons": 0.5,
+        "armor": 0.4,
+        "default": 0.3
+      }
+    },
+    "available_quests": [
+      {
+        "id": "guard_advice",
+        "name": "Guard's Advice",
+        "description": "I've been hearing rumors from the merchants. Ask Aldric what he knows about the wolves. He'll have more details than I do.",
+        "prerequisites": [],
+        "steps": [
+          {"description": "Ask Aldric about the wolves", "type": "talk_topic", "target": "wolves", "npc": "aldric", "current": 0}
+        ],
+        "completion_npc": "aldric",
+        "completion_topic": "wolves",
+        "keywords": ["wolves", "aldric", "guard", "ask", "advice", "problem"],
+        "rewards": {
+          "gold": 5,
+          "reputation": 2
+        }
+      },
+      {
+        "id": "wolves_menace",
+        "name": "Wolves Menace",
+        "description": "The wolves in the forest have been getting bolder. Kill 5 of them and I'll reward you handsomely.",
+        "prerequisites": ["guard_advice"],
+        "steps": [
+          {"description": "Kill 5 wolves in the forest", "type": "kill", "target": "wolf", "count": 5, "current": 0},
+          {"description": "Return to Grim", "type": "talk", "target": "blacksmith", "current": 0}
+        ],
+        "keywords": ["wolves", "forest", "danger", "hunt", "kill", "reward"],
+        "rewards": {
+          "gold": 50,
+          "item": "Enchanted Blade",
+          "reputation": 10
+        }
+      }
+    ]
+  }
+}

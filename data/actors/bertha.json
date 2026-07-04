@@ -1,0 +1,159 @@
+{
+  "id": "bertha",
+  "name": "Bertha",
+  "race": "human",
+  "subtype": "farmer",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["village"],
+
+  "appearance": {
+    "unknown_name": "a farmer at her stall",
+    "known_name": "Bertha",
+    "full_name": "Bertha, the farmer",
+    "description": "A sturdy woman with dirt under her nails and a basket of vegetables at her side."
+  },
+
+  "attributes": {
+    "strength": 120,
+    "dexterity": 100,
+    "knowledge": 100,
+    "constitution": 140,
+    "observation": 100,
+    "willpower": 50,
+    "reactiveness": 50,
+    "arcana": 50
+  },
+
+  "skills": {
+    "farming": 80,
+    "cooking": 50,
+    "barter": 40
+  },
+
+  "techniques": [],
+
+  "schedule": [
+    { "from": 8, "to": 12, "map_id": "village", "node_id": "market" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "tavern" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "market" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "market" },
+    { "from": 22, "to": 8, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 300, "respect": 200, "friendship": 300, "fear": 0 },
+    "aldric": { "trust": 300, "respect": 400, "friendship": 250, "fear": 0 },
+    "elias": { "trust": 400, "respect": 300, "friendship": 350, "fear": 0 },
+    "meadow": { "trust": 500, "respect": 400, "friendship": 500, "fear": 0 }
+  },
+
+  "knowledge": {
+    "farming": {
+      "importance": 700,
+      "stages": [
+        {
+          "id": "farm_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["The fields produce good harvests. Autumn is the busiest season."]
+        }
+      ]
+    },
+    "seasons": {
+      "importance": 500,
+      "stages": [
+        {
+          "id": "season_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["Spring planting, autumn harvest. Winter is harsh in these parts."]
+        }
+      ]
+    },
+    "herbs": {
+      "importance": 600,
+      "stages": [
+        {
+          "id": "herb_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["Healing herbs near the old oak tree. The apothecary pays well for them."]
+        }
+      ]
+    },
+    "village_history": {
+      "importance": 400,
+      "stages": [
+        {
+          "id": "history_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["This village was founded over 300 years ago. Settlers came from the south."]
+        }
+      ]
+    },
+    "forest_plants": {
+      "importance": 500,
+      "stages": [
+        {
+          "id": "plant_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["The forest has many useful plants if you know where to look."]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["herb_collection"],
+    "progresses": [],
+    "completes": ["herb_collection"]
+  },
+
+  "shop": {
+    "visible_for_sale": ["fresh_bread", "apple", "cheese_wheel", "herb_bundle"],
+    "hidden_for_sale": []
+  },
+
+  "conversation": {
+    "personality": "friendly",
+    "first_greeting": "The farmer looks up from her vegetables with a warm smile. 'Hello there! I'm Bertha, the village farmer. Looking for fresh produce?'",
+    "greeting": "Bertha looks up from her vegetables. 'Hello there! Looking for fresh produce?'",
+    "farewell": "Bertha smiles. 'Take care, and come back for the freshest goods in town!'",
+    "dialogue_interest": ["farm", "vegetable", "harvest", "season", "weather", "nature"],
+    "dialogue_bored": ["violence", "fighting", "weapons", "politics"]
+  },
+
+  "world": {
+    "job": "farmer",
+    "shop": {
+      "items": [
+        {"name": "Fresh Bread", "stats": "Restores 8 HP", "price": 1, "secret": false},
+        {"name": "Apple", "stats": "Restores 5 HP", "price": 1, "secret": false},
+        {"name": "Cheese Wheel", "stats": "Restores 12 HP", "price": 3, "secret": false},
+        {"name": "Herb Bundle", "stats": "Crafting ingredient", "price": 4, "secret": false}
+      ],
+      "buy_prices": {
+        "food": 0.4,
+        "default": 0.3
+      }
+    },
+    "active_quest": {
+      "name": "Herb Collection",
+      "description": "I need someone to gather some rare herbs from the forest for my special recipes.",
+      "steps": [
+        {"description": "Find 5 Healing Herbs in the forest", "type": "collect", "target": "healing_herb", "count": 5, "current": 0},
+        {"description": "Return the herbs to Bertha", "type": "talk", "target": "farmer", "current": 0}
+      ],
+      "rewards": {
+        "gold": 20,
+        "item": "Herb Bundle",
+        "reputation": 5
+      }
+    }
+  }
+}

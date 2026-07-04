@@ -1,0 +1,40 @@
+{
+  "mash": [
+    {
+      "id": "green_mash",
+      "name": "Green Mash",
+      "category": "material",
+      "description": "A mash made from green berries."
+    },
+    {
+      "id": "red_mash",
+      "name": "Red Mash",
+      "category": "material",
+      "description": "A mash made from red berries."
+    },
+    {
+      "id": "black_mash",
+      "name": "Black Mash",
+      "category": "material",
+      "description": "A mash made from black berries."
+    },
+    {
+      "id": "yellow_mash",
+      "name": "Yellow Mash",
+      "category": "material",
+      "description": "A mixed mash of green berries and wheat."
+    },
+    {
+      "id": "pink_mash",
+      "name": "Pink Mash",
+      "category": "material",
+      "description": "A mixed mash of red berries and rice."
+    },
+    {
+      "id": "purple_mash",
+      "name": "Purple Mash",
+      "category": "material",
+      "description": "A mixed mash of black berries and barley."
+    }
+  ]
+}

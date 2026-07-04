@@ -1,0 +1,359 @@
+{
+  "actors": [
+    { "id": "grey_wolf_1",
+      "name": "Grey Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "gray",
+      "spawn": { "map_id": "overworld", "node_id": "forest_path_start" },
+      "possible_locations": [
+        {"map_id": "overworld", "node_id": "forest_path_start"},
+        {"map_id": "overworld", "node_id": "forest_edge_north"},
+        {"map_id": "overworld", "node_id": "forest_edge_west"}
+      ],
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "white_wolf_1",
+      "name": "White Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "white",
+      "spawn": { "map_id": "overworld", "node_id": "forest_edge_north" },
+      "possible_locations": [
+        {"map_id": "overworld", "node_id": "forest_edge_north"},
+        {"map_id": "overworld", "node_id": "deep_forest_north"}
+      ],
+      "max_distance": 2,
+      "respawn_minutes": 10
+    },
+    { "id": "black_wolf_1",
+      "name": "Black Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "black",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_north" },
+      "possible_locations": [
+        {"map_id": "overworld", "node_id": "deep_forest_north"},
+        {"map_id": "overworld", "node_id": "forest_path_west"}
+      ],
+      "max_distance": 2,
+      "respawn_minutes": 10
+    },
+    { "id": "scared_wolf_1",
+      "name": "Scared Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "scared",
+      "spawn": { "map_id": "overworld", "node_id": "forest_path_west" },
+      "possible_locations": [
+        {"map_id": "overworld", "node_id": "forest_path_west"},
+        {"map_id": "overworld", "node_id": "forest_edge_west"}
+      ],
+      "max_distance": 2,
+      "respawn_minutes": 10,
+      "behaviors": {
+        "hostile": false,
+        "aggressive": false,
+        "flee_threshold": 0.5
+      }
+    },
+    { "id": "enraged_wolf_1",
+      "name": "Enraged Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "enraged",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_north" },
+      "possible_locations": [
+        {"map_id": "overworld", "node_id": "deep_forest_north"}
+      ],
+      "max_distance": 2,
+      "respawn_minutes": 10
+    },
+    { "id": "deep_wolf_52_1",
+      "name": "Grey Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "gray",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_52" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "deep_wolf_52_2",
+      "name": "Black Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "black",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_52" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "deep_wolf_52_3",
+      "name": "Scarred Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "scarred",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_52" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "deep_wolf_68_1",
+      "name": "Grey Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "gray",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_68" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "deep_wolf_68_2",
+      "name": "Large Black Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "large_black",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_68" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "deep_wolf_68_3",
+      "name": "Young Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "young",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_68" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "wander_wolf_deep_18",
+      "name": "Grey Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "gray",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_18" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "wander_wolf_deep_33",
+      "name": "Black Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "black",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_33" },
+      "max_distance": 3,
+      "respawn_minutes": 10
+    },
+    { "id": "wander_wolf_edge_10",
+      "name": "Young Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "young",
+      "spawn": { "map_id": "overworld", "node_id": "forest_edge_10" },
+      "max_distance": 4,
+      "respawn_minutes": 10
+    },
+    { "id": "wolf_boss_alpha",
+      "name": "Alpha Wolf",
+      "type": "creature",
+      "template": "wolf",
+      "descriptor": "large_black",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_69" },
+      "max_distance": 4,
+      "respawn_minutes": 30,
+      "techniques": ["bite", "claw", "howl", "double_attack"],
+      "attributes": {
+        "strength": 40,
+        "dexterity": 30,
+        "knowledge": 60,
+        "constitution": 25,
+        "observation": 15,
+        "willpower": 60,
+        "reactiveness": 25,
+        "arcana": 50
+      },
+      "hp": 200,
+      "max_hp": 200,
+      "damage": 25,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "poursuit": true,
+        "flee": 10,
+        "patrol_radius": 4
+      },
+      "loot": [
+        {"id": "wolf_pelt", "name": "Alpha Wolf Pelt", "chance": 1.0},
+        {"id": "wolf_fang", "name": "Alpha Wolf Fang", "chance": 1.0},
+        {"id": "wolf_fang", "name": "Alpha Wolf Fang", "chance": 0.7},
+        {"id": "coins", "name": "Gold Coin", "chance": 1.0, "amount": "5-10"}
+      ],
+      "appearance": {
+        "unknown_name": "a massive black wolf with blood-red eyes",
+        "known_name": "Alpha Wolf",
+        "full_name": "Alpha Wolf, pack leader",
+        "description": "A massive black wolf with blood-red eyes. Its fur is scarred from countless battles, and it moves with terrifying purpose."
+      }
+    },
+    { "id": "goblin_deep_29_1",
+      "name": "Goblin bowman",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "hunter",
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_29" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "techniques": ["melee_attack", "short_bow_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "appearance": {
+        "unknown_name": "a goblin archer with a short bow",
+        "known_name": "Goblin bowman",
+        "full_name": "Goblin Bowman",
+        "description": "A scrawny goblin carrying a short bow. It nocks an arrow with practiced ease."
+      }
+    },
+    { "id": "goblin_deep_29_2",
+      "name": "Goblin Warrior",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "warrior",
+      "techniques": ["melee_attack", "crunch", "shield_bash"],
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_29" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 15,
+        "pierce": 12,
+        "bludgeon": 15
+      },
+      "appearance": {
+        "unknown_name": "a goblin warrior with a crude shield",
+        "known_name": "Goblin Warrior",
+        "full_name": "Goblin Warrior",
+        "description": "A muscular goblin with a wooden shield and rusty shortsword."
+      }
+    },
+    { "id": "goblin_deep_29_3",
+      "name": "Crooked-Nose Goblin",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "crooked_nose",
+      "techniques": ["melee_attack", "bite"],
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_29" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_deep_29_4",
+      "name": "Snarling Goblin",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "snarling",
+      "techniques": ["melee_attack", "crunch"],
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_29" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_deep_30_1",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "enraged",
+      "techniques": ["melee_attack", "short_bow_shot"],
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_30" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_deep_30_2",
+      "name": "One-Eyed Goblin",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "one_eyed",
+      "techniques": ["melee_attack", "crunch"],
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_30" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_deep_30_3",
+      "name": "Red-Capped Goblin",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "red_capped",
+      "techniques": ["melee_attack", "short_bow_shot"],
+      "spawn": { "map_id": "overworld", "node_id": "deep_forest_30" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_edge_17_1",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "scout",
+      "techniques": ["melee_attack", "short_bow_shot"],
+      "spawn": { "map_id": "overworld", "node_id": "forest_edge_17" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_edge_17_2",
+      "name": "Crooked-Nose Goblin",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "crooked_nose",
+      "techniques": ["melee_attack", "bite"],
+      "spawn": { "map_id": "overworld", "node_id": "forest_edge_17" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    },
+    { "id": "goblin_edge_17_3",
+      "name": "Snarling Goblin",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "snarling",
+      "techniques": ["melee_attack", "crunch"],
+      "spawn": { "map_id": "overworld", "node_id": "forest_edge_17" },
+      "max_distance": 4,
+      "respawn_minutes": 15,
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      }
+    }
+  ]
+}

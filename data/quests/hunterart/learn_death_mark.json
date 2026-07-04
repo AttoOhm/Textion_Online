@@ -1,0 +1,28 @@
+{
+  "id": "learn_death_mark",
+  "title": "Lesson: Death Mark",
+  "giver": "huntsman",
+  "participants": ["huntsman"],
+  "prerequisites": [],
+  "description": "The hunter will teach you Death Mark, a technique to mark targets for increased damage.",
+  "completion_conditions": [
+    { "type": "kill", "target": "creature", "count": 10 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "death_mark",
+    "reputation": { "actor": { "huntsman": 50 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["hunter", "death", "mark", "learn"],
+  "steps": [
+    {"description": "Defeat 10 creatures", "type": "kill", "target": "creature", "count": 10, "current": 0},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+  ],
+  "completion_npc": "huntsman",
+  "completion_topic": "death_mark"
+}

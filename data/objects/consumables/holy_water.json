@@ -1,0 +1,24 @@
+{
+  "holy_water": [
+    {
+      "id": "holy_water",
+      "name": "Holy Water",
+      "category": "consumable",
+      "subtype": "divine_fuel",
+      "description": "Water blessed by the church. Used to channel divine power for holy techniques.",
+      "stackable": true,
+      "max_stack": 30,
+      "weight": 0.2
+    },
+    {
+      "id": "consecrated_holy_water",
+      "name": "Consecrated Holy Water",
+      "category": "consumable",
+      "subtype": "divine_fuel",
+      "description": "Water blessed by a high priest. Powers the most sacred divine techniques.",
+      "stackable": true,
+      "max_stack": 10,
+      "weight": 0.5
+    }
+  ]
+}

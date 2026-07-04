@@ -1,0 +1,57 @@
+{
+  "chest": {
+    "id": "chest",
+    "name": "Wooden Chest",
+    "category": "structure",
+    "map_id": "dungeon",
+    "node_id": "dungeon_level_1",
+    "description": "A sturdy wooden chest, bound with iron bands.",
+    "interactable": true,
+    "actions": ["open", "examine"]
+  },
+  "barrel": {
+    "id": "barrel",
+    "name": "Wooden Barrel",
+    "category": "structure",
+    "map_id": "dungeon",
+    "node_id": "dungeon_level_1",
+    "description": "A common wooden barrel.",
+    "interactable": true,
+    "actions": ["examine", "search"]
+  },
+  "door": {
+    "id": "door",
+    "name": "Heavy Wooden Door",
+    "category": "structure",
+    "map_id": "dungeon",
+    "node_id": "dungeon_level_1",
+    "description": "A heavy wooden door, slightly ajar.",
+    "interactable": true,
+    "actions": ["open", "examine"]
+  },
+  "treasure_chest": {
+    "id": "treasure_chest",
+    "name": "Ornate Treasure Chest",
+    "category": "structure",
+    "map_id":  "goblin_camp", 
+    "node_id": "chiefs_tent",
+    "description": "An ornate chest, gleaming with gold and jewels.",
+    "interactable": true,
+    "actions": ["open", "examine", "take"],
+    "contains": [
+      {"id": "coins", "name": "Coins", "chance": 1.0, "min": 50, "max": 100},
+      {"id": "copper_sword", "name": "Copper Sword", "chance": 0.3},
+      {"id": "medium_quiver", "name": "Medium Quiver", "chance": 0.5}
+    ]
+  },
+  "altar": {
+    "id": "altar",
+    "name": "Stone Altar",
+    "category": "structure",
+    "map_id": "dungeon",
+    "node_id": "dungeon_level_2",
+    "description": "A dark stone altar, covered in strange symbols.",
+    "interactable": true,
+    "actions": ["examine", "pray"]
+  }
+}

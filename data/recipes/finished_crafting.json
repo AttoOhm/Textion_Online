@@ -1,0 +1,361 @@
+{
+  "blacksmithing": {
+    "technique": "blacksmithing",
+    "station": "anvil",
+    "recipes": {
+      "copper_sword": {
+        "name": "Copper Sword",
+        "inputs": [
+          {"item": "copper_ingot", "quantity": 3},
+          {"item": "oak_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "copper_sword", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "copper_dagger": {
+        "name": "Copper Dagger",
+        "inputs": [
+          {"item": "copper_ingot", "quantity": 2},
+          {"item": "oak_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "copper_dagger", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "iron_sword": {
+        "name": "Iron Sword",
+        "inputs": [
+          {"item": "iron_ingot", "quantity": 3},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "iron_sword", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "iron_dagger": {
+        "name": "Iron Dagger",
+        "inputs": [
+          {"item": "iron_ingot", "quantity": 2},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "iron_dagger", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "bronze_sword": {
+        "name": "Bronze Sword",
+        "inputs": [
+          {"item": "copper_ingot", "quantity": 3},
+          {"item": "tin_ore", "quantity": 12},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "bronze_sword", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "bronze_dagger": {
+        "name": "Bronze Dagger",
+        "inputs": [
+          {"item": "copper_ingot", "quantity": 2},
+          {"item": "tin_ore", "quantity": 9},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "bronze_dagger", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "bronze_axe": {
+        "name": "Bronze Axe",
+        "inputs": [
+          {"item": "copper_ingot", "quantity": 3},
+          {"item": "tin_ore", "quantity": 12},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "bronze_axe", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "bronze_hammer": {
+        "name": "Bronze Hammer",
+        "inputs": [
+          {"item": "copper_ingot", "quantity": 3},
+          {"item": "tin_ore", "quantity": 12},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "bronze_hammer", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "steel_sword": {
+        "name": "Steel Sword",
+        "inputs": [
+          {"item": "iron_ingot", "quantity": 3},
+          {"item": "coal", "quantity": 12},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "steel_sword", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "steel_dagger": {
+        "name": "Steel Dagger",
+        "inputs": [
+          {"item": "iron_ingot", "quantity": 2},
+          {"item": "coal", "quantity": 9},
+          {"item": "ash_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "steel_dagger", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "steel_axe": {
+        "name": "Steel Axe",
+        "inputs": [
+          {"item": "iron_ingot", "quantity": 3},
+          {"item": "coal", "quantity": 12},
+          {"item": "yew_plank", "quantity": 2}
+        ],
+        "outputs": [{"item": "steel_axe", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "steel_hammer": {
+        "name": "Steel Hammer",
+        "inputs": [
+          {"item": "iron_ingot", "quantity": 3},
+          {"item": "coal", "quantity": 12},
+          {"item": "yew_plank", "quantity": 2}
+        ],
+        "outputs": [{"item": "steel_hammer", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "mithril_sword": {
+        "name": "Mithril Sword",
+        "inputs": [
+          {"item": "mithril_ingot", "quantity": 3},
+          {"item": "yew_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "mithril_sword", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "mithril_dagger": {
+        "name": "Mithril Dagger",
+        "inputs": [
+          {"item": "mithril_ingot", "quantity": 2},
+          {"item": "yew_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "mithril_dagger", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "mithril_axe": {
+        "name": "Mithril Axe",
+        "inputs": [
+          {"item": "mithril_ingot", "quantity": 3},
+          {"item": "arcane_yew_plank", "quantity": 2}
+        ],
+        "outputs": [{"item": "mithril_axe", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "mithril_hammer": {
+        "name": "Mithril Hammer",
+        "inputs": [
+          {"item": "mithril_ingot", "quantity": 3},
+          {"item": "arcane_yew_plank", "quantity": 2}
+        ],
+        "outputs": [{"item": "mithril_hammer", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "titran_sword": {
+        "name": "Titran Sword",
+        "inputs": [
+          {"item": "titran_ingot", "quantity": 3},
+          {"item": "dragonite_ore", "quantity": 12},
+          {"item": "yew_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "titran_sword", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "titran_dagger": {
+        "name": "Titran Dagger",
+        "inputs": [
+          {"item": "titran_ingot", "quantity": 2},
+          {"item": "dragonite_ore", "quantity": 9},
+          {"item": "yew_plank", "quantity": 1}
+        ],
+        "outputs": [{"item": "titran_dagger", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "titran_axe": {
+        "name": "Titran Axe",
+        "inputs": [
+          {"item": "titran_ingot", "quantity": 3},
+          {"item": "dragonite_ore", "quantity": 12},
+          {"item": "arcane_yew_plank", "quantity": 2}
+        ],
+        "outputs": [{"item": "titran_axe", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "titran_hammer": {
+        "name": "Titran Hammer",
+        "inputs": [
+          {"item": "titran_ingot", "quantity": 3},
+          {"item": "dragonite_ore", "quantity": 12},
+          {"item": "arcane_yew_plank", "quantity": 2}
+        ],
+        "outputs": [{"item": "titran_hammer", "quantity": 1}],
+        "duration_ticks": 5
+      }
+    }
+  },
+  "alchemy": {
+    "technique": "alchemy",
+    "station": "cauldron",
+    "recipes": {
+      "healing_potion": {
+        "name": "Healing Potion",
+        "inputs": [
+          {"item": "yellow_mash", "quantity": 1}
+        ],
+        "outputs": [{"item": "healing_potion", "quantity": 1}],
+        "duration_ticks": 6
+      },
+      "healing_potion_plus": {
+        "name": "Healing Potion +",
+        "inputs": [
+          {"item": "yellow_mash", "quantity": 2},
+          {"item": "red_herb", "quantity": 1}
+        ],
+        "outputs": [{"item": "healing_potion+", "quantity": 1}],
+        "duration_ticks": 8
+      },
+      "healing_potion_plus_plus": {
+        "name": "Healing Potion ++",
+        "inputs": [
+          {"item": "yellow_mash", "quantity": 3},
+          {"item": "red_herb", "quantity": 2},
+          {"item": "berry", "quantity": 5}
+        ],
+        "outputs": [{"item": "healing_potion++", "quantity": 1}],
+        "duration_ticks": 10
+      },
+      "healing_potion_plus_plus_plus": {
+        "name": "Healing Potion +++",
+        "inputs": [
+          {"item": "yellow_mash", "quantity": 4},
+          {"item": "red_herb", "quantity": 3},
+          {"item": "berry", "quantity": 10},
+          {"item": "healing_potion++", "quantity": 1}
+        ],
+        "outputs": [{"item": "healing_potion+++", "quantity": 1}],
+        "duration_ticks": 12
+      },
+      "strength_potion": {
+        "name": "Strength Potion",
+        "inputs": [
+          {"item": "fire_herb", "quantity": 2},
+          {"item": "yellow_mash", "quantity": 1},
+          {"item": "red_herb", "quantity": 1}
+        ],
+        "outputs": [{"item": "strength_potion", "quantity": 1}],
+        "duration_ticks": 10
+      },
+      "swiftness_potion": {
+        "name": "Swiftness Potion",
+        "inputs": [
+          {"item": "wind_herb", "quantity": 2},
+          {"item": "yellow_mash", "quantity": 1},
+          {"item": "blue_essence", "quantity": 1}
+        ],
+        "outputs": [{"item": "swiftness_potion", "quantity": 1}],
+        "duration_ticks": 10
+      },
+      "iron_hide_potion": {
+        "name": "Iron Hide Potion",
+        "inputs": [
+          {"item": "stone_herb", "quantity": 2},
+          {"item": "yellow_mash", "quantity": 1},
+          {"item": "clear_water", "quantity": 1}
+        ],
+        "outputs": [{"item": "iron_hide_potion", "quantity": 1}],
+        "duration_ticks": 10
+      }
+    }
+  },
+  "woodcrafting": {
+    "technique": "woodcrafting",
+    "station": "workbench",
+    "recipes": {
+      "oak_bow": {
+        "name": "Oak Bow",
+        "inputs": [
+          {"item": "oak_plank", "quantity": 4},
+          {"item": "resin", "quantity": 12}
+        ],
+        "outputs": [{"item": "oak_bow", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "ash_bow": {
+        "name": "Ash Bow",
+        "inputs": [
+          {"item": "ash_plank", "quantity": 4},
+          {"item": "sap", "quantity": 12}
+        ],
+        "outputs": [{"item": "ash_bow", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "yew_bow": {
+        "name": "Yew Bow",
+        "inputs": [
+          {"item": "yew_plank", "quantity": 4},
+          {"item": "spirit_bark", "quantity": 12}
+        ],
+        "outputs": [{"item": "yew_bow", "quantity": 1}],
+        "duration_ticks": 5
+      },
+      "oak_staff": {
+        "name": "Oak Staff",
+        "inputs": [
+          {"item": "oak_plank", "quantity": 4},
+          {"item": "resin", "quantity": 12}
+        ],
+        "outputs": [{"item": "oak_staff", "quantity": 1}],
+        "duration_ticks": 6
+      },
+      "ash_staff": {
+        "name": "Ash Staff",
+        "inputs": [
+          {"item": "ash_plank", "quantity": 4},
+          {"item": "sap", "quantity": 12}
+        ],
+        "outputs": [{"item": "ash_staff", "quantity": 1}],
+        "duration_ticks": 6
+      },
+      "yew_staff": {
+        "name": "Yew Staff",
+        "inputs": [
+          {"item": "yew_plank", "quantity": 4},
+          {"item": "spirit_bark", "quantity": 12}
+        ],
+        "outputs": [{"item": "yew_staff", "quantity": 1}],
+        "duration_ticks": 6
+      },
+      "oak_wand": {
+        "name": "Oak Wand",
+        "inputs": [
+          {"item": "oak_plank", "quantity": 2},
+          {"item": "resin", "quantity": 6}
+        ],
+        "outputs": [{"item": "oak_wand", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "ash_wand": {
+        "name": "Ash Wand",
+        "inputs": [
+          {"item": "ash_plank", "quantity": 2},
+          {"item": "sap", "quantity": 6}
+        ],
+        "outputs": [{"item": "ash_wand", "quantity": 1}],
+        "duration_ticks": 4
+      },
+      "yew_wand": {
+        "name": "Yew Wand",
+        "inputs": [
+          {"item": "yew_plank", "quantity": 2},
+          {"item": "spirit_bark", "quantity": 6}
+        ],
+        "outputs": [{"item": "yew_wand", "quantity": 1}],
+        "duration_ticks": 4
+      }
+    }
+  }
+}

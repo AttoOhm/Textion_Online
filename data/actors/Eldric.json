@@ -1,0 +1,114 @@
+{
+  "id": "Eldric",
+  "name": "Eldric the Arcane",
+  "race": "human",
+  "subtype": "archmage",
+  "languages": {
+    "speak": ["common", "arcane"],
+    "understand": ["common", "arcane", "elvish"]
+  },
+  "factions": ["adventure_guild", "mage_council"],
+
+  "appearance": {
+    "unknown_name": "an elderly man in ornate robes",
+    "known_name": "Eldric",
+    "full_name": "Eldric the Arcane, Master of the Guild",
+    "description": "An elderly man with a long white beard and piercing blue eyes. He wears ornate blue robes embroidered with silver runes, and carries an ornate staff that glows with arcane energy."
+  },
+
+  "attributes": {
+    "strength": 60,
+    "dexterity": 100,
+    "knowledge": 200,
+    "constitution": 80,
+    "observation": 170,
+    "willpower": 180,
+    "reactiveness": 90,
+    "arcana": 250
+  },
+
+  "skills": {
+    "arcane_lore": 250,
+    "teaching": 150,
+    "alchemy": 120,
+    "enchanting": 180
+  },
+
+  "techniques": ["magic_missile", "mana_shield", "teleport", "arcane_sight", "arcane_explosion", "reality_tear"],
+
+  "schedule": [
+    { "from": 5, "to": 12, "map_id": "village", "node_id": "arcane_tower" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "library" },
+    { "from": 14, "to": 17, "map_id": "village", "node_id": "arcane_tower" },
+    { "from": 17, "to": 5, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 600, "respect": 700, "friendship": 500, "fear": 0 },
+    "aldric": { "trust": 500, "respect": 600, "friendship": 400, "fear": 0 },
+    "seraphina": { "trust": 700, "respect": 800, "friendship": 600, "fear": 0 },
+    "player": { "trust": 0, "respect": 0, "friendship": 0, "fear": 0 }
+  },
+
+  "knowledge": {
+    "arcane_arts": {
+      "importance": 1000,
+      "stages": [
+        {
+          "id": "arcane_intro",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": [
+            "I am Eldric, master of the arcane arts. I can teach you the fundamentals of magic.",
+            "Arcane magic requires focus - a staff or wand - and runestones to channel power.",
+            "Staves amplify spell damage, while wands reduce cooldowns. Choose your path wisely.",
+            "Each technique requires dedication. Come to me when you are ready to begin your training."
+          ]
+        }
+      ]
+    },
+    "magic_theory": {
+      "importance": 900,
+      "stages": [
+        {
+          "id": "magic_basics",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": [
+            "Magic Missile is your first spell - a reliable bolt of arcane energy.",
+            "Mana Shield provides protection by creating a barrier of pure magic.",
+            "Arcane Sight reveals hidden auras and enhances your perception.",
+            "Teleport allows instant movement, but requires precise control."
+          ]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["learn_magic_missile", "learn_mana_shield", "learn_arcane_sight", "learn_teleport", "learn_arcane_explosion", "learn_reality_tear"],
+    "progresses": [],
+    "completes": ["learn_magic_missile", "learn_mana_shield", "learn_arcane_sight", "learn_teleport", "learn_arcane_explosion", "learn_reality_tear"]
+  },
+
+  "shop": {
+    "visible_for_sale": ["runestone", "greater_runestone", "oak_wand", "ash_wand", "yew_wand", "oak_staff", "ash_staff", "yew_staff"],
+    "hidden_for_sale": ["ancient_archmage_staff"]
+  },
+
+  "conversation": {
+    "personality": "wise",
+    "first_greeting": "The archmage smiles warmly, his staff glowing with soft blue light. 'Ah, a seeker of arcane knowledge. I am Eldric the Arcane, master of this tower. What brings you here?'",
+    "greeting": "Eldric smiles warmly, his staff glowing with soft blue light. 'Ah, a seeker of arcane knowledge. I am Eldric. What brings you to the church?'",
+    "farewell": "He nods thoughtfully. 'May your studies be fruitful, and your runestones plentiful.'",
+    "dialogue_interest": ["magic", "arcane", "spell", "runestone", "staff", "wand", "learn", "technique"],
+    "dialogue_bored": ["weapons", "armor", "fighting", "gossip"]
+  },
+
+  "world": {
+    "job": "archmage",
+    "location": "arcane_tower",
+    "specialty": "arcane_techniques",
+    "teaching_style": "scholarly"
+  }
+}

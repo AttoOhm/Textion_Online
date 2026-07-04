@@ -1,0 +1,27 @@
+{
+  "id": "learn_silent_step",
+  "title": "Lesson: Silent Step",
+  "giver": "huntsman",
+  "prerequisites": ["learn_bear_trap"],
+  "description": "The hunter will teach you Silent Step, a stealth technique to move undetected.",
+  "completion_conditions": [
+    { "type": "stat", "target": "undetected_encounters", "count": 10 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "silent_step",
+    "reputation": { "actor": { "huntsman": 125 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["hunter", "silent", "step", "stealth", "learn"],
+  "steps": [
+    {"description": "Successfully avoid detection 10 times", "type": "stat", "target": "undetected_encounters", "count": 10, "current": 0},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+  ],
+  "completion_npc": "huntsman",
+  "completion_topic": "silent_step"
+}

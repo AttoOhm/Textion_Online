@@ -1,0 +1,22 @@
+{
+  "id": "learn_alchemy",
+  "title": "Lesson: Alchemy",
+  "giver": "meadow",
+  "prerequisites": ["learn_preserving"],
+  "description": "Learn to brew potions and elixirs at the cauldron.",
+  "completion_conditions": [
+    { "type": "item_delivery", "target": "yellow_mash", "count": 5 },
+    { "type": "item_delivery", "target": "healing_potion", "count": 3 }
+  ],
+  "rewards": {
+    "technique": "alchemy",
+    "reputation": { "actor": { "meadow": 150 } }
+  },
+  "steps": [
+    {"description": "Bring 5 yellow mash to Meadow", "type": "deliver", "target": "yellow_mash", "count": 5},
+    {"description": "Bring 3 healing potions to Meadow", "type": "deliver", "target": "healing_potion", "count": 3},
+    {"description": "Speak to Meadow", "type": "talk", "target": "meadow"}
+  ],
+  "completion_npc": "meadow",
+  "completion_topic": "alchemy"
+}

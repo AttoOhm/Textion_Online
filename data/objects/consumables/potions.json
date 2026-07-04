@@ -1,0 +1,88 @@
+{
+  "potions": [
+    {
+      "id": "healing_potion",
+      "name": "Healing Potion",
+      "category": "consumable",
+      "description": "A red liquid that restores 10 HP when consumed.",
+      "consumable": true,
+      "heal_amount": 10
+    },
+    {
+      "id": "healing_potion+",
+      "name": "Healing Potion +",
+      "category": "consumable",
+      "description": "A red liquid that restores 20 HP when consumed.",
+      "consumable": true,
+      "heal_amount": 20
+    },
+    {
+      "id": "healing_potion++",
+      "name": "Healing Potion ++",
+      "category": "consumable",
+      "description": "A red liquid that restores 33 HP when consumed.",
+      "consumable": true,
+      "heal_amount": 33
+    },
+    {
+      "id": "healing_potion+++",
+      "name": "Healing Potion +++",
+      "category": "consumable",
+      "description": "A red liquid that restores 50 HP when consumed.",
+      "consumable": true,
+      "heal_amount": 50
+    },
+    {
+      "id": "mana_potion",
+      "name": "Mana Potion",
+      "category": "consumable",
+      "description": "A blue liquid that restores 15 mana when consumed.",
+      "consumable": true,
+      "mana_restore": 15
+    },
+    {
+      "id": "mana_potion+",
+      "name": "Mana Potion +",
+      "category": "consumable",
+      "description": "A blue liquid that restores 30 mana when consumed.",
+      "consumable": true,
+      "mana_restore": 30
+    },
+    {
+      "id": "strength_potion",
+      "name": "Strength Potion",
+      "category": "consumable",
+      "description": "A fiery liquid that temporarily increases strength by 10 for 30 seconds.",
+      "consumable": true,
+      "buff": {
+        "stat": "strength",
+        "amount": 10,
+        "duration": 30
+      }
+    },
+    {
+      "id": "swiftness_potion",
+      "name": "Swiftness Potion",
+      "category": "consumable",
+      "description": "A green liquid that temporarily increases dexterity by 10 for 30 seconds.",
+      "consumable": true,
+      "buff": {
+        "stat": "dexterity",
+        "amount": 10,
+        "duration": 30
+      }
+    },
+    {
+      "id": "iron_hide_potion",
+      "name": "Iron Hide Potion",
+      "category": "consumable",
+      "description": "A grey liquid that temporarily increases constitution by 10 for 30 seconds.",
+      "consumable": true,
+      "buff": {
+        "stat": "constitution",
+        "amount": 10,
+        "duration": 30
+      }
+    }
+  ]
+}

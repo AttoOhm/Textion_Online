@@ -1,0 +1,122 @@
+{
+  "metals": [
+    {
+      "id": "copper_ore",
+      "name": "Copper Ore",
+      "category": "resource",
+      "stackable": true,
+      "max_stack": 128,
+      "description": "Raw copper ore mined from copper deposits."
+    },
+    {
+      "id": "iron_ore",
+      "name": "Iron Ore",
+      "category": "resource",
+      "stackable": true,
+      "max_stack": 128,
+      "description": "Raw iron ore mined from iron deposits."
+    },
+    {
+      "id": "mithril_ore",
+      "name": "Mithril Ore",
+      "category": "resource",
+      "description": "Rare mithril ore mined from mithril deposits."
+    },
+    {
+      "id": "tin_ore",
+      "name": "Tin Ore",
+      "category": "resource",
+      "description": "Raw tin ore mined from tin deposits."
+    },
+    {
+      "id": "coal",
+      "name": "Coal",
+      "category": "resource",
+      "description": "Coal mined from coal deposits. Used in steel production."
+    },
+    {
+      "id": "dragonite_ore",
+      "name": "Dragonite Ore",
+      "category": "resource",
+      "description": "Rare dragonite ore mined from dragonite deposits."
+    }
+  ],
+  "woods": [
+    {
+      "id": "oak_log",
+      "name": "Oak Log",
+      "category": "resource",
+      "stackable": true,
+      "max_stack": 128,
+      "description": "An oak log chopped from an oak tree."
+    },
+    {
+      "id": "ash_log",
+      "name": "Ash Log",
+      "category": "resource",
+      "description": "An ash log chopped from an ash tree."
+    },
+    {
+      "id": "yew_log",
+      "name": "Yew Log",
+      "category": "resource",
+      "description": "A yew log chopped from a yew tree."
+    },
+    {
+      "id": "resin",
+      "name": "Resin",
+      "category": "resource",
+      "description": "Natural resin harvested from resin deposits."
+    },
+    {
+      "id": "sap",
+      "name": "Sap",
+      "category": "resource",
+      "description": "Tree sap harvested from sap deposits."
+    },
+    {
+      "id": "spirit_bark",
+      "name": "Spirit Bark",
+      "category": "resource",
+      "description": "Mystical spirit bark harvested from spirit bark deposits."
+    }
+  ],
+  "food": [
+    {
+      "id": "green_berry",
+      "name": "Green Berry",
+      "category": "resource",
+      "description": "A green berry harvested from green berry bushes."
+    },
+    {
+      "id": "red_berry",
+      "name": "Red Berry",
+      "category": "resource",
+      "description": "A red berry harvested from red berry bushes."
+    },
+    {
+      "id": "black_berry",
+      "name": "Black Berry",
+      "category": "resource",
+      "description": "A black berry harvested from black berry bushes."
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "category": "resource",
+      "description": "Wheat harvested from wheat fields."
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "category": "resource",
+      "description": "Rice harvested from rice fields."
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "category": "resource",
+      "description": "Barley harvested from barley fields."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "learn_saw",
+  "title": "Lesson: Sawing",
+  "giver": "elias",
+  "prerequisites": [],
+  "description": "Learn to saw logs into planks at the woodshop.",
+  "completion_conditions": [
+    { "type": "item_delivery", "target": "oak_log", "count": 15 },
+    { "type": "item_delivery", "target": "ash_log", "count": 10 }
+  ],
+  "rewards": {
+    "technique": "sawing",
+    "reputation": { "actor": { "elias": 100 } }
+  },
+  "steps": [
+    {"description": "Bring 15 oak logs to Elias", "type": "deliver", "target": "oak_log", "count": 15},
+    {"description": "Bring 10 ash logs to Elias", "type": "deliver", "target": "ash_log", "count": 10},
+    {"description": "Speak to Elias", "type": "talk", "target": "elias"}
+  ],
+  "completion_npc": "elias",
+  "completion_topic": "sawing"
+}

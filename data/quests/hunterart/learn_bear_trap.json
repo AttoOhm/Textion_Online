@@ -1,0 +1,20 @@
+{
+  "id": "learn_bear_trap",
+  "title": "Lesson: Bear Trap",
+  "giver": "huntsman",
+  "prerequisites": ["learn_track_prey"],
+  "description": "Learn to place immobilizing bear traps.",
+  "completion_conditions": [
+    { "type": "stat", "target": "traps_placed", "count": 10 }
+  ],
+  "rewards": {
+    "technique": "bear_trap",
+    "reputation": { "actor": { "huntsman": 100 } }
+  },
+  "steps": [
+    {"description": "Place 10 bear traps", "type": "stat", "target": "traps_placed", "count": 10},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman"}
+  ],
+  "completion_npc": "huntsman",
+  "completion_topic": "bear_trap"
+}

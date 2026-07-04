@@ -1,0 +1,30 @@
+{
+  "id": "spice_trade",
+  "title": "Spice Trade",
+  "giver": "elias",
+  "participants": ["elias"],
+  "prerequisites": [],
+  "description": "I need someone to retrieve my lost spice shipment from bandits in the forest.",
+  "completion_conditions": [
+    { "type": "collect", "target": "spice_crate", "count": 3 },
+    { "type": "talk", "target": "elias", "topic": "spice" }
+  ],
+    "rewards": {
+      "gold": 100,
+      "items": ["spice_pouch"],
+      "reputation": { "actor": { "elias": 50 } }
+    },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["spice", "trade", "bandits", "shipment", "help", "quest"],
+  "steps": [
+    {"description": "Find the bandit camp in the forest", "type": "explore", "target": "bandit_camp", "current": 0},
+    {"description": "Defeat the bandits", "type": "kill", "target": "bandit", "count": 3, "current": 0},
+    {"description": "Retrieve the spice crates", "type": "collect", "target": "spice_crate", "count": 3, "current": 0},
+    {"description": "Return the spices to Elias", "type": "talk", "target": "merchant", "current": 0}
+  ],
+  "completion_npc": "elias",
+  "completioncompletion_topic": "spice"
+}

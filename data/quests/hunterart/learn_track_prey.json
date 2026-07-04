@@ -1,0 +1,28 @@
+{
+  "id": "learn_track_prey",
+  "title": "Lesson: Track Prey",
+  "giver": "huntsman",
+  "participants": ["huntsman"],
+  "prerequisites": ["learn_death_mark"],
+  "description": "The hunter will teach you Track Prey, a technique to track and locate targets.",
+  "completion_conditions": [
+    { "type": "stat", "target": "creatures_tracked", "count": 5 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "track_prey",
+    "reputation": { "actor": { "huntsman": 75 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["hunter", "track", "prey", "learn"],
+  "steps": [
+    {"description": "Track 5 different creatures", "type": "stat", "target": "creatures_tracked", "count": 5, "current": 0},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman", "current": 0}
+  ],
+  "completion_npc": "huntsman",
+  "completion_topic": "track_prey"
+}

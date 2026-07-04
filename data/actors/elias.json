@@ -1,0 +1,167 @@
+{
+  "id": "elias",
+  "name": "Elias",
+  "race": "human",
+  "subtype": "merchant",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["village"],
+
+  "appearance": {
+    "unknown_name": "a merchant at his stall",
+    "known_name": "Elias",
+    "full_name": "Elias, the merchant",
+    "description": "A well-dressed merchant with a friendly smile and sharp eyes."
+  },
+
+  "attributes": {
+    "strength": 90,
+    "dexterity": 100,
+    "knowledge": 130,
+    "constitution": 100,
+    "observation": 120,
+    "willpower": 50,
+    "reactiveness": 50,
+    "arcana": 50
+  },
+
+  "skills": {
+    "barter": 70,
+    "appraisal": 65,
+    "negotiation": 60
+  },
+
+  "techniques": [],
+
+  "schedule": [
+    { "from": 8, "to": 12, "map_id": "village", "node_id": "market" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "market" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "market" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "market" },
+    { "from": 22, "to": 8, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 400, "respect": 300, "friendship": 350, "fear": 0 },
+    "aldric": { "trust": 500, "respect": 400, "friendship": 300, "fear": 0 },
+    "meadow": { "trust": 600, "respect": 500, "friendship": 400, "fear": 0 },
+    "bertha": { "trust": 500, "respect": 400, "friendship": 350, "fear": 0 }
+  },
+
+  "knowledge": {
+    "trade_routes": {
+      "importance": 700,
+      "stages": [
+        {
+          "id": "trade_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["The trade road runs north to the capital. South leads to the coast."]
+        }
+      ]
+    },
+    "foreign_lands": {
+      "importance": 500,
+      "stages": [
+        {
+          "id": "foreign_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["I trade with merchants from distant lands. Each has its own wonders."]
+        }
+      ]
+    },
+    "merchant_guild": {
+      "importance": 600,
+      "stages": [
+        {
+          "id": "guild_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["The merchant guild protects our interests. Membership has its privileges."]
+        }
+      ]
+    },
+    "spice_trade": {
+      "importance": 800,
+      "stages": [
+        {
+          "id": "spice_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["Spices from the south are worth a fortune. But bandits have been hitting the caravans."]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["spice_trade", "learn_saw", "learn_woodcrafting"],
+    "progresses": [],
+    "completes": ["spice_trade", "learn_saw", "learn_woodcrafting"]
+  },
+
+  "shop": {
+    "visible_for_sale": ["health_potion", "mana_potion", "rope", "torch", "lockpick_set", "recipe_oak_bow", "recipe_ash_bow", "recipe_yew_bow", "recipe_oak_staff", "recipe_ash_staff", "recipe_yew_staff", "recipe_oak_wand", "recipe_ash_wand", "recipe_yew_wand", "oak_plank", "ash_plank", "yew_plank", "arcane_yew_plank", "resin", "sap", "spirit_bark"],
+    "hidden_for_sale": ["rare_spice"]
+  },
+
+  "conversation": {
+    "personality": "friendly",
+    "first_greeting": "The merchant smiles warmly and bows slightly. 'Name's Elias. Welcome to my stall! I have all manner of goods from distant lands.'",
+    "greeting": "Elias smiles warmly. 'Welcome to my stall! I have all manner of goods from distant lands.'",
+    "farewell": "Elias nods cheerfully. 'Safe travels! Come back anytime.'",
+    "dialogue_interest": ["trade", "goods", "buy", "sell", "price", "foreign", "travel"],
+    "dialogue_bored": ["violence", "fighting", "weapons"]
+  },
+
+  "world": {
+    "job": "merchant",
+    "shop": {
+      "items": [
+        {"name": "old Hatchet", "stats": "ATK: 4", "price": 20, "secret": false},
+        {"name": "Recipe: Oak Bow", "stats": "Teaches: Oak Bow", "price": 45, "secret": false},
+        {"name": "Recipe: Ash Bow", "stats": "Teaches: Ash Bow", "price": 60, "secret": false},
+        {"name": "Recipe: Yew Bow", "stats": "Teaches: Yew Bow", "price": 80, "secret": false},
+        {"name": "Recipe: Oak Staff", "stats": "Teaches: Oak Staff", "price": 50, "secret": false},
+        {"name": "Recipe: Ash Staff", "stats": "Teaches: Ash Staff", "price": 65, "secret": false},
+        {"name": "Recipe: Yew Staff", "stats": "Teaches: Yew Staff", "price": 85, "secret": false},
+        {"name": "Recipe: Oak Wand", "stats": "Teaches: Oak Wand", "price": 30, "secret": false},
+        {"name": "Recipe: Ash Wand", "stats": "Teaches: Ash Wand", "price": 40, "secret": false},
+        {"name": "Recipe: Yew Wand", "stats": "Teaches: Yew Wand", "price": 55, "secret": false},
+        {"name": "Health Potion", "stats": "Restores 30 HP", "price": 10, "secret": false},
+        {"name": "Lockpick Set", "stats": "Opens locks", "price": 20, "secret": false},
+        {"name": "Oak Plank", "stats": "Woodworking material", "price": 8, "secret": false},
+        {"name": "Ash Plank", "stats": "Woodworking material", "price": 12, "secret": false},
+        {"name": "Yew Plank", "stats": "Woodworking material", "price": 18, "secret": false},
+        {"name": "Arcane Yew Plank", "stats": "Rare woodworking material", "price": 35, "secret": true, "quest_required": "spice_trade"},
+        {"name": "Resin", "stats": "Binding agent", "price": 3, "secret": false},
+        {"name": "Sap", "stats": "Natural adhesive", "price": 4, "secret": false},
+        {"name": "Spirit Bark", "stats": "Magical binding", "price": 8, "secret": false},
+        {"name": "Rare Spice", "stats": "Valuable trade good", "price": 40, "secret": true, "quest_required": "spice_trade"}
+      ],
+      "buy_prices": {
+        "potions": 0.6,
+        "tools": 0.5,
+        "default": 0.3
+      }
+    },
+    "active_quest": {
+      "name": "Spice Trade",
+      "description": "I need someone to retrieve my lost spice shipment from bandits in the forest.",
+      "steps": [
+        {"description": "Find the bandit camp in the forest", "type": "explore", "target": "bandit_camp", "current": 0},
+        {"description": "Defeat the bandits", "type": "kill", "target": "bandit", "count": 3, "current": 0},
+        {"description": "Retrieve the spice crates", "type": "collect", "target": "spice_crate", "count": 3, "current": 0},
+        {"description": "Return the spices to Elias", "type": "talk", "target": "merchant", "current": 0}
+      ],
+      "rewards": {
+        "gold": 75,
+        "item": "Rare Spice",
+        "reputation": 15
+      }
+    }
+  }
+}

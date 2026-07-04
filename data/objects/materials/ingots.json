@@ -1,0 +1,46 @@
+{
+  "ingots": [
+    {
+      "id": "copper_ingot",
+      "name": "Copper Ingot",
+      "category": "material",
+      "description": "A refined copper ingot."
+    },
+    {
+      "id": "iron_ingot",
+      "name": "Iron Ingot",
+      "category": "material",
+      "description": "A refined iron ingot."
+    },
+    {
+      "id": "mithril_ingot",
+      "name": "Mithril Ingot",
+      "category": "material",
+      "description": "A refined mithril ingot."
+    },
+    {
+      "id": "tin_ingot",
+      "name": "Tin Ingot",
+      "category": "material",
+      "description": "A refined tin ingot."
+    },
+    {
+      "id": "bronze_ingot",
+      "name": "Bronze Ingot",
+      "category": "material",
+      "description": "An alloy ingot of copper and tin."
+    },
+    {
+      "id": "steel_ingot",
+      "name": "Steel Ingot",
+      "category": "material",
+      "description": "An alloy ingot of iron and coal."
+    },
+    {
+      "id": "titran_ingot",
+      "name": "Titran Ingot",
+      "category": "material",
+      "description": "An alloy ingot of mithril and dragonite."
+    }
+  ]
+}

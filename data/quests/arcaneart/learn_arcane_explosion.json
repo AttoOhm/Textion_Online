@@ -1,0 +1,28 @@
+{
+  "id": "learn_arcane_explosion",
+  "title": "Lesson: Arcane Explosion",
+  "giver": "archmage",
+  "participants": ["archmage"],
+  "prerequisites": ["learn_teleport"],
+  "description": "Eldric will teach you Arcane Explosion, a powerful area-of-effect spell that unleashes a burst of arcane energy on all nearby enemies. To master this, you must demonstrate mastery of area control by defeating 5 groups of 3 or more enemies simultaneously.",
+  "completion_conditions": [
+    { "type": "stat", "target": "aoe_kills", "count": 5 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "arcane_explosion",
+    "reputation": { "actor": { "archmage": 150 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["magic", "explosion", "aoe", "arcane", "spell", "learn", "eldric", "training"],
+  "steps": [
+    {"description": "Defeat 5 groups of 3+ enemies with area attacks", "type": "stat", "target": "aoe_kills", "count": 5, "current": 0},
+    {"description": "Speak to Eldric to learn Arcane Explosion", "type": "talk", "target": "archmage", "current": 0}
+  ],
+  "completion_npc": "archmage",
+  "completion_topic": "arcane_explosion"
+}

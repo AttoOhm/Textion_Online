@@ -1,0 +1,26 @@
+{
+  "id": "guard_advice",
+  "title": "Guard's Advice",
+  "giver": "grim",
+  "participants": ["grim", "aldric"],
+  "prerequisites": [],
+  "description": "I've been hearing rumors from the merchants. Ask Aldric what he knows about the wolves. He'll have more details than I do.",
+  "completion_conditions": [
+    { "type": "talk", "target": "aldric", "topic": "wolves" }
+  ],
+  "rewards": {
+    "gold": 5,
+    "items": [],
+    "reputation": { "actor": { "grim": 10 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["wolves", "aldric", "guard", "ask", "advice", "problem"],
+  "steps": [
+    {"description": "Ask Aldric about the wolves", "type": "talk_topic", "target": "wolves", "npc": "aldric", "current": 0}
+  ],
+  "completion_npc": "aldric",
+  "completion_topic": "wolves"
+}

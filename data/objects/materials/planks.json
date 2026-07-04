@@ -1,0 +1,40 @@
+{
+  "planks": [
+    {
+      "id": "oak_plank",
+      "name": "Oak Plank",
+      "category": "material",
+      "description": "A plank cut from oak wood."
+    },
+    {
+      "id": "ash_plank",
+      "name": "Ash Plank",
+      "category": "material",
+      "description": "A plank cut from ash wood."
+    },
+    {
+      "id": "yew_plank",
+      "name": "Yew Plank",
+      "category": "material",
+      "description": "A plank cut from yew wood."
+    },
+    {
+      "id": "treated_oak_plank",
+      "name": "Treated Oak Plank",
+      "category": "material",
+      "description": "An oak plank treated with resin for extra durability."
+    },
+    {
+      "id": "reinforced_ash_plank",
+      "name": "Reinforced Ash Plank",
+      "category": "material",
+      "description": "An ash plank reinforced with sap."
+    },
+    {
+      "id": "arcane_yew_plank",
+      "name": "Arcane Yew Plank",
+      "category": "material",
+      "description": "A yew plank infused with spirit bark."
+    }
+  ]
+}

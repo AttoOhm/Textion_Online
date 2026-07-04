@@ -1,0 +1,22 @@
+{
+  "id": "learn_preserving",
+  "title": "Lesson: Preserving",
+  "giver": "meadow",
+  "prerequisites": [],
+  "description": "Learn to preserve food and ingredients at the kitchen.",
+  "completion_conditions": [
+    { "type": "item_delivery", "target": "berry", "count": 15 },
+    { "type": "item_delivery", "target": "herb", "count": 10 }
+  ],
+  "rewards": {
+    "technique": "preserving",
+    "reputation": { "actor": { "meadow": 100 } }
+  },
+  "steps": [
+    {"description": "Bring 15 berries to Meadow", "type": "deliver", "target": "berry", "count": 15},
+    {"description": "Bring 10 herbs to Meadow", "type": "deliver", "target": "herb", "count": 10},
+    {"description": "Speak to Meadow", "type": "talk", "target": "meadow"}
+  ],
+  "completion_npc": "meadow",
+  "completion_topic": "preserving"
+}

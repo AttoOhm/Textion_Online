@@ -1,0 +1,40 @@
+{
+  "wands": [
+    {
+      "id": "oak_wand",
+      "name": "Oak Wand",
+      "category": "weapon",
+      "subtype": "wand",
+      "damage": 2,
+      "weight": 1,
+      "arcane_focus": true,
+      "arcane_power": 1.0,
+      "cooldown_reduction": 0.2,
+      "description": "A wand crafted from oak wood. Reduces spell cooldowns by 20%."
+    },
+    {
+      "id": "ash_wand",
+      "name": "Ash Wand",
+      "category": "weapon",
+      "subtype": "wand",
+      "damage": 3,
+      "weight": 1,
+      "arcane_focus": true,
+      "arcane_power": 1.0,
+      "cooldown_reduction": 0.35,
+      "description": "A wand crafted from ash wood. Reduces spell cooldowns by 35%."
+    },
+    {
+      "id": "yew_wand",
+      "name": "Yew Wand",
+      "category": "weapon",
+      "subtype": "wand",
+      "damage": 4,
+      "weight": 1,
+      "arcane_focus": true,
+      "arcane_power": 1.0,
+      "cooldown_reduction": 0.5,
+      "description": "A wand crafted from yew wood. Reduces spell cooldowns by 50%."
+    }
+  ]
+}

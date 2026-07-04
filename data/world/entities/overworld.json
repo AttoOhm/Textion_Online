@@ -1,0 +1,104 @@
+{
+  "old_oak_tree": {
+    "id": "old_oak_tree",
+    "name": "Old Oak Tree",
+    "category": "landmark",
+    "map_id": "overworld",
+    "node_id": "forest_path_start",
+    "description": "An ancient oak tree with gnarled branches, standing sentinel over the forest path.",
+    "interactable": true,
+    "actions": [
+      "examine",
+      "climb"
+    ]
+  },
+  "mushroom_ring": {
+    "id": "mushroom_ring",
+    "name": "Fairy Ring",
+    "category": "landmark",
+    "map_id": "overworld",
+    "node_id": "deep_forest_west",
+    "description": "A mysterious circle of glowing mushrooms, said to be a fairy ring.",
+    "interactable": true,
+    "actions": [
+      "examine",
+      "gather"
+    ]
+  },
+  "ancient_tree": {
+    "id": "ancient_tree",
+    "name": "Ancient Tree",
+    "category": "landmark",
+    "map_id": "overworld",
+    "node_id": "deep_forest_north",
+    "description": "A towering, ancient tree with a hollow in its trunk.",
+    "interactable": true,
+    "actions": [
+      "examine",
+      "search"
+    ]
+  },
+  "ancient_marker": {
+    "id": "ancient_marker",
+    "name": "Ancient Stone Marker",
+    "category": "landmark",
+    "map_id": "overworld",
+    "node_id": "forest_edge_north",
+    "description": "A weathered stone marker, covered in unreadable runes.",
+    "interactable": true,
+    "actions": [
+      "examine"
+    ]
+  },
+  "wild_berry_bush": {
+    "description": "A thorny bush laden with ripe red berries."
+  },
+  "mossy_log": {
+    "description": "A fallen log covered in a thick layer of soft green moss."
+  },
+  "fern_patch": {
+    "description": "A cluster of vibrant green ferns unfurling in the dim light."
+  },
+  "mushroom_cluster": {
+    "description": "A circle of glowing mushrooms sprouting from decaying wood."
+  },
+  "ancient_oak": {
+    "description": "A towering ancient oak, its bark thick with age and moss."
+  },
+  "mossy_rock": {
+    "description": "A large rock covered in patches of emerald moss."
+  },
+  "fallen_log": {
+    "description": "A fallen tree trunk slowly returning to the earth."
+  },
+  "fern_grove": {
+    "description": "A dense grove of ferns reaching waist height."
+  },
+  "wild_flower_patch": {
+    "description": "A patch of wildflowers in bloom\u2014purple, yellow, and white."
+  },
+  "small_stream": {
+    "description": "A small stream trickles over smooth pebbles."
+  },
+  "standing_stone": {
+    "description": "A weathered standing stone covered in ancient moss."
+  },
+  "wildflower_meadow": {
+    "description": "A stretch of hillside carpeted in blooming wildflowers."
+  },
+  "wind_swept_bush": {
+    "description": "A hardy shrub shaped by the constant wind into an interesting form."
+  },
+  "rabbit_burrow": {
+    "description": "A small burrow in the hillside\u2014rabbit tracks lead inside."
+  },
+  "weeping_willow": {
+    "description": "A graceful weeping willow dipping its branches into the water."
+  },
+  "smooth_stones": {
+    "description": "Flat smooth stones perfect for crossing the river."
+  },
+  "frog_pond": {
+    "description": "A small pond teeming with frogs and dragonflies."
+  }
+}

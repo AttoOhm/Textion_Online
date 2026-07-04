@@ -1,0 +1,1440 @@
+{
+  "actors": [
+    { "id": "goblin_patrol_1",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "camp_perimeter" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "camp_perimeter"},
+        {"map_id": "goblin_camp", "node_id": "forest_path"},
+        {"map_id": "goblin_camp", "node_id": "watch_tower"},
+        {"map_id": "goblin_camp", "node_id": "trap_line"}
+      ],
+      "max_distance": 3,
+
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 10
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.3, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_patrol_2",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "mess_hall" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "mess_hall"},
+        {"map_id": "goblin_camp", "node_id": "kitchen"},
+        {"map_id": "goblin_camp", "node_id": "storage_hut"},
+        {"map_id": "goblin_camp", "node_id": "animal_pen"}
+      ],
+      "max_distance": 3,
+
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 10
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.3, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_patrol_3",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "training_ground" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "training_ground"},
+        {"map_id": "goblin_camp", "node_id": "armory"},
+        {"map_id": "goblin_camp", "node_id": "chiefs_tent"},
+        {"map_id": "goblin_camp", "node_id": "treasure_hoard"}
+      ],
+      "max_distance": 3,
+
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 10
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": 2},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.3, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_patrol_4",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "shaman_hut" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "shaman_hut"},
+        {"map_id": "goblin_camp", "node_id": "spirit_grove"},
+        {"map_id": "goblin_camp", "node_id": "training_ground"},
+        {"map_id": "goblin_camp", "node_id": "treasure_hoard"}
+      ],
+      "max_distance": 3,
+
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 10
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.3, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_patrol_5",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "healing_hut" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "healing_hut"},
+        {"map_id": "goblin_camp", "node_id": "animal_pen"},
+        {"map_id": "goblin_camp", "node_id": "storage_hut"},
+        {"map_id": "goblin_camp", "node_id": "trap_line"}
+      ],
+      "max_distance": 3,
+
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 15
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_patrol_6",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "forest_path" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "forest_path"},
+        {"map_id": "goblin_camp", "node_id": "camp_perimeter"}
+      ],
+      "max_distance": 2,
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 10
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.3, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_patrol_7",
+      "name": "Goblin Patrol",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "patrol",
+      "spawn": { "map_id": "goblin_camp", "node_id": "forest_path" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "forest_path"},
+        {"map_id": "goblin_camp", "node_id": "camp_perimeter"}
+      ],
+      "max_distance": 2,
+      "respawn_minutes": 10,
+      "techniques": ["bite", "claw", "tackle"],
+      "armor": {
+        "slash": 10,
+        "pierce": 10,
+        "bludgeon": 10
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.3, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 16,
+        "dexterity": 18,
+        "knowledge": 40,
+        "constitution": 12,
+        "observation": 14,
+        "willpower": 40,
+        "reactiveness": 16,
+        "arcana": 30
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 17,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.25
+      }
+    },
+    { "id": "goblin_grunt_1",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "camp_perimeter" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "camp_perimeter"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_2",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "camp_perimeter" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "camp_perimeter"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_3",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "mess_hall" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "mess_hall"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 3,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_4",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "mess_hall" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "mess_hall"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_5",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "mess_hall" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "mess_hall"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_6",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "trap_line" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "trap_line"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_7",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "storage_hut" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "storage_hut"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_8",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "storage_hut" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "storage_hut"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "gold_coin", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_9",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "animal_pen" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "animal_pen"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "gold_coin", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_10",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "kitchen" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "kitchen"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "gold_coin", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_11",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "kitchen" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "kitchen"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "gold_coin", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_grunt_12",
+      "name": "Goblin Grunt",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "grunt",
+      "spawn": { "map_id": "goblin_camp", "node_id": "training_ground" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "training_ground"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 12,
+      "techniques": ["bite", "claw"],
+      "armor": {
+        "slash": 3,
+        "pierce": 3,
+        "bludgeon": 3
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "gold_coin", "name": "Gold Coin", "chance": 0.5, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 14,
+        "dexterity": 14,
+        "knowledge": 35,
+        "constitution": 10,
+        "observation": 10,
+        "willpower": 35,
+        "reactiveness": 12,
+        "arcana": 25
+      },
+      "hp": 60,
+      "max_hp": 60,
+      "damage": 15,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.35
+      }
+    },
+    { "id": "goblin_archer_1",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "watch_tower" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "watch_tower"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": 2},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_archer_2",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "watch_tower" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "watch_tower"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_archer_3",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "watch_tower" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "watch_tower"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_archer_4",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "training_ground" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "training_ground"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_archer_5",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "training_ground" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "training_ground"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_archer_6",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "training_ground" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "training_ground"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_archer_7",
+      "name": "Goblin Archer",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "archer",
+      "spawn": { "map_id": "goblin_camp", "node_id": "trap_line" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "trap_line"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 15,
+      "techniques": ["bite", "claw", "ranged_shot"],
+      "armor": {
+        "slash": 5,
+        "pierce": 5,
+        "bludgeon": 5
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "arrow", "name": "Arrow", "chance": 0.9, "amount": "3-5"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.4, "amount": "1-2"}
+      ],
+      "attributes": {
+        "strength": 12,
+        "dexterity": 20,
+        "knowledge": 40,
+        "constitution": 10,
+        "observation": 16,
+        "willpower": 38,
+        "reactiveness": 18,
+        "arcana": 30
+      },
+      "hp": 65,
+      "max_hp": 65,
+      "damage": 19,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.3
+      }
+    },
+    { "id": "goblin_guard_1",
+      "name": "Goblin Guard",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "guard",
+      "spawn": { "map_id": "goblin_camp", "node_id": "chiefs_tent" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "chiefs_tent"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 18,
+      "techniques": ["bite", "claw", "shield_bash"],
+      "armor": {
+        "slash": 20,
+        "pierce": 20,
+        "bludgeon": 20
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": 2},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.6, "amount": "2-4"},
+        {"id": "wooden_shield", "name": "Wooden Shield", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 20,
+        "dexterity": 14,
+        "knowledge": 40,
+        "constitution": 16,
+        "observation": 14,
+        "willpower": 45,
+        "reactiveness": 14,
+        "arcana": 30
+      },
+      "hp": 75,
+      "max_hp": 75,
+      "damage": 21,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_guard_2",
+      "name": "Goblin Guard",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "guard",
+      "spawn": { "map_id": "goblin_camp", "node_id": "chiefs_tent" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "chiefs_tent"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 18,
+      "techniques": ["bite", "claw", "shield_bash"],
+      "armor": {
+        "slash": 20,
+        "pierce": 20,
+        "bludgeon": 20
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.6, "amount": "2-4"},
+        {"id": "wooden_shield", "name": "Wooden Shield", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 20,
+        "dexterity": 14,
+        "knowledge": 40,
+        "constitution": 16,
+        "observation": 14,
+        "willpower": 45,
+        "reactiveness": 14,
+        "arcana": 30
+      },
+      "hp": 75,
+      "max_hp": 75,
+      "damage": 21,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_guard_3",
+      "name": "Goblin Guard",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "guard",
+      "spawn": { "map_id": "goblin_camp", "node_id": "treasure_hoard" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "treasure_hoard"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 18,
+      "techniques": ["bite", "claw", "shield_bash"],
+      "armor": {
+        "slash": 20,
+        "pierce": 20,
+        "bludgeon": 20
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.6, "amount": "2-4"},
+        {"id": "wooden_shield", "name": "Wooden Shield", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 20,
+        "dexterity": 14,
+        "knowledge": 40,
+        "constitution": 16,
+        "observation": 14,
+        "willpower": 45,
+        "reactiveness": 14,
+        "arcana": 30
+      },
+      "hp": 75,
+      "max_hp": 75,
+      "damage": 21,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_guard_4",
+      "name": "Goblin Guard",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "guard",
+      "spawn": { "map_id": "goblin_camp", "node_id": "treasure_hoard" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "treasure_hoard"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 18,
+      "techniques": ["bite", "claw", "shield_bash"],
+      "armor": {
+        "slash": 20,
+        "pierce": 20,
+        "bludgeon": 20
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.6, "amount": "2-4"},
+        {"id": "wooden_shield", "name": "Wooden Shield", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 20,
+        "dexterity": 14,
+        "knowledge": 40,
+        "constitution": 16,
+        "observation": 14,
+        "willpower": 45,
+        "reactiveness": 14,
+        "arcana": 30
+      },
+      "hp": 75,
+      "max_hp": 75,
+      "damage": 21,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_guard_5",
+      "name": "Goblin Guard",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "guard",
+      "spawn": { "map_id": "goblin_camp", "node_id": "prisoner_pit" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "prisoner_pit"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 18,
+      "techniques": ["bite", "claw", "shield_bash"],
+      "armor": {
+        "slash": 20,
+        "pierce": 20,
+        "bludgeon": 20
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.6, "amount": "2-4"},
+        {"id": "wooden_shield", "name": "Wooden Shield", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 20,
+        "dexterity": 14,
+        "knowledge": 40,
+        "constitution": 16,
+        "observation": 14,
+        "willpower": 45,
+        "reactiveness": 14,
+        "arcana": 30
+      },
+      "hp": 75,
+      "max_hp": 75,
+      "damage": 21,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_guard_6",
+      "name": "Goblin Guard",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "guard",
+      "spawn": { "map_id": "goblin_camp", "node_id": "prisoner_pit" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "prisoner_pit"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 18,
+      "techniques": ["bite", "claw", "shield_bash"],
+      "armor": {
+        "slash": 20,
+        "pierce": 20,
+        "bludgeon": 20
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.6, "amount": "2-4"},
+        {"id": "wooden_shield", "name": "Wooden Shield", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 20,
+        "dexterity": 14,
+        "knowledge": 40,
+        "constitution": 16,
+        "observation": 14,
+        "willpower": 45,
+        "reactiveness": 14,
+        "arcana": 30
+      },
+      "hp": 75,
+      "max_hp": 75,
+      "damage": 21,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_shaman_1",
+      "name": "Goblin Shaman",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "shaman",
+      "spawn": { "map_id": "goblin_camp", "node_id": "spirit_grove" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "spirit_grove"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 25,
+      "techniques": ["bite", "claw", "heal", "magic_missile"],
+      "armor": {
+        "slash": 2,
+        "pierce": 2,
+        "bludgeon": 2
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": 2},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.7, "amount": "2-4"}
+      ],
+      "attributes": {
+        "strength": 10,
+        "dexterity": 14,
+        "knowledge": 60,
+        "constitution": 12,
+        "observation": 18,
+        "willpower": 55,
+        "reactiveness": 14,
+        "arcana": 50
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 20,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_shaman_2",
+      "name": "Goblin Shaman",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "shaman",
+      "spawn": { "map_id": "goblin_camp", "node_id": "spirit_grove" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "spirit_grove"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 25,
+      "techniques": ["bite", "claw", "heal", "magic_missile"],
+      "armor": {
+        "slash": 2,
+        "pierce": 2,
+        "bludgeon": 2
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": "1-2"},
+        {"id": "coins", "name": "Gold Coin", "chance": 0.7, "amount": "2-4"}
+      ],
+      "attributes": {
+        "strength": 10,
+        "dexterity": 14,
+        "knowledge": 60,
+        "constitution": 12,
+        "observation": 18,
+        "willpower": 55,
+        "reactiveness": 14,
+        "arcana": 50
+      },
+      "hp": 70,
+      "max_hp": 70,
+      "damage": 20,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": false,
+        "flee_threshold": 0.15
+      }
+    },
+    { "id": "goblin_chief",
+      "name": "Goblin Chief",
+      "type": "creature",
+      "template": "goblin",
+      "descriptor": "chief",
+      "spawn": { "map_id": "goblin_camp", "node_id": "chiefs_tent" },
+      "possible_locations": [
+        {"map_id": "goblin_camp", "node_id": "chiefs_tent"}
+      ],
+      "max_distance": 0,
+      "respawn_minutes": 30,
+      "techniques": ["bite", "claw", "tackle", "war_cry"],
+      "armor": {
+        "slash": 30,
+        "pierce": 25,
+        "bludgeon": 25
+      },
+      "loot": [
+        {"id": "goblin_ear", "name": "Goblin Ear", "chance": 0.8, "amount": 2},
+        {"id": "coins", "name": "Gold Coin", "chance": 1.0, "amount": "5-10"},
+        {"id": "chief_axe", "name": "Chief's Axe", "chance": 0.3}
+      ],
+      "attributes": {
+        "strength": 28,
+        "dexterity": 22,
+        "knowledge": 55,
+        "constitution": 22,
+        "observation": 18,
+        "willpower": 60,
+        "reactiveness": 24,
+        "arcana": 45
+      },
+      "hp": 85,
+      "max_hp": 85,
+      "damage": 25,
+      "behaviors": {
+        "hostile": true,
+        "aggressive": true,
+        "flee_threshold": 0.1
+      }
+    }
+  ]
+}

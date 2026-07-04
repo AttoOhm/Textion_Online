@@ -1,0 +1,27 @@
+{
+  "id": "alpha_wolf_hunt",
+  "title": "The Alpha's Fall",
+  "giver": "grim",
+  "participants": ["grim"],
+  "prerequisites": ["wolves_menace"],
+  "description": "The wolves have been driven back, but their leader still prowls the deep forest. The Alpha Wolf must be killed to truly secure the forest paths. Seek it out in deep_forest_69 and bring me its fang as proof.",
+  "completion_conditions": [
+    { "type": "kill", "target": "wolf_boss_alpha", "count": 1 }
+  ],
+  "rewards": {
+    "gold": 100,
+    "items": ["alpha_wolf_pelt", "enchanted_blade"],
+    "reputation": { "actor": { "grim": 100 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["alpha", "wolf", "boss", "leader", "hunt", "kill", "forest", "deep"],
+  "steps": [
+    {"description": "Find and kill the Alpha Wolf in deep_forest_69", "type": "kill", "target": "wolf_boss_alpha", "count": 1, "current": 0},
+    {"description": "Return to Grim with proof", "type": "talk", "target": "grim", "current": 0}
+  ],
+  "completion_npc": "grim",
+  "completion_topic": "alpha_wolf"
+}

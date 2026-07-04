@@ -1,0 +1,49 @@
+{
+  "hammers": [
+    {
+      "id": "copper_hammer",
+      "name": "Copper Hammer",
+      "category": "weapon",
+      "subtype": "hammer",
+      "damage": 5,
+      "weight": 5,
+      "description": "A simple copper hammer."
+    },
+    {
+      "id": "iron_hammer",
+      "name": "Iron Hammer",
+      "category": "weapon",
+      "subtype": "hammer",
+      "damage": 7,
+      "weight": 5,
+      "description": "A sturdy iron hammer."
+    },
+    {
+      "id": "steel_hammer",
+      "name": "Steel Hammer",
+      "category": "weapon",
+      "subtype": "hammer",
+      "damage": 10,
+      "weight": 5,
+      "description": "A finely crafted steel hammer."
+    },
+    {
+      "id": "mithril_hammer",
+      "name": "Mithril Hammer",
+      "category": "weapon",
+      "subtype": "hammer",
+      "damage": 13,
+      "weight": 4,
+      "description": "A lightweight mithril hammer."
+    },
+    {
+      "id": "titran_hammer",
+      "name": "Titran Hammer",
+      "category": "weapon",
+      "subtype": "hammer",
+      "damage": 16,
+      "weight": 4,
+      "description": "A legendary titran hammer."
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+      "id": "Thorin Ironvein",
+      "name": "Thorin Ironvein",
+      "race": "dwarf",
+      "subtype": "guild_master",
+      "max_distance": 0,
+      "languages": {
+        "speak": ["common", "dwarvish"],
+        "understand": ["common", "dwarvish", "goblin"]
+      },
+      "factions": ["adventure_guild"],
+      "appearance": {
+        "unknown_name": "a dwarf in guild robes",
+        "known_name": "Thorin Ironvein",
+        "full_name": "Thorin Ironvein, Guild Master",
+        "description": "A stout dwarf with a magnificent braided beard and piercing blue eyes. He wears formal guild robes over his armor."
+      },
+      "attributes": {
+        "strength": 130,
+        "dexterity": 90,
+        "knowledge": 150,
+        "constitution": 140,
+        "observation": 120,
+        "willpower": 100,
+        "reactiveness": 80,
+        "arcana": 60
+      },
+      "skills": {
+        "leadership": 90,
+        "appraisal": 75,
+        "negotiation": 85
+      },
+      "techniques": [],
+      "schedule": [
+        { "from": 8, "to": 12, "map_id": "village", "node_id": "adventure_guild" },
+        { "from": 12, "to": 14, "map_id": "village", "node_id": "tavern" },
+        { "from": 14, "to": 18, "map_id": "village", "node_id": "adventure_guild" },
+        { "from": 18, "to": 22, "map_id": "village", "node_id": "adventure_guild" },
+        { "from": 22, "to": 8, "map_id": null, "node_id": null }
+      ],
+      "relations": {
+        "grim": { "trust": 500, "respect": 600, "friendship": 400, "fear": 0 },
+        "elias": { "trust": 600, "respect": 500, "friendship": 450, "fear": 0 },
+        "meadow": { "trust": 400, "respect": 300, "friendship": 350, "fear": 0 },
+        "bertha": { "trust": 300, "respect": 200, "friendship": 250, "fear": 0 },
+        "aldric": { "trust": 700, "respect": 600, "friendship": 500, "fear": 0 }
+      },
+      "knowledge": {
+        "goblin_camp": {
+          "importance": 900,
+          "stages": [
+            {
+              "id": "goblin_camp_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": ["The goblin camp to the north has been causing trouble. Their chief leads a ruthless band."]
+            },
+            {
+              "id": "goblin_camp_2",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": ["The goblin shamans wield dark magic. They must be eliminated before they grow stronger."]
+            }
+          ]
+        },
+        "adventure_guild": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "guild_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": ["The guild pays well for goblin ears. Bring me as many as you can carry."]
+            }
+          ]
+        },
+        "bounties": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "bounty_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": ["I have bounties on the goblin chief and shamans. Dead or alive, though dead is easier."]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": ["goblin_chief_bounty", "shaman_hunt", "goblin_ears_trade"],
+        "progresses": [],
+        "completes": ["goblin_chief_bounty", "shaman_hunt"]
+      },
+      "shop": null,
+  "conversation": {
+    "personality": "authoritative",
+    "first_greeting": "The dwarf looks up from his ledger, his beard twitching. 'Ah, another adventurer! I am Thorin Ironvein, Guild Master. Looking for work?'",
+    "greeting": "Thorin looks up from his ledger, his beard twitching. 'Ah, another adventurer! Looking for work?'",
+    "farewell": "Thorin nods. 'May your blade be sharp and your purse heavy. Return when you have more ears!'",
+        "dialogue_interest": ["goblin", "bounty", "quest", "reward", "gold", "ear", "camp", "danger"],
+        "dialogue_bored": ["weather", "gossip", "politics", "farming"]
+      },
+      "world": {
+        "job": "guild_master",
+        "shop": null,
+        "available_quests": [
+          {
+            "id": "goblin_chief_bounty",
+            "name": "Chief's Bounty",
+            "description": "The goblin chief has been terrorizing the region. Bring me his head and you'll be richly rewarded.",
+            "prerequisites": [],
+            "steps": [
+              {"description": "Slay the Goblin Chief in his tent", "type": "kill", "target": "goblin_chief", "count": 1, "current": 0},
+              {"description": "Return to Thorin with proof", "type": "talk", "target": "guild_master", "current": 0}
+            ],
+            "keywords": ["goblin", "chief", "bounty", "kill", "reward", "gold"],
+            "rewards": {
+              "gold": 100,
+              "item": "chief_axe",
+              "reputation": 25
+            }
+          },
+          {
+            "id": "shaman_hunt",
+            "name": "Shaman Hunt",
+            "description": "The goblin shamans are dark magic users. We need them eliminated before they summon something worse.",
+            "prerequisites": [],
+            "steps": [
+              {"description": "Kill 4 goblin shamans in the camp", "type": "kill", "target": "goblin_shaman", "count": 4, "current": 0},
+              {"description": "Return to Thorin", "type": "talk", "target": "guild_master", "current": 0}
+            ],
+            "keywords": ["goblin", "shaman", "hunt", "kill", "magic", "reward"],
+            "rewards": {
+              "gold": 75,
+              "reputation": 15
+            }
+          },
+          {
+            "id": "goblin_ears_trade",
+            "name": "Ears for Gold",
+            "description": "Bring me goblin ears and I'll pay you 1 gold per ear. No questions asked.",
+            "prerequisites": [],
+            "steps": [
+              {"description": "Collect goblin ears from any goblin", "type": "collect", "target": "goblin_ear", "count": 1, "current": 0},
+              {"description": "Return ears to Thorin", "type": "talk", "target": "guild_master", "current": 0}
+            ],
+            "repeatable": true,
+            "keywords": ["goblin", "ear", "trade", "gold", "repeatable"],
+            "rewards": {
+              "gold": 1,
+              "reputation": 1
+            }
+          }
+        ]
+      },
+      "is_hostile": false,
+      "hp": 80,
+      "max_hp": 80,
+      "behaviors": {
+        "hostile": false,
+        "aggressive": false,
+        "flee_threshold": 0.0
+      },
+      "relationships": {
+        "player": "friendly",
+        "human": "friendly",
+        "goblin": "hostile",
+        "wolf": "neutral"
+      },
+      "spawn_locations": ["adventure_guild"],
+      "respawn_time": 300,
+      "is_alive": true 
+}

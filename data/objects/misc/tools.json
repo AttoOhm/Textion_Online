@@ -1,0 +1,70 @@
+{
+  "tools": [
+    {
+      "id": "old_pickaxe",
+      "name": "Old Pickaxe",
+      "category": "tool",
+      "subtype": "pickaxe",
+      "durability": 50,
+      "max_durability": 50,
+      "damage": 2,
+      "weight": 3,
+      "description": "An old, worn pickaxe. Not very durable."
+    },
+    {
+      "id": "new_pickaxe",
+      "name": "New Pickaxe",
+      "category": "tool",
+      "subtype": "pickaxe",
+      "durability": 100,
+      "max_durability": 100,
+      "damage": 4,
+      "weight": 3,
+      "description": "A new pickaxe in good condition."
+    },
+    {
+      "id": "old_hatchet",
+      "name": "Old Hatchet",
+      "category": "tool",
+      "subtype": "hatchet",
+      "durability": 50,
+      "max_durability": 50,
+      "damage": 2,
+      "weight": 2,
+      "description": "An old, worn hatchet. Not very durable."
+    },
+    {
+      "id": "new_hatchet",
+      "name": "New Hatchet",
+      "category": "tool",
+      "subtype": "hatchet",
+      "durability": 100,
+      "max_durability": 100,
+      "damage": 4,
+      "weight": 2,
+      "description": "A new hatchet in good condition."
+    },
+    {
+      "id": "old_sickle",
+      "name": "Old Sickle",
+      "category": "tool",
+      "subtype": "sickle",
+      "durability": 50,
+      "max_durability": 50,
+      "damage": 2,
+      "weight": 1,
+      "description": "An old, worn sickle. Not very durable."
+    },
+    {
+      "id": "new_sickle",
+      "name": "New Sickle",
+      "category": "tool",
+      "subtype": "sickle",
+      "durability": 100,
+      "max_durability": 100,
+      "damage": 4,
+      "weight": 1,
+      "description": "A new sickle in good condition."
+    }
+  ]
+}

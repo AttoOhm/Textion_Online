@@ -1,0 +1,31 @@
+{
+  "unique": [
+    {
+      "id": "fang_of_aldric",
+      "name": "Fang of Aldric",
+      "category": "unique",
+      "subtype": "sword",
+      "damage": 20,
+      "weight": 2,
+      "description": "A legendary sword said to have belonged to the hero Aldric."
+    },
+    {
+      "id": "stormbreaker",
+      "name": "Stormbreaker",
+      "category": "unique",
+      "subtype": "hammer",
+      "damage": 25,
+      "weight": 6,
+      "description": "A mighty hammer that crackles with lightning."
+    },
+    {
+      "id": "moonbite",
+      "name": "Moonbite",
+      "category": "unique",
+      "subtype": "dagger",
+      "damage": 15,
+      "weight": 1,
+      "description": "A dagger that glows with moonlight."
+    }
+  ]
+}

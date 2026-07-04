@@ -1,0 +1,28 @@
+{
+  "id": "learn_whirlwind",
+  "title": "Lesson: Whirlwind",
+  "giver": "swordswoman",
+  "participants": ["swordswoman"],
+  "prerequisites": ["learn_perfect_cut"],
+  "description": "Seraphina will teach you Whirlwind, a devastating spinning attack that strikes all nearby enemies. This advanced technique requires mastery of chaos in combat. Defeat 3 or more enemies simultaneously on 10 separate occasions to prove your readiness.",
+  "completion_conditions": [
+    { "type": "stat", "target": "multi_kill_count", "count": 10 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "whirlwind",
+    "reputation": { "actor": { "swordswoman": 150 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["sword", "technique", "whirlwind", "aoe", "mastery", "learn", "seraphina", "training", "chaos"],
+  "steps": [
+    {"description": "Defeat 3+ enemies at once on 10 occasions", "type": "stat", "target": "multi_kill_count", "count": 10, "current": 0},
+    {"description": "Speak to Seraphina to learn Whirlwind", "type": "talk", "target": "swordswoman", "current": 0}
+  ],
+  "completion_npc": "swordswoman",
+  "completion_topic": "whirlwind"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "learn_loot",
+  "title": "Lesson: Loot",
+  "giver": "huntsman",
+  "prerequisites": ["learn_pacify_prey"],
+  "description": "Learn to efficiently loot corpses, taking all available items in one swift motion.",
+  "completion_conditions": [
+    { "type": "stat", "target": "corpses_looted", "count": 3 }
+  ],
+  "rewards": {
+    "technique": "loot",
+    "reputation": { "actor": { "huntsman": 250 } }
+  },
+  "steps": [
+    {"description": "Loot 3 corpses", "type": "stat", "target": "corpses_looted", "count": 3},
+    {"description": "Speak to the huntsman", "type": "talk", "target": "huntsman"}
+  ],
+  "completion_npc": "hunter",
+  "completion_topic": "loot"
+}

@@ -1,0 +1,1326 @@
+{
+  "id": "overworld",
+  "name": "Overworld",
+  "description": "The wild land outside the safety of Oakhaven's walls.",
+  "nodes": {
+    "Oakhaven_village_entrance": {
+      "id": "Oakhaven_village_entrance",
+      "name": "Oakhaven Gates",
+      "description": "The massive wooden gates of Oakhaven stand open to the north, offering safety from the wild.",
+      "exits": {
+        "northern field": "farm_land_8",
+        "eastern field": "farm_land_13",
+        "western field": "farm_land_12",
+        "to the forest edge": "forest_edge_12"
+      },
+      "entities": [
+        "village_gate_entrance"
+      ],
+      "tags": [
+        "entrance",
+        "safe"
+      ],
+      "discovery_text": "You see the great gates of Oakhaven rising before you.",
+      "ambient_text": "A guard nods at you from the gatehouse."
+    },
+    "forest_edge_10": {
+      "id": "forest_edge_10",
+      "name": "Forest Edge",
+      "description": "The sound of the open plains fades as the forest thickens. Ancient trees loom overhead.",
+      "exits": {
+        "follow the forest edge left": "forest_edge_11",
+        "into the hill": "open_hill_12",
+        "to the fields": "farm_land_11",
+        "further in forest": "deep_forest_18"
+      },
+      "entities": [
+        "fern_patch"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A cool breeze carries the scent of pine and wildflowers from deeper within.",
+      "ambient_text": "Birds call to each other from the branches above."
+    },
+    "forest_edge_11": {
+      "id": "forest_edge_11",
+      "name": "Forest Edge",
+      "description": "Wild strawberries grow among the roots of the old oaks here. The air smells of earth and green things.",
+      "exits": {
+        "follow the forest edge right": "forest_edge_10",
+        "follow the forest edge left": "forest_edge_12",
+        "to the fields": "farm_land_12",
+        "further in forest": "deep_forest_19"
+      },
+      "entities": [
+        "old_oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The edge of the forest stretches out before you. Birds scatter as you approach.",
+      "ambient_text": "A squirrel chatters from a nearby branch."
+    },
+    "forest_edge_12": {
+      "id": "forest_edge_12",
+      "name": "Forest Edge",
+      "description": "The tree line creates a natural boundary here. Birds flit between the branches, chirping softly.",
+      "exits": {
+        "follow the forest edge right": "forest_edge_11",
+        "follow the forest edge left": "forest_edge_13",
+        "to Oakhaven walls": "Oakhaven_village_entrance",
+        "further in forest": "deep_forest_20"
+      },
+      "entities": [
+        "mossy_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The edge of the forest stretches out before you. Birds scatter as you approach.",
+      "ambient_text": "A squirrel chatters from a nearby branch."
+    },
+    "forest_edge_13": {
+      "id": "forest_edge_13",
+      "name": "Forest Edge",
+      "description": "Tall oaks stand at the border between field and forest. A carpet of fallen leaves rustles underfoot.",
+      "exits": {
+        "follow the forest edge right": "forest_edge_12",
+        "follow the forest edge left": "forest_edge_14",
+        "to the fields": "farm_land_13",
+        "further in forest": "deep_forest_21"
+      },
+      "entities": [
+        "fern_patch",
+        "oak_tree",
+        "mossy_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A cool breeze carries the scent of pine and wildflowers from deeper within.",
+      "ambient_text": "The wind carries the distant sound of a creek."
+    },
+    "forest_edge_14": {
+      "id": "forest_edge_14",
+      "name": "Forest Edge",
+      "description": "Wild strawberries grow among the roots of the old oaks here. The air smells of earth and green things.",
+      "exits": {
+        "follow the forest edge right": "forest_edge_13",
+        "to the fields": "farm_land_14",
+        "to a riverbank": "river_crossing_52"
+      },
+      "entities": [
+        "wild_berry_bush",
+        "fern_patch",
+        "old_oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The edge of the forest stretches out before you. Birds scatter as you approach.",
+      "ambient_text": "A woodpecker taps somewhere in the distance."
+    },
+    "forest_edge_17": {
+      "id": "forest_edge_17",
+      "name": "Forest Edge",
+      "description": "A narrow deer trail winds through the undergrowth at the forest's edge.",
+      "exits": {
+        "follow the forest edge left": "forest_edge_18",
+        "into the hill": "open_hill_11",
+        "up the hillside": "open_hill_13",
+        "further in forest": "deep_forest_29"
+      },
+      "entities": [
+        "mushroom_cluster"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The trees close in around you as you leave the open fields behind.",
+      "ambient_text": "A squirrel chatters from a nearby branch."
+    },
+    "forest_edge_18": {
+      "id": "forest_edge_18",
+      "name": "Forest Edge",
+      "description": "The forest whispers at the edge of the plains. Wild roses and brambles tangle among the trunks.",
+      "exits": {
+        "follow the forest edge right": "forest_edge_17",
+        "into the hill": "open_hill_12",
+        "further in forest": "deep_forest_30",
+        "deeper in the woods": "deep_forest_18"
+      },
+      "entities": [
+        "mossy_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "You step past the last of the plains grass and into the shade of the forest.",
+      "ambient_text": "Birds call to each other from the branches above."
+    },
+    "forest_edge_24": {
+      "id": "forest_edge_24",
+      "name": "Forest Edge",
+      "description": "The sound of the open plains fades as the forest thickens. Ancient trees loom overhead.",
+      "exits": {
+        "into the hill": "open_hill_13",
+        "further in the forest": "deep_forest_46",
+        "deeper into the woods": "deep_forest_29"
+      },
+      "entities": [
+        "oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A cool breeze carries the scent of pine and wildflowers from deeper within.",
+      "ambient_text": "Birds call to each other from the branches above."
+    },
+    "deep_forest_18": {
+      "id": "deep_forest_18",
+      "name": "Deep Forest",
+      "description": "The canopy blots out much of the sky. Dappled light falls on a bed of moss and fallen leaves.",
+      "exits": {
+        "out of the forest": "forest_edge_18",
+        "back toward the forest edge": "forest_edge_10",
+        "further in the forest": "deep_forest_19",
+        "deeper into the woods": "deep_forest_31"
+      },
+      "entities": [
+        "fallen_log",
+        "oak_tree",
+        "mossy_rock"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "The creak of ancient branches swaying in the wind."
+    },
+    "deep_forest_19": {
+      "id": "deep_forest_19",
+      "name": "Deep Forest",
+      "description": "Massive trunks rise like pillars in a natural cathedral. Sunlight streams through gaps in the leaves.",
+      "exits": {
+        "out of the forest": "forest_edge_11",
+        "further in the forest": "deep_forest_20",
+        "deeper into the woods": "deep_forest_32",
+        "follow the winding game trail": "deep_forest_18"
+      },
+      "entities": [
+        "fallen_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "The creak of ancient branches swaying in the wind."
+    },
+    "deep_forest_20": {
+      "id": "deep_forest_20",
+      "name": "Deep Forest",
+      "description": "The forest floor is soft with decaying leaves. The air is cool and damp.",
+      "exits": {
+        "out of the forest": "forest_edge_12",
+        "further in the forest": "deep_forest_21",
+        "deeper into the woods": "deep_forest_19",
+        "follow the winding game trail": "deep_forest_33"
+      },
+      "entities": [
+        "mossy_rock",
+        "oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "Leaves rustle as something moves in the undergrowth."
+    },
+    "deep_forest_21": {
+      "id": "deep_forest_21",
+      "name": "Deep Forest",
+      "description": "A fallen giant of a tree lies rotting, providing nutrients for new growth.",
+      "exits": {
+        "out of the forest": "forest_edge_13",
+        "further in the forest": "river_crossing_52",
+        "deeper into the woods": "deep_forest_34",
+        "follow the winding game trail": "deep_forest_20"
+      },
+      "entities": [
+        "mossy_rock"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "A woodpecker drums rhythmically on a distant trunk."
+    },
+    "deep_forest_29": {
+      "id": "deep_forest_29",
+      "name": "Deep Forest",
+      "description": "Twisted roots break through the soil, creating natural steps and obstacles.",
+      "exits": {
+        "out of the forest": "forest_edge_24",
+        "back toward the forest edge": "forest_edge_17",
+        "further in the forest": "deep_forest_47",
+        "deeper into the woods": "deep_forest_30"
+      },
+      "entities": [
+        "oak_tree",
+        "mossy_rock",
+        "fallen_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "The buzzing of insects creates a constant low hum."
+    },
+    "deep_forest_30": {
+      "id": "deep_forest_30",
+      "name": "Deep Forest",
+      "description": "The undergrowth is thick here\u2014ferns, ivy, and low-hanging branches create a maze of green.",
+      "exits": {
+        "out of the forest": "forest_edge_18",
+        "further in the forest": "deep_forest_31",
+        "deeper into the woods": "deep_forest_48",
+        "follow the winding game trail": "deep_forest_29"
+      },
+      "entities": [
+        "copper_deposit",
+        "fallen_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "You push through a wall of ferns and find yourself deeper in the woods.",
+      "ambient_text": "Leaves rustle as something moves in the undergrowth."
+    },
+    "deep_forest_31": {
+      "id": "deep_forest_31",
+      "name": "Deep Forest",
+      "description": "A fallen giant of a tree lies rotting, providing nutrients for new growth.",
+      "exits": {
+        "further in the forest": "deep_forest_18",
+        "deeper into the woods": "deep_forest_49",
+        "follow the winding game trail": "deep_forest_30",
+        "push through the tangled thicket": "deep_forest_32"
+      },
+      "entities": [
+        "wild_flower_patch",
+        "ancient_oak"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "You push through a wall of ferns and find yourself deeper in the woods.",
+      "ambient_text": "The creak of ancient branches swaying in the wind."
+    },
+    "deep_forest_32": {
+      "id": "deep_forest_32",
+      "name": "Deep Forest",
+      "description": "The deeper forest hums with the sounds of insects and unseen animals.",
+      "exits": {
+        "further in the forest": "deep_forest_50",
+        "deeper into the woods": "deep_forest_31",
+        "follow the winding game trail": "deep_forest_33",
+        "push through the tangled thicket": "deep_forest_19"
+      },
+      "entities": [
+        "ancient_oak",
+        "mossy_rock"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The trees grow larger and older as you press deeper into the forest.",
+      "ambient_text": "The buzzing of insects creates a constant low hum."
+    },
+    "deep_forest_33": {
+      "id": "deep_forest_33",
+      "name": "Deep Forest",
+      "description": "A fallen giant of a tree lies rotting, providing nutrients for new growth.",
+      "exits": {
+        "further in the forest": "deep_forest_34",
+        "deeper into the woods": "deep_forest_20",
+        "follow the winding game trail": "deep_forest_32",
+        "push through the tangled thicket": "deep_forest_51"
+      },
+      "entities": [
+        "oak_tree",
+        "mossy_rock",
+        "fallen_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "You push through a wall of ferns and find yourself deeper in the woods.",
+      "ambient_text": "The buzzing of insects creates a constant low hum."
+    },
+    "deep_forest_34": {
+      "id": "deep_forest_34",
+      "name": "Deep Forest",
+      "description": "The forest floor is soft with decaying leaves. The air is cool and damp.",
+      "exits": {
+        "further in the forest": "river_crossing_53",
+        "deeper into the woods": "deep_forest_21",
+        "follow the winding game trail": "river_crossing_54",
+        "push through the tangled thicket": "deep_forest_33"
+      },
+      "entities": [
+        "copper_deposit",
+        "mossy_rock"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "Water drips from a mossy rock nearby."
+    },
+    "deep_forest_46": {
+      "id": "deep_forest_46",
+      "name": "Deep Forest",
+      "description": "Massive trunks rise like pillars in a natural cathedral. Sunlight streams through gaps in the leaves.",
+      "exits": {
+        "out of the forest": "forest_edge_12",
+        "further in the forest": "deep_forest_64",
+        "deeper into the woods": "deep_forest_47"
+      },
+      "entities": [
+        "fern_grove"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The trees grow larger and older as you press deeper into the forest.",
+      "ambient_text": "Water drips from a mossy rock nearby."
+    },
+    "deep_forest_47": {
+      "id": "deep_forest_47",
+      "name": "Deep Forest",
+      "description": "The forest floor is soft with decaying leaves. The air is cool and damp.",
+      "exits": {
+        "further in the forest": "deep_forest_29",
+        "deeper into the woods": "deep_forest_48",
+        "follow the winding game trail": "deep_forest_46",
+        "push through the tangled thicket": "deep_forest_65"
+      },
+      "entities": [
+        "fallen_log",
+        "oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "Birdsong echoes through the trees above."
+    },
+    "deep_forest_48": {
+      "id": "deep_forest_48",
+      "name": "Deep Forest",
+      "description": "A fallen giant of a tree lies rotting, providing nutrients for new growth.",
+      "exits": {
+        "further in the forest": "deep_forest_66",
+        "deeper into the woods": "deep_forest_49",
+        "follow the winding game trail": "deep_forest_30",
+        "push through the tangled thicket": "deep_forest_47"
+      },
+      "entities": [
+        "fallen_log",
+        "copper_deposit"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "You push through a wall of ferns and find yourself deeper in the woods.",
+      "ambient_text": "The creak of ancient branches swaying in the wind."
+    },
+    "deep_forest_49": {
+      "id": "deep_forest_49",
+      "name": "Deep Forest",
+      "description": "The deeper forest hums with the sounds of insects and unseen animals.",
+      "exits": {
+        "further in the forest": "deep_forest_48",
+        "deeper into the woods": "deep_forest_50",
+        "follow the winding game trail": "deep_forest_31",
+        "push through the tangled thicket": "deep_forest_67"
+      },
+      "entities": [
+        "fallen_log",
+        "iron_deposit"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "Birdsong echoes through the trees above."
+    },
+    "deep_forest_50": {
+      "id": "deep_forest_50",
+      "name": "Deep Forest",
+      "description": "A thick carpet of moss covers the ground, muffling your footsteps.",
+      "exits": {
+        "further in the forest": "deep_forest_32",
+        "deeper into the woods": "deep_forest_51",
+        "follow the winding game trail": "deep_forest_49",
+        "push through the tangled thicket": "river_crossing_55"
+      },
+      "entities": [
+        "mushroom_ring",
+        "resin_deposit"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "Water drips from a mossy rock nearby."
+    },
+    "deep_forest_51": {
+      "id": "deep_forest_51",
+      "name": "Deep Forest",
+      "description": "The deeper forest hums with the sounds of insects and unseen animals.",
+      "exits": {
+        "further in the forest": "river_crossing_54",
+        "deeper into the woods": "deep_forest_50",
+        "follow the winding game trail": "river_crossing_56",
+        "push through the tangled thicket": "deep_forest_33"
+      },
+      "entities": [
+        "mossy_rock",
+        "iron_deposit"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The trees grow larger and older as you press deeper into the forest.",
+      "ambient_text": "Leaves rustle as something moves in the undergrowth."
+    },
+    "deep_forest_52": {
+      "id": "deep_forest_52",
+      "name": "Deep Forest",
+      "description": "A thick carpet of moss covers the ground, muffling your footsteps.",
+      "exits": {
+        "further in the forest": "deep_forest_69",
+        "deeper into the woods": "river_crossing_54",
+        "follow the winding game trail": "river_crossing_53"
+      },
+      "entities": [
+        "ancient_oak"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The trees grow larger and older as you press deeper into the forest.",
+      "ambient_text": "The buzzing of insects creates a constant low hum."
+    },
+    "deep_forest_64": {
+      "id": "deep_forest_64",
+      "name": "Deep Forest",
+      "description": "Ancient trees tower overhead, their branches intertwining to form a living ceiling.",
+      "exits": {
+        "further in the forest": "deep_forest_46",
+        "deeper into the woods": "deep_forest_65"
+      },
+      "entities": [
+        "fern_grove",
+        "ancient_oak",
+        "mossy_rock"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "Water drips from a mossy rock nearby."
+    },
+    "deep_forest_65": {
+      "id": "deep_forest_65",
+      "name": "Deep Forest",
+      "description": "The deeper forest hums with the sounds of insects and unseen animals.",
+      "exits": {
+        "further in the forest": "deep_forest_64",
+        "deeper into the woods": "deep_forest_66",
+        "follow the winding game trail": "deep_forest_47"
+      },
+      "entities": [
+        "fern_grove",
+        "oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "An owl hoots softly in the distance."
+    },
+    "deep_forest_66": {
+      "id": "deep_forest_66",
+      "name": "Deep Forest",
+      "description": "The canopy blots out much of the sky. Dappled light falls on a bed of moss and fallen leaves.",
+      "exits": {
+        "further in the forest": "deep_forest_48",
+        "deeper into the woods": "deep_forest_67",
+        "follow the winding game trail": "deep_forest_65"
+      },
+      "entities": [
+        "wild_flower_patch",
+        "copper_deposit"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "Birdsong echoes through the trees above."
+    },
+    "deep_forest_67": {
+      "id": "deep_forest_67",
+      "name": "Deep Forest",
+      "description": "The forest floor is soft with decaying leaves. The air is cool and damp.",
+      "exits": {
+        "further in the forest": "deep_forest_66",
+        "deeper into the woods": "deep_forest_49",
+        "follow the winding game trail": "river_crossing_55"
+      },
+      "entities": [
+        "mossy_rock",
+        "resin_deposit",
+        "fallen_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "A carpet of bluebells stretches between the trees, glowing faintly in the dim light.",
+      "ambient_text": "Leaves rustle as something moves in the undergrowth."
+    },
+    "deep_forest_68": {
+      "id": "deep_forest_68",
+      "name": "Deep Forest",
+      "description": "Massive trunks rise like pillars in a natural cathedral. Sunlight streams through gaps in the leaves.",
+      "exits": {
+        "further in the forest": "river_crossing_56",
+        "deeper into the woods": "river_crossing_54",
+        "follow the winding game trail": "deep_forest_69"
+      },
+      "entities": [
+        "mossy_rock",
+        "oak_tree"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "Leaves rustle as something moves in the undergrowth."
+    },
+    "deep_forest_69": {
+      "id": "deep_forest_69",
+      "name": "Deep Forest",
+      "description": "A thick carpet of moss covers the ground, muffling your footsteps.",
+      "exits": {
+        "further in the forest": "deep_forest_68",
+        "deeper into the woods": "deep_forest_52"
+      },
+      "entities": [
+        "mossy_rock",
+        "ancient_oak",
+        "fallen_log"
+      ],
+      "tags": [
+        "forest",
+        "wilderness"
+      ],
+      "discovery_text": "The shadows deepen as you venture further from the forest's edge.",
+      "ambient_text": "Leaves rustle as something moves in the undergrowth."
+    },
+    "open_hill_1": {
+      "id": "open_hill_1",
+      "name": "Open Hill",
+      "description": "From this rise you can see the forest canopy stretching to the horizon like a green sea.",
+      "exits": {
+        "further in hills": "open_hill_2",
+        "climb the next hill": "open_hill_4"
+      },
+      "entities": [
+        "standing_stone",
+        "wind_swept_bush"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You climb the gentle slope and take in the view of the lands below.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "open_hill_2": {
+      "id": "open_hill_2",
+      "name": "Open Hill",
+      "description": "The hill provides a panoramic view of the surrounding countryside.",
+      "exits": {
+        "further in hills": "open_hill_1",
+        "climb the next hill": "open_hill_3",
+        "over the rocky ridge": "open_hill_5"
+      },
+      "entities": [
+        "wind_swept_bush",
+        "wildflower_meadow"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You ascend the rise, the grass swishing around your knees.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "open_hill_3": {
+      "id": "open_hill_3",
+      "name": "Open Hill",
+      "description": "The hill provides a panoramic view of the surrounding countryside.",
+      "exits": {
+        "further in hills": "open_hill_2",
+        "climb the next hill": "open_hill_6",
+        "toward fields": "farm_land_1"
+      },
+      "entities": [
+        "rabbit_burrow",
+        "copper_deposit"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "The hill offers a vantage point over the surrounding wilderness.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "open_hill_4": {
+      "id": "open_hill_4",
+      "name": "Open Hill",
+      "description": "From this rise you can see the forest canopy stretching to the horizon like a green sea.",
+      "exits": {
+        "further in hills": "open_hill_1",
+        "climb the next hill": "open_hill_4",
+        "over the rocky ridge": "open_hill_7"
+      },
+      "entities": [
+        "standing_stone",
+        "copper_deposit"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You ascend the rise, the grass swishing around your knees.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "open_hill_5": {
+      "id": "open_hill_5",
+      "name": "Open Hill",
+      "description": "The hill provides a panoramic view of the surrounding countryside.",
+      "exits": {
+        "further in hills": "open_hill_2",
+        "climb the next hill": "open_hill_4",
+        "over the rocky ridge": "open_hill_8",
+        "up the grassy slope": "open_hill_6"
+      },
+      "entities": [
+        "wind_swept_bush"
+
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "The hill offers a vantage point over the surrounding wilderness.",
+      "ambient_text": "Birds wheel overhead, riding the thermals."
+    },
+    "open_hill_6": {
+      "id": "open_hill_6",
+      "name": "Open Hill",
+      "description": "A gentle breeze sweeps across the hilltop, carrying the scent of grass and wild herbs.",
+      "exits": {
+        "further in hills": "open_hill_9",
+        "climb the next hill": "open_hill_3",
+        "over the rocky ridge": "open_hill_5",
+        "toward fields": "farm_land_6"
+      },
+      "entities": [
+        "rabbit_burrow",
+        "iron_deposit"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "The hill offers a vantage point over the surrounding wilderness.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "open_hill_7": {
+      "id": "open_hill_7",
+      "name": "Open Hill",
+      "description": "From this rise you can see the forest canopy stretching to the horizon like a green sea.",
+      "exits": {
+        "further in hills": "open_hill_4",
+        "climb the next hill": "open_hill_8",
+        "over the rocky ridge": "open_hill_10"
+      },
+      "entities": [
+        "iron_deposit"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You ascend the rise, the grass swishing around your knees.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "open_hill_8": {
+      "id": "open_hill_8",
+      "name": "Open Hill",
+      "description": "Clusters of heather and gorse cling to the hillside, attracting bees and butterflies.",
+      "exits": {
+        "further in hills": "open_hill_5",
+        "climb the next hill": "open_hill_7",
+        "over the rocky ridge": "open_hill_9",
+        "up the grassy slope": "open_hill_11"
+      },
+      "entities": [
+        "copper_deposit",
+        "rabbit_burrow"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You climb the gentle slope and take in the view of the lands below.",
+      "ambient_text": "Birds wheel overhead, riding the thermals."
+    },
+    "open_hill_9": {
+      "id": "open_hill_9",
+      "name": "Open Hill",
+      "description": "From this rise you can see the forest canopy stretching to the horizon like a green sea.",
+      "exits": {
+        "further in hills": "open_hill_12",
+        "climb the next hill": "open_hill_6",
+        "toward fields": "farm_land_11",
+        "over the rocky ridge": "open_hill_8"
+      },
+      "entities": [
+        "oak_tree",
+        "wind_swept_bush"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You climb the gentle slope and take in the view of the lands below.",
+      "ambient_text": "Butterflies dance between the wildflowers."
+    },
+    "open_hill_10": {
+      "id": "open_hill_10",
+      "name": "Open Hill",
+      "description": "A gentle breeze sweeps across the hilltop, carrying the scent of grass and wild herbs.",
+      "exits": {
+        "further in hills": "open_hill_7",
+        "climb the next hill": "open_hill_11",
+        "over the rocky ridge": "open_hill_13"
+      },
+      "entities": [
+        "rabbit_burrow",
+        "copper_deposit"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You climb the gentle slope and take in the view of the lands below.",
+      "ambient_text": "Butterflies dance between the wildflowers."
+    },
+    "open_hill_11": {
+      "id": "open_hill_11",
+      "name": "Open Hill",
+      "description": "The hill provides a panoramic view of the surrounding countryside.",
+      "exits": {
+        "further in hills": "open_hill_12",
+        "toward edge of forest": "forest_edge_17",
+        "climb the next hill": "open_hill_8",
+        "over the rocky ridge": "open_hill_10"
+      },
+      "entities": [
+        "rabbit_burrow"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "The hill offers a vantage point over the surrounding wilderness.",
+      "ambient_text": "Butterflies dance between the wildflowers."
+    },
+    "open_hill_12": {
+      "id": "open_hill_12",
+      "name": "Open Hill",
+      "description": "From this rise you can see the forest canopy stretching to the horizon like a green sea.",
+      "exits": {
+        "toward edge of forest": "forest_edge_18",
+        "toward the forest clearing": "forest_edge_10",
+        "further in hills": "open_hill_9",
+        "climb the next hill": "open_hill_11"
+      },
+      "entities": [
+        "standing_stone",
+        "wind_swept_bush"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You ascend the rise, the grass swishing around your knees.",
+      "ambient_text": "Birds wheel overhead, riding the thermals."
+    },
+    "open_hill_13": {
+      "id": "open_hill_13",
+      "name": "Open Hill",
+      "description": "The hill is covered in soft grass that waves in the breeze. Wildflowers dot the slope.",
+      "exits": {
+        "further in hills": "open_hill_10",
+        "toward edge of forest": "forest_edge_24",
+        "toward the forest clearing": "forest_edge_17"
+      },
+      "entities": [
+        "wildflower_meadow",
+        "oak_tree"
+      ],
+      "tags": [
+        "hill",
+        "open"
+      ],
+      "discovery_text": "You ascend the rise, the grass swishing around your knees.",
+      "ambient_text": "The wind blows softly across the grass, creating ripples like water."
+    },
+    "farm_land_1": {
+      "id": "farm_land_1",
+      "name": "Farm Land",
+      "description": "Golden wheat sways in the breeze, stretching toward the horizon in orderly rows.",
+      "exits": {
+        "into the hill": "open_hill_3",
+        "to the next field": "farm_land_2",
+        "across to the neighboring field": "farm_land_6"
+      },
+      "entities": [
+        "wheat_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "You walk between the rows of crops, the earth soft beneath your feet.",
+      "ambient_text": "The rustle of crops in the wind is soothing."
+    },
+    "farm_land_2": {
+      "id": "farm_land_2",
+      "name": "Farm Land",
+      "description": "The fields are a patchwork of green and gold. The air smells of earth and ripening grain.",
+      "exits": {
+        "to the next field": "farm_land_1",
+        "across to the neighboring field": "farm_land_3",
+        "through the gate to the next field": "farm_land_7"
+      },
+      "entities": [
+        "corn_field",
+        "wheat_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "Fields of grain spread out before you, swaying in the breeze like a golden sea.",
+      "ambient_text": "Birds sing from a scarecrow standing guard nearby."
+    },
+    "farm_land_3": {
+      "id": "farm_land_3",
+      "name": "Farm Land",
+      "description": "Hay bales dot the harvested sections of the field like forgotten sentinels.",
+      "exits": {
+        "to the next field": "farm_land_2",
+        "across to the neighboring field": "farm_land_4",
+        "through the gate to the next field": "farm_land_8"
+      },
+      "entities": [
+        "corn_field",
+        "wheat_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "The cultivated fields of Oakhaven stretch before you, full of promise.",
+      "ambient_text": "The buzz of bees working among the blossoms fills the air."
+    },
+    "farm_land_4": {
+      "id": "farm_land_4",
+      "name": "Farm Land",
+      "description": "Neat rows of crops stretch across the landscape, a testament to the farmer's craft.",
+      "exits": {
+        "to the next field": "farm_land_3",
+        "across to the neighboring field": "farm_land_5",
+        "through the gate to the next field": "farm_land_9"
+      },
+      "entities": [
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "You walk between the rows of crops, the earth soft beneath your feet.",
+      "ambient_text": "Birds sing from a scarecrow standing guard nearby."
+    },
+    "farm_land_5": {
+      "id": "farm_land_5",
+      "name": "Farm Land",
+      "description": "Tall corn stalks create a whispering maze of green. The sun warms the fertile soil.",
+      "exits": {
+        "to the next field": "farm_land_4",
+        "across to the neighboring field": "farm_land_10"
+      },
+      "entities": [
+        "wheat_field",
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "The cultivated fields of Oakhaven stretch before you, full of promise.",
+      "ambient_text": "The distant lowing of cattle carries on the breeze."
+    },
+    "farm_land_6": {
+      "id": "farm_land_6",
+      "name": "Farm Land",
+      "description": "Tall corn stalks create a whispering maze of green. The sun warms the fertile soil.",
+      "exits": {
+        "to the next field": "farm_land_1",
+        "into the hill": "open_hill_6",
+        "across to the neighboring field": "farm_land_11",
+        "through the gate to the next field": "farm_land_7"
+      },
+      "entities": [
+        "wheat_field",
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "The cultivated fields of Oakhaven stretch before you, full of promise.",
+      "ambient_text": "The distant lowing of cattle carries on the breeze."
+    },
+    "farm_land_7": {
+      "id": "farm_land_7",
+      "name": "Farm Land",
+      "description": "Neat rows of crops stretch across the landscape, a testament to the farmer's craft.",
+      "exits": {
+        "to the next field": "farm_land_8",
+        "across to the neighboring field": "farm_land_6",
+        "through the gate to the next field": "farm_land_2",
+        "over to the adjacent field": "farm_land_12"
+      },
+      "entities": [
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "You walk between the rows of crops, the earth soft beneath your feet.",
+      "ambient_text": "The buzz of bees working among the blossoms fills the air."
+    },
+    "farm_land_8": {
+      "id": "farm_land_8",
+      "name": "Farm Land",
+      "description": "Golden wheat sways in the breeze, stretching toward the horizon in orderly rows.",
+      "exits": {
+        "to the next field": "farm_land_3",
+        "across to the neighboring field": "farm_land_9",
+        "through the gate to the next field": "farm_land_7",
+        "to a walled village": "Oakhaven_village_entrance"
+      },
+      "entities": [
+        "wheat_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "You walk between the rows of crops, the earth soft beneath your feet.",
+      "ambient_text": "The distant lowing of cattle carries on the breeze."
+    },
+    "farm_land_9": {
+      "id": "farm_land_9",
+      "name": "Farm Land",
+      "description": "Hay bales dot the harvested sections of the field like forgotten sentinels.",
+      "exits": {
+        "to the next field": "farm_land_13",
+        "across to the neighboring field": "farm_land_10",
+        "through the gate to the next field": "farm_land_8",
+        "over to the adjacent field": "farm_land_4"
+      },
+      "entities": [
+        "corn_field",
+        "wheat_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "The cultivated fields of Oakhaven stretch before you, full of promise.",
+      "ambient_text": "The buzz of bees working among the blossoms fills the air."
+    },
+    "farm_land_10": {
+      "id": "farm_land_10",
+      "name": "Farm Land",
+      "description": "The field buzzes with the activity of bees and other pollinators among the blossoms.",
+      "exits": {
+        "to the next field": "farm_land_5",
+        "across to the neighboring field": "farm_land_14",
+        "through the gate to the next field": "farm_land_9"
+      },
+      "entities": [
+        "wheat_field",
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "Fields of grain spread out before you, swaying in the breeze like a golden sea.",
+      "ambient_text": "The distant lowing of cattle carries on the breeze."
+    },
+    "farm_land_11": {
+      "id": "farm_land_11",
+      "name": "Farm Land",
+      "description": "The field buzzes with the activity of bees and other pollinators among the blossoms.",
+      "exits": {
+        "to the next field": "farm_land_5",
+        "across to the neighboring field": "farm_land_12",
+        "to the forest edge": "forest_edge_10",
+        "into the hill": "open_hill_9"
+      },
+      "entities": [
+        "wheat_field",
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "Fields of grain spread out before you, swaying in the breeze like a golden sea.",
+      "ambient_text": "The distant lowing of cattle carries on the breeze."
+    },
+    "farm_land_12": {
+      "id": "farm_land_12",
+      "name": "Farm Land",
+      "description": "Hay bales dot the harvested sections of the field like forgotten sentinels.",
+      "exits": {
+        "to a walled village": "Oakhaven_village_entrance",
+        "to the forest edge": "forest_edge_11",
+        "to the next field": "farm_land_11",
+        "across to the neighboring field": "farm_land_7"
+      },
+      "entities": [
+        "corn_field",
+        "wheat_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "The cultivated fields of Oakhaven stretch before you, full of promise.",
+      "ambient_text": "Birds sing from a scarecrow standing guard nearby."
+    },
+    "farm_land_13": {
+      "id": "farm_land_13",
+      "name": "Farm Land",
+      "description": "Tall corn stalks create a whispering maze of green. The sun warms the fertile soil.",
+      "exits": {
+        "to the next field": "farm_land_14",
+        "across to the neighboring field": "farm_land_9",
+        "to the forest edge": "forest_edge_13",
+        "to a walled village": "Oakhaven_village_entrance"
+      },
+      "entities": [
+        "green_berry_bush"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "The cultivated fields of Oakhaven stretch before you, full of promise.",
+      "ambient_text": "The distant lowing of cattle carries on the breeze."
+    },
+    "farm_land_14": {
+      "id": "farm_land_14",
+      "name": "Farm Land",
+      "description": "Neat rows of crops stretch across the landscape, a testament to the farmer's craft.",
+      "exits": {},
+      "entities": [
+        "wheat_field",
+        "corn_field"
+      ],
+      "tags": [
+        "farm",
+        "fields"
+      ],
+      "discovery_text": "You walk between the rows of crops, the earth soft beneath your feet.",
+      "ambient_text": "Birds sing from a scarecrow standing guard nearby."
+    },
+    "river_crossing_52": {
+      "id": "river_crossing_52",
+      "name": "River Crossing",
+      "description": "Tall reeds and cattails line the riverbank. Dragonflies hover over the still pools.",
+      "exits": {
+        "further in the forest": "deep_forest_21",
+        "out of the forest": "forest_edge_14",
+        "deeper into the woods": "river_crossing_53"
+      },
+      "entities": [
+        "green_berry_bush",
+        "weeping_willow",
+        "river"
+      ],
+      "tags": [
+        "river",
+        "crossing"
+      ],
+      "discovery_text": "You emerge from the trees to find a river cutting through the landscape.",
+      "ambient_text": "The sound of flowing water fills the air."
+    },
+    "river_crossing_53": {
+      "id": "river_crossing_53",
+      "name": "River Crossing",
+      "description": "The river bends here, creating a calm pool on one side and a gentle rapid on the other.",
+      "exits": {
+        "further in the forest": "river_crossing_52",
+        "deeper into the woods": "deep_forest_34",
+        "follow the winding game trail": "deep_forest_52"
+      },
+      "entities": [
+        "green_berry_bush",
+        "river"
+      ],
+      "tags": [
+        "river",
+        "crossing"
+      ],
+      "discovery_text": "You emerge from the trees to find a river cutting through the landscape.",
+      "ambient_text": "A fish leaps from the water with a splash."
+    },
+    "river_crossing_54": {
+      "id": "river_crossing_54",
+      "name": "River Crossing",
+      "description": "A shallow crossing allows passage over the river. The current is gentle here.",
+      "exits": {
+        "further in the forest": "deep_forest_68",
+        "deeper into the woods": "deep_forest_34",
+        "follow the winding game trail": "deep_forest_52",
+        "push through the tangled thicket": "deep_forest_51"
+      },
+      "entities": [
+        "green_berry_bush",
+        "river",
+        "frog_pond"
+      ],
+      "tags": [
+        "river",
+        "crossing"
+      ],
+      "discovery_text": "A clear river crosses your path, its waters glinting in the sunlight.",
+      "ambient_text": "A fish leaps from the water with a splash."
+    },
+    "river_crossing_55": {
+      "id": "river_crossing_55",
+      "name": "River Crossing",
+      "description": "The water sparkles in the sunlight as it flows over a bed of pebbles and sand.",
+      "exits": {
+        "further in the forest": "deep_forest_67",
+        "deeper into the woods": "deep_forest_50",
+        "follow the winding game trail": "river_crossing_56"
+      },
+      "entities": [
+        "smooth_stones",
+        "green_berry_bush"
+      ],
+      "tags": [
+        "river",
+        "crossing"
+      ],
+      "discovery_text": "The sound of flowing water grows louder as you approach the riverbank.",
+      "ambient_text": "The sound of flowing water fills the air."
+    },
+    "river_crossing_56": {
+      "id": "river_crossing_56",
+      "name": "River Crossing",
+      "description": "A shallow crossing allows passage over the river. The current is gentle here.",
+      "exits": {
+        "further in the forest": "deep_forest_68",
+        "deeper into the woods": "river_crossing_55",
+        "follow the winding game trail": "deep_forest_51"
+      },
+      "entities": [
+        "weeping_willow",
+        "river"
+      ],
+      "tags": [
+        "river",
+        "crossing"
+      ],
+      "discovery_text": "You emerge from the trees to find a river cutting through the landscape.",
+      "ambient_text": "A fish leaps from the water with a splash."
+    },
+    "dungeon_exterior": {
+      "id": "dungeon_exterior",
+      "name": "Dungeon Exterior",
+      "description": "The dark mouth of a dungeon gapes before you. A cold draft seeps from within.",
+      "exits": {
+        "north": "forest_path_start",
+        "east": "deep_forest_south"
+      },
+      "entities": [
+        "dungeon_entrance"
+      ],
+      "tags": [
+        "dungeon",
+        "entrance",
+        "dangerous"
+      ],
+      "discovery_text": "A gaping maw of stone opens into the earth. Cold air rises from below.",
+      "ambient_text": "Water drips somewhere inside the darkness."
+    }
+  }
+}

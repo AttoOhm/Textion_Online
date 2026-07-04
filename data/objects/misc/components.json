@@ -1,0 +1,64 @@
+{
+  "components": [
+    {
+      "id": "wolf_pelt",
+      "name": "Wolf Pelt",
+      "category": "component",
+      "description": "A thick pelt from a wolf. Can be used for crafting armor."
+    },
+    {
+      "id": "wolf_fang",
+      "name": "Wolf Fang",
+      "category": "component",
+      "description": "A sharp fang from a wolf. May be useful for crafting."
+    },
+    {
+      "id": "wolf_claw",
+      "name": "Wolf Claw",
+      "category": "component",
+      "description": "A claw from a wolf. May be useful for crafting."
+    },
+    {
+      "id": "wolf_hide",
+      "name": "Wolf Hide",
+      "category": "component",
+      "description": "A hide from a wolf. May be useful for crafting."
+    },
+    {
+      "id": "goblin_ear",
+      "name": "Goblin Ear",
+      "category": "component",
+      "description": "A severed goblin ear. Can be turned in for rewards."
+    },
+    {
+      "id": "arrow",
+      "name": "Arrow",
+      "category": "ammunition",
+      "description": "A simple wooden arrow with a metal tip."
+    },
+    {
+      "id": "rusty_armor",
+      "name": "Rusty Armor",
+      "category": "armor",
+      "subtype": "light",
+      "defense": 3,
+      "description": "Old, rusty armor. Better than nothing."
+    },
+    {
+      "id": "rusty_weapon",
+      "name": "Rusty Weapon",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 4,
+      "description": "A rusty, worn weapon. Still sharp enough to cut."
+    },
+    {
+      "id": "chief_axe",
+      "name": "Chief's Axe",
+      "category": "weapon",
+      "subtype": "axe",
+      "damage": 8,
+      "description": "A ceremonial axe wielded by the goblin chief."
+    }
+  ]
+}

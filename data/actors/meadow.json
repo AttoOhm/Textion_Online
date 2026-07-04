@@ -1,0 +1,161 @@
+{
+  "id": "meadow",
+  "name": "Meadow",
+  "race": "human",
+  "subtype": "bartender",
+  "languages": {
+    "speak": ["common"],
+    "understand": ["common"]
+  },
+  "factions": ["village"],
+
+  "appearance": {
+    "unknown_name": "a friendly bartender",
+    "known_name": "Meadow",
+    "full_name": "Meadow, the tavern keeper",
+    "description": "A warm-hearted woman with a ready smile and a towel over her shoulder."
+  },
+
+  "attributes": {
+    "strength": 100,
+    "dexterity": 110,
+    "knowledge": 110,
+    "constitution": 120,
+    "observation": 120,
+    "willpower": 50,
+    "reactiveness": 50,
+    "arcana": 50
+  },
+
+  "skills": {
+    "barter": 50,
+    "cooking": 70,
+    "negotiation": 40
+  },
+
+  "techniques": [],
+
+  "schedule": [
+    { "from": 8, "to": 12, "map_id": "village", "node_id": "tavern" },
+    { "from": 12, "to": 14, "map_id": "village", "node_id": "tavern" },
+    { "from": 14, "to": 18, "map_id": "village", "node_id": "tavern" },
+    { "from": 18, "to": 22, "map_id": "village", "node_id": "tavern" },
+    { "from": 22, "to": 8, "map_id": null, "node_id": null }
+  ],
+
+  "relations": {
+    "grim": { "trust": 500, "respect": 400, "friendship": 500, "fear": 0 },
+    "aldric": { "trust": 400, "respect": 500, "friendship": 400, "fear": 0 },
+    "elias": { "trust": 600, "respect": 500, "friendship": 600, "fear": 0 },
+    "bertha": { "trust": 500, "respect": 400, "friendship": 500, "fear": 0 }
+  },
+
+  "knowledge": {
+    "village_gossip": {
+      "importance": 700,
+      "stages": [
+        {
+          "id": "gossip_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["Plenty of talk these days. The merchants are restless."]
+        }
+      ]
+    },
+    "traveler_stories": {
+      "importance": 500,
+      "stages": [
+        {
+          "id": "story_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["Travelers passing through always have interesting tales to tell."]
+        }
+      ]
+    },
+    "forest_rumors": {
+      "importance": 600,
+      "stages": [
+        {
+          "id": "rumor_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["I've heard strange noises coming from the forest at night."]
+        }
+      ]
+    },
+    "old_legends": {
+      "importance": 400,
+      "stages": [
+        {
+          "id": "legend_1",
+          "visibility": "normal",
+          "conditions": [],
+          "facts": ["They say treasure is buried beneath the village. Old ruins to the north."]
+        }
+      ]
+    },
+    "mystery_brew": {
+      "importance": 800,
+      "stages": [
+        {
+          "id": "brew_1",
+          "visibility": "eager",
+          "conditions": [],
+          "facts": ["I'm working on a special brew. Just need one rare ingredient from the deep forest."]
+        }
+      ]
+    }
+  },
+
+  "quests": {
+    "starts": ["mystery_ingredient", "learn_preserving", "learn_alchemy"],
+    "progresses": [],
+    "completes": ["mystery_ingredient", "learn_preserving", "learn_alchemy"]
+  },
+
+  "shop": {
+    "visible_for_sale": ["mug_of_ale", "honey_mead", "hearty_stew"],
+    "hidden_for_sale": ["mystery_brew"]
+  },
+
+  "conversation": {
+    "personality": "cheerful",
+    "first_greeting": "The bartender polishes a mug with a warm smile. 'Name's Meadow. Welcome to my tavern! What'll it be? We've got ale, mead, and stories.'",
+    "greeting": "Meadow polishes a mug. 'What'll it be? We've got ale, mead, and stories.'",
+    "farewell": "Meadow waves. 'Come back anytime! New stories every night.'",
+    "dialogue_interest": ["ale", "mead", "drink", "story", "gossip", "tavern", "rest"],
+    "dialogue_bored": ["violence", "fighting", "weapons", "politics"]
+  },
+
+  "world": {
+    "job": "bartender",
+    "shop": {
+      "items": [
+        {"name": "Mug of Ale", "stats": "Restores 5 HP, temporary morale boost", "price": 2, "secret": false},
+        {"name": "Honey Mead", "stats": "Restores 10 HP, temporary strength boost", "price": 5, "secret": false},
+        {"name": "Hearty Stew", "stats": "Restores 15 HP", "price": 8, "secret": false},
+        {"name": "old Sickle", "stats": "ATK: 4", "price": 20, "secret": false},
+        {"name": "Mystery Brew", "stats": "Random effect", "price": 15, "secret": true, "quest_required": "mystery_ingredient"}
+      ],
+      "buy_prices": {
+        "drinks": 0.3,
+        "food": 0.4,
+        "default": 0.2
+      }
+    },
+    "active_quest": {
+      "name": "Mystery Ingredient",
+      "description": "I'm trying to brew something special but I need a rare ingredient from the deep forest.",
+      "steps": [
+        {"description": "Find the Moonflower in the deep forest", "type": "collect", "target": "moonflower", "count": 3, "current": 0},
+        {"description": "Return the flowers to Meadow", "type": "talk", "target": "bartender", "current": 0}
+      ],
+      "rewards": {
+        "gold": 40,
+        "item": "Mystery Brew",
+        "reputation": 8
+      }
+    }
+  }
+}

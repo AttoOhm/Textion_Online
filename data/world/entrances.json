@@ -1,0 +1,70 @@
+{
+  "entrances": {
+    "village_gate_entrance": {
+      "id": "village_gate_entrance",
+      "name": "Oakhaven Main Gate",
+      "category": "entrance",
+      "map_id": "overworld",
+      "node_id": "village_entrance",
+      "description": "The entrance gates leading into Oakhaven village.",
+      "command": "enter",
+      "destination_map": "village",
+      "destination_node": "gate_exit"
+    },
+    "overworld_entrance": {
+      "id": "overworld_entrance",
+      "name": "Oakhaven Main Gate",
+      "category": "entrance",
+      "map_id": "village",
+      "node_id": "gate_exit",
+      "description": "The gates leading out to the wilderness.",
+      "command": "exit to",
+      "destination_map": "overworld",
+      "destination_node": "Oakhaven_village_entrance"
+    },
+    "dungeon_entrance": {
+      "id": "dungeon_entrance",
+      "name": "Dungeon Entrance",
+      "category": "entrance",
+      "map_id": "overworld",
+      "node_id": "dungeon_exterior",
+      "description": "The dark gaping mouth leading deep into the underground dungeon.",
+      "command": "enter",
+      "destination_map": "dungeon",
+      "destination_node": "dungeon_entrance"
+    },
+    "dungeon_exit": {
+      "id": "dungeon_exit",
+      "name": "Dungeon Exit Door",
+      "category": "entrance",
+      "map_id": "dungeon",
+      "node_id": "dungeon_entrance",
+      "description": "The light filtering from above indicates the path to the outside.",
+      "command": "exit to",
+      "destination_map": "overworld",
+      "destination_node": "dungeon_exterior"
+    },
+    "goblin_camp_entrance": {
+      "id": "goblin_camp_entrance",
+      "name": "Goblin Camp",
+      "category": "entrance",
+      "map_id": "overworld",
+      "node_id": "deep_forest_29",
+      "description": "the entrance to a rough goblin encampment hidden beneath the forest canopy.",
+      "command": "enter",
+      "destination_map": "goblin_camp",
+      "destination_node": "forest_path"
+    },
+    "goblin_camp_exit": {
+      "id": "goblin_camp_exit",
+      "name": "Goblin Camp",
+      "category": "entrance",
+      "map_id": "goblin_camp",
+      "node_id": "forest_path",
+      "description": "The path leading out of the goblin camp and back into the forest.",
+      "command": "exit to",
+      "destination_map": "overworld",
+      "destination_node": "deep_forest_29"
+    }
+  }
+}

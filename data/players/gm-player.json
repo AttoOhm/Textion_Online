@@ -1,0 +1,97 @@
+{
+  "name": "GM-player",
+  "attributes": {
+    "strength": 30,
+    "dexterity": 30,
+    "knowledge": 14,
+    "constitution": 14,
+    "observation": 13,
+    "willpower": 13,
+    "reactiveness": 13,
+    "arcana": 13
+  },
+  "position": {
+    "map_id": "village",
+    "node_id": "church"
+  },
+  "hp": 100,
+  "max_hp": 100,
+  "coins": 73,
+  "inventory": [
+    {
+      "item_id": "copper_ingot",
+      "quantity": 1
+    },
+    {
+      "item_id": "mug_of_ale",
+      "quantity": 1
+    }
+  ],
+  "equipment": {
+    "weapon": null,
+    "armor": null,
+    "accessory": null,
+    "main_hand": {
+      "item_id": "old_pickaxe",
+      "name": "Old Pickaxe"
+    }
+  },
+  "skills": {},
+  "quests": [
+    {
+      "id": "guard_advice",
+      "name": "Guard's Advice",
+      "status": "active",
+      "steps": []
+    },
+    {
+      "id": "wolves_menace",
+      "name": "Wolves Menace",
+      "status": "active",
+      "steps": []
+    },
+    {
+      "id": "learn_draw_cut",
+      "name": "Lesson: Draw Cut",
+      "status": "active",
+      "steps": []
+    },
+    {
+      "id": "learn_riposte",
+      "name": "Lesson: Riposte",
+      "status": "active",
+      "steps": []
+    }
+  ],
+  "quest_notes": {},
+  "journal": [],
+  "completed_quests": [
+    {
+      "id": "guard_advice",
+      "name": "Guard's Advice",
+      "completed_at": "now"
+    }
+  ],
+  "discovery": {
+    "visited_nodes": [],
+    "known_actors": [
+      "aldric",
+      "guild_master",
+      "huntsman",
+      "grim",
+      "Seraphina",
+      "Thorin Ironvein",
+      "Eldric",
+      "meadow",
+      "Father_Benedict"
+    ],
+    "known_entities": [],
+    "known_locations": [],
+    "location_positions": []
+  },
+  "reputation": {
+    "actors": {},
+    "factions": {}
+  },
+  "account_id": "admin"
+}

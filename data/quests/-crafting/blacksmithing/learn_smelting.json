@@ -1,0 +1,22 @@
+{
+  "id": "learn_smelting",
+  "title": "Lesson: Smelting",
+  "giver": "grim",
+  "prerequisites": [],
+  "description": "Learn to smelt ore into ingots at the forge.",
+  "completion_conditions": [
+    { "type": "item_delivery", "target": "copper_ore", "count": 20 },
+    { "type": "item_delivery", "target": "iron_ore", "count": 10 }
+  ],
+  "rewards": {
+    "technique": "smelting",
+    "reputation": { "actor": { "grim": 100 } }
+  },
+  "steps": [
+    {"description": "Bring 20 copper ore to Grim", "type": "deliver", "target": "copper_ore", "count": 20},
+    {"description": "Bring 10 iron ore to Grim", "type": "deliver", "target": "iron_ore", "count": 10},
+    {"description": "Speak to Grim", "type": "talk", "target": "grim"}
+  ],
+  "completion_npc": "grim",
+  "completion_topic": "smelting"
+}

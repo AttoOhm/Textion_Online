@@ -1,0 +1,91 @@
+{
+  "id": "goblin",
+  "name": "Grigi",
+  "race": "goblin",
+  "subtype": "goblin",
+  "languages": {
+    "speak": ["greenskin"],
+    "understand": ["greenskin", "common"]
+  },
+  "factions": ["goblin_tribe"],
+
+  "appearance": {
+    "unknown_name": "Goblin",
+    "known_name": "Goblin",
+    "full_name": "Grigi, the goblin",
+    "description": "A small, green-skinned humanoid with beady eyes and sharp teeth. It clutches a rusty dagger."
+  },
+
+  "attributes": {
+    "strength": 80,
+    "dexterity": 130,
+    "knowledge": 70,
+    "constitution": 80,
+    "observation": 110,
+    "willpower": 50,
+    "reactiveness": 50,
+    "arcana": 50
+  },
+
+  "skills": {
+    "melee": 30,
+    "stealth": 50,
+    "perception": 40
+  },
+
+  "techniques": ["bite", "claw"],
+
+  "schedule": [
+    { "from": 0, "to": 24, "location": "forest_path" }
+  ],
+
+  "relations": {
+    "goblin": { "trust": 400, "respect": 300, "friendship": 500, "fear": 0 },
+    "wolf": { "trust": 0, "respect": 0, "friendship": 0, "fear": 200 },
+    "human": { "trust": 0, "respect": 0, "friendship": 0, "fear": 500 }
+  },
+
+  "knowledge": {},
+
+  "quests": {
+    "starts": [],
+    "progresses": [],
+    "completes": []
+  },
+
+  "shop": null,
+
+  "conversation": null,
+
+  "is_hostile": true,
+  "damage": 3,
+  "loot": [
+    {"id": "rusty_dagger", "name": "Rusty Dagger", "chance": 0.6},
+    {"id": "gold_coin", "name": "Gold Coin", "chance": 0.8, "amount": "1-3"}
+  ],
+
+  "world": {},
+  "type": "creature",
+  "can_converse": false,
+  "descriptor": "one_eyed",
+  "location": "forest_path",
+  "personality": "cunning, cowardly, aggressive in numbers",
+  "emotions": {
+    "aggressive": 0.5,
+    "fearful": 0.4
+  },
+  "hp": 65,
+  "max_hp": 65,
+  "behaviors": {
+    "hostile": true,
+    "aggressive": false,
+    "flee_threshold": 0.3,
+    "patrol_radius": 2,
+    "group_size": "2-4"
+  },
+  "relationships": {
+    "goblin": "pack",
+    "wolf": "neutral",
+    "human": "hostile"
+  }
+}

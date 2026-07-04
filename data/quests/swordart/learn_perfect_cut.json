@@ -1,0 +1,28 @@
+{
+  "id": "learn_perfect_cut",
+  "title": "Lesson: Perfect Cut",
+  "giver": "swordswoman",
+  "participants": ["swordswoman"],
+  "prerequisites": ["learn_riposte"],
+  "description": "Seraphina will teach you Perfect Cut, a precisely aimed strike that bypasses armor. This technique requires immense patience and precision. Practice your form by striking the ancient oak tree in the village graveyard 100 times.",
+  "completion_conditions": [
+    { "type": "action_count", "target": "attack_old_oak", "count": 100 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "perfect_cut",
+    "reputation": { "actor": { "swordswoman": 100 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["sword", "technique", "perfect", "cut", "armor", "learn", "seraphina", "training", "precision"],
+  "steps": [
+    {"description": "Practice striking the old oak tree 100 times in the graveyard", "type": "action_count", "target": "attack_old_oak", "count": 100, "current": 0},
+    {"description": "Speak to Seraphina to learn Perfect Cut", "type": "talk", "target": "swordswoman", "current": 0}
+  ],
+  "completion_npc": "swordswoman",
+  "completion_topic": "perfect_cut"
+}

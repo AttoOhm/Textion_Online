@@ -1,0 +1,4090 @@
+{
+  "actors": [
+    {
+      "id": "aldric",
+      "name": "Aldric",
+      "race": "human",
+      "subtype": "guard",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "village"
+      ],
+      "appearance": {
+        "unknown_name": "a guard in silver armor",
+        "known_name": "Aldric",
+        "full_name": "Aldric, the village guard",
+        "description": "A disciplined guard wearing polished silver armor."
+      },
+      "attributes": {
+        "strength": 150,
+        "dexterity": 120,
+        "knowledge": 100,
+        "constitution": 140,
+        "observation": 130,
+        "willpower": 50,
+        "reactiveness": 50,
+        "arcana": 50
+      },
+      "skills": {
+        "melee": 65,
+        "perception": 55,
+        "leadership": 40
+      },
+      "techniques": [
+        "shield_bash",
+        "alert"
+      ],
+      "schedule": [
+        {
+          "from": 8,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "village_center"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "village_center"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "village_center"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "village_center"
+        },
+        {
+          "from": 22,
+          "to": 8,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 700,
+          "respect": 600,
+          "friendship": 500,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 300,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 400,
+          "fear": 0
+        },
+        "bertha": {
+          "trust": 300,
+          "respect": 200,
+          "friendship": 200,
+          "fear": 0
+        },
+        "wolf": {
+          "trust": 0,
+          "respect": 0,
+          "friendship": 0,
+          "fear": 500
+        },
+        "goblin": {
+          "trust": 0,
+          "respect": 0,
+          "friendship": 0,
+          "fear": 600
+        }
+      },
+      "knowledge": {
+        "village_defenses": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "defense_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "The village walls are sturdy but we're short on patrols at night."
+              ]
+            }
+          ]
+        },
+        "forest_dangers": {
+          "importance": 600,
+          "stages": [
+            {
+              "id": "forest_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "Wolves and goblins stalk the forest paths. Travel carefully after dark."
+              ]
+            }
+          ]
+        },
+        "criminal_activity": {
+          "importance": 500,
+          "stages": [
+            {
+              "id": "crime_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "There have been some thefts reported. Bandits operating nearby."
+              ]
+            }
+          ]
+        },
+        "traveler_rumors": {
+          "importance": 400,
+          "stages": [
+            {
+              "id": "rumor_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "Strange lights at a ruined castle north of here. Travelers speak of ghostly figures."
+              ]
+            }
+          ]
+        },
+        "village_history": {
+          "importance": 400,
+          "stages": [
+            {
+              "id": "history_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "This village was founded over 300 years ago by settlers from the south."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "patrol_perimeter"
+        ],
+        "progresses": [],
+        "completes": [
+          "guard_advice"
+        ]
+      },
+      "shop": null,
+      "conversation": {
+        "personality": "dutiful",
+        "greeting": "The guard stands tall, hand resting on his sword. 'State your business, traveler.'",
+        "farewell": "Aldric nods firmly. 'Stay safe.'",
+        "dialogue_interest": [
+          "guard",
+          "patrol",
+          "danger",
+          "protect",
+          "village",
+          "safety"
+        ],
+        "dialogue_bored": [
+          "violence",
+          "fighting",
+          "weapons",
+          "gossip"
+        ],
+        "topics": {
+          "sword_techniques": {
+            "greeting": "Aldric's eyes light up. 'Ah, interested in the art of the sword? I can teach you five fundamental techniques if you've proven yourself.'",
+            "farewell": "Remember, technique is nothing without practice. Train hard, and you'll become a true swordsman.",
+            "keywords": [
+              "sword",
+              "technique",
+              "combat",
+              "training",
+              "mastery",
+              "art"
+            ]
+          }
+        }
+      },
+      "world": {
+        "job": "guard",
+        "shop": null,
+        "available_quests": [
+          {
+            "id": "patrol_perimeter",
+            "name": "Patrol the Perimeter",
+            "description": "I need someone to help patrol the village perimeter. Strange noises have been reported at night.",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Patrol the village walls at night",
+                "type": "explore",
+                "target": "village_walls",
+                "current": 0
+              },
+              {
+                "description": "Investigate strange noises",
+                "type": "investigate",
+                "target": "noise_source",
+                "current": 0
+              },
+              {
+                "description": "Report findings to Aldric",
+                "type": "talk",
+                "target": "guard",
+                "current": 0
+              }
+            ],
+            "rewards": {
+              "gold": 30,
+              "item": "Guard Badge",
+              "reputation": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "elias",
+      "name": "Elias",
+      "race": "human",
+      "subtype": "merchant",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "village"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "a merchant at his stall",
+        "known_name": "Elias",
+        "full_name": "Elias, the merchant",
+        "description": "A well-dressed merchant with a friendly smile and sharp eyes."
+      },
+      "attributes": {
+        "strength": 90,
+        "dexterity": 100,
+        "knowledge": 130,
+        "constitution": 100,
+        "observation": 120,
+        "willpower": 50,
+        "reactiveness": 50,
+        "arcana": 50
+      },
+      "skills": {
+        "barter": 70,
+        "appraisal": 65,
+        "negotiation": 60
+      },
+      "techniques": [],
+      "schedule": [
+        {
+          "from": 8,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 22,
+          "to": 8,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 350,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 300,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 600,
+          "respect": 500,
+          "friendship": 400,
+          "fear": 0
+        },
+        "bertha": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 350,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "trade_routes": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "trade_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "The trade road runs north to the capital. South leads to the coast."
+              ]
+            }
+          ]
+        },
+        "foreign_lands": {
+          "importance": 500,
+          "stages": [
+            {
+              "id": "foreign_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "I trade with merchants from distant lands. Each has its own wonders."
+              ]
+            }
+          ]
+        },
+        "merchant_guild": {
+          "importance": 600,
+          "stages": [
+            {
+              "id": "guild_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "The merchant guild protects our interests. Membership has its privileges."
+              ]
+            }
+          ]
+        },
+        "spice_trade": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "spice_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "Spices from the south are worth a fortune. But bandits have been hitting the caravans."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "spice_trade",
+          "learn_saw",
+          "learn_woodcrafting"
+        ],
+        "progresses": [],
+        "completes": [
+          "spice_trade",
+          "learn_saw",
+          "learn_woodcrafting"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "health_potion",
+          "mana_potion",
+          "rope",
+          "torch",
+          "lockpick_set",
+          "recipe_oak_bow",
+          "recipe_ash_bow",
+          "recipe_yew_bow",
+          "recipe_oak_staff",
+          "recipe_ash_staff",
+          "recipe_yew_staff",
+          "recipe_oak_wand",
+          "recipe_ash_wand",
+          "recipe_yew_wand",
+          "oak_plank",
+          "ash_plank",
+          "yew_plank",
+          "arcane_yew_plank",
+          "resin",
+          "sap",
+          "spirit_bark"
+        ],
+        "hidden_for_sale": [
+          "rare_spice"
+        ]
+      },
+      "conversation": {
+        "personality": "friendly",
+        "first_greeting": "The merchant smiles warmly and bows slightly. 'Name's Elias. Welcome to my stall! I have all manner of goods from distant lands.'",
+        "greeting": "Elias smiles warmly. 'Welcome to my stall! I have all manner of goods from distant lands.'",
+        "farewell": "Elias nods cheerfully. 'Safe travels! Come back anytime.'",
+        "dialogue_interest": [
+          "trade",
+          "goods",
+          "buy",
+          "sell",
+          "price",
+          "foreign",
+          "travel"
+        ],
+        "dialogue_bored": [
+          "violence",
+          "fighting",
+          "weapons"
+        ]
+      },
+      "world": {
+        "job": "merchant",
+        "shop": {
+          "items": [
+            {
+              "name": "old Hatchet",
+              "stats": "ATK: 4",
+              "price": 20,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Oak Bow",
+              "stats": "Teaches: Oak Bow",
+              "price": 45,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Ash Bow",
+              "stats": "Teaches: Ash Bow",
+              "price": 60,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Yew Bow",
+              "stats": "Teaches: Yew Bow",
+              "price": 80,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Oak Staff",
+              "stats": "Teaches: Oak Staff",
+              "price": 50,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Ash Staff",
+              "stats": "Teaches: Ash Staff",
+              "price": 65,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Yew Staff",
+              "stats": "Teaches: Yew Staff",
+              "price": 85,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Oak Wand",
+              "stats": "Teaches: Oak Wand",
+              "price": 30,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Ash Wand",
+              "stats": "Teaches: Ash Wand",
+              "price": 40,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Yew Wand",
+              "stats": "Teaches: Yew Wand",
+              "price": 55,
+              "secret": false
+            },
+            {
+              "name": "Health Potion",
+              "stats": "Restores 30 HP",
+              "price": 10,
+              "secret": false
+            },
+            {
+              "name": "Lockpick Set",
+              "stats": "Opens locks",
+              "price": 20,
+              "secret": false
+            },
+            {
+              "name": "Oak Plank",
+              "stats": "Woodworking material",
+              "price": 8,
+              "secret": false
+            },
+            {
+              "name": "Ash Plank",
+              "stats": "Woodworking material",
+              "price": 12,
+              "secret": false
+            },
+            {
+              "name": "Yew Plank",
+              "stats": "Woodworking material",
+              "price": 18,
+              "secret": false
+            },
+            {
+              "name": "Arcane Yew Plank",
+              "stats": "Rare woodworking material",
+              "price": 35,
+              "secret": true,
+              "quest_required": "spice_trade"
+            },
+            {
+              "name": "Resin",
+              "stats": "Binding agent",
+              "price": 3,
+              "secret": false
+            },
+            {
+              "name": "Sap",
+              "stats": "Natural adhesive",
+              "price": 4,
+              "secret": false
+            },
+            {
+              "name": "Spirit Bark",
+              "stats": "Magical binding",
+              "price": 8,
+              "secret": false
+            },
+            {
+              "name": "Rare Spice",
+              "stats": "Valuable trade good",
+              "price": 40,
+              "secret": true,
+              "quest_required": "spice_trade"
+            }
+          ],
+          "buy_prices": {
+            "potions": 0.6,
+            "tools": 0.5,
+            "default": 0.3
+          }
+        },
+        "active_quest": {
+          "name": "Spice Trade",
+          "description": "I need someone to retrieve my lost spice shipment from bandits in the forest.",
+          "steps": [
+            {
+              "description": "Find the bandit camp in the forest",
+              "type": "explore",
+              "target": "bandit_camp",
+              "current": 0
+            },
+            {
+              "description": "Defeat the bandits",
+              "type": "kill",
+              "target": "bandit",
+              "count": 3,
+              "current": 0
+            },
+            {
+              "description": "Retrieve the spice crates",
+              "type": "collect",
+              "target": "spice_crate",
+              "count": 3,
+              "current": 0
+            },
+            {
+              "description": "Return the spices to Elias",
+              "type": "talk",
+              "target": "merchant",
+              "current": 0
+            }
+          ],
+          "max_distance": 0,
+          "rewards": {
+            "gold": 75,
+            "item": "Rare Spice",
+            "reputation": 15
+          }
+        },
+        "available_quests": [
+          {
+            "id": "spice_trade",
+            "name": "Spice Trade",
+            "description": "I need someone to retrieve my lost spice shipment from bandits in the forest.",
+            "giver": "elias",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Find the bandit camp in the forest",
+                "type": "explore",
+                "target": "bandit_camp",
+                "current": 0
+              },
+              {
+                "description": "Defeat the bandits",
+                "type": "kill",
+                "target": "bandit",
+                "count": 3,
+                "current": 0
+              },
+              {
+                "description": "Retrieve the spice crates",
+                "type": "collect",
+                "target": "spice_crate",
+                "count": 3,
+                "current": 0
+              },
+              {
+                "description": "Return the spices to Elias",
+                "type": "talk",
+                "target": "merchant",
+                "current": 0
+              }
+            ],
+            "completion_npc": "elias",
+            "completion_topic": "",
+            "keywords": [
+              "spice",
+              "trade",
+              "bandits",
+              "shipment",
+              "help",
+              "quest"
+            ],
+            "rewards": {
+              "gold": 100,
+              "items": [
+                "spice_pouch"
+              ],
+              "reputation": {
+                "actor": {
+                  "elias": 50
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_saw",
+            "name": "Lesson: Sawing",
+            "description": "Learn to saw logs into planks at the woodshop.",
+            "giver": "elias",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Bring 15 oak logs to Elias",
+                "type": "deliver",
+                "target": "oak_log",
+                "count": 15
+              },
+              {
+                "description": "Bring 10 ash logs to Elias",
+                "type": "deliver",
+                "target": "ash_log",
+                "count": 10
+              },
+              {
+                "description": "Speak to Elias",
+                "type": "talk",
+                "target": "elias"
+              }
+            ],
+            "completion_npc": "elias",
+            "completion_topic": "sawing",
+            "keywords": [],
+            "rewards": {
+              "technique": "sawing",
+              "reputation": {
+                "actor": {
+                  "elias": 100
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_woodcrafting",
+            "name": "Lesson: Woodcrafting",
+            "description": "Learn to craft bows and staves from wood at the workbench.",
+            "giver": "elias",
+            "prerequisites": [
+              "learn_saw"
+            ],
+            "steps": [
+              {
+                "description": "Bring 8 oak planks to Elias",
+                "type": "deliver",
+                "target": "oak_plank",
+                "count": 8
+              },
+              {
+                "description": "Bring 4 ash planks to Elias",
+                "type": "deliver",
+                "target": "ash_plank",
+                "count": 4
+              },
+              {
+                "description": "Speak to Elias",
+                "type": "talk",
+                "target": "elias"
+              }
+            ],
+            "completion_npc": "elias",
+            "completion_topic": "woodcrafting",
+            "keywords": [],
+            "rewards": {
+              "technique": "woodcrafting",
+              "reputation": {
+                "actor": {
+                  "elias": 150
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "grim",
+      "name": "Grim",
+      "race": "human",
+      "subtype": "blacksmith",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "village"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "A blacksmith at his forge",
+        "known_name": "Grim",
+        "full_name": "Grim, the village blacksmith",
+        "description": "A broad-shouldered man with soot-stained hands and a thick leather apron."
+      },
+      "attributes": {
+        "strength": 140,
+        "dexterity": 100,
+        "knowledge": 120,
+        "constitution": 130,
+        "observation": 110,
+        "willpower": 50,
+        "reactiveness": 50,
+        "arcana": 50
+      },
+      "skills": {
+        "smithing": 75,
+        "appraisal": 60,
+        "negotiation": 30
+      },
+      "techniques": [
+        "power_strike",
+        "forge_mastery"
+      ],
+      "schedule": [
+        {
+          "from": 8,
+          "to": 9,
+          "map_id": "village",
+          "node_id": "blacksmith"
+        },
+        {
+          "from": 9,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "blacksmith"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "blacksmith"
+        },
+        {
+          "from": 22,
+          "to": 8,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "aldric": {
+          "trust": 600,
+          "respect": 700,
+          "friendship": 400,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 200,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 500,
+          "fear": 0
+        },
+        "bertha": {
+          "trust": 300,
+          "respect": 200,
+          "friendship": 100,
+          "fear": 0
+        },
+        "wolf": {
+          "trust": 0,
+          "respect": 0,
+          "friendship": 0,
+          "fear": 600
+        },
+        "goblin": {
+          "trust": 0,
+          "respect": 0,
+          "friendship": 0,
+          "fear": 700
+        }
+      },
+      "knowledge": {
+        "blacksmithing": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "blacksmith_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I work iron and steel here. Good ore comes from the east."
+              ]
+            }
+          ]
+        },
+        "village_history": {
+          "importance": 400,
+          "stages": [
+            {
+              "id": "history_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "This village was founded over 300 years ago. Settlers came from the south."
+              ]
+            }
+          ]
+        },
+        "iron_deposits": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "iron_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "There are iron deposits in the eastern hills. The mines are dangerous but rich."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "guard_advice",
+          "wolves_menace",
+          "alpha_wolf_hunt",
+          "learn_smelting",
+          "learn_blacksmithing"
+        ],
+        "progresses": [],
+        "completes": [
+          "guard_advice",
+          "wolves_menace",
+          "alpha_wolf_hunt",
+          "learn_smelting",
+          "learn_blacksmithing"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "recipe_copper_sword",
+          "recipe_copper_dagger",
+          "recipe_copper_axe",
+          "recipe_copper_hammer",
+          "recipe_iron_sword",
+          "recipe_iron_dagger",
+          "recipe_bronze_sword",
+          "recipe_bronze_dagger",
+          "recipe_bronze_axe",
+          "recipe_bronze_hammer",
+          "recipe_steel_sword",
+          "recipe_steel_dagger",
+          "recipe_steel_axe",
+          "recipe_steel_hammer",
+          "recipe_mithril_sword",
+          "recipe_mithril_dagger",
+          "recipe_mithril_axe",
+          "recipe_mithril_hammer",
+          "recipe_titran_sword",
+          "recipe_titran_dagger",
+          "recipe_titran_axe",
+          "recipe_titran_hammer",
+          "copper_ingot",
+          "iron_ingot",
+          "bronze_ingot",
+          "steel_ingot",
+          "oak_plank",
+          "ash_plank",
+          "yew_plank"
+        ],
+        "hidden_for_sale": [
+          "fang_of_aldric"
+        ]
+      },
+      "conversation": {
+        "personality": "dutiful",
+        "first_greeting": "The blacksmith looks up from his anvil, wiping sweat from his brow. 'Name's Grim. I'm the village blacksmith. Need something forged or repaired?'",
+        "greeting": "Grim looks up from his anvil, wiping sweat from his brow. 'Need something forged or repaired?'",
+        "farewell": "Grim nods and returns to his work.",
+        "dialogue_interest": [
+          "forge",
+          "steel",
+          "weapon",
+          "ore",
+          "smith"
+        ],
+        "dialogue_bored": [
+          "weather",
+          "gossip",
+          "politics"
+        ]
+      },
+      "world": {
+        "job": "blacksmith",
+        "shop": {
+          "items": [
+            {
+              "name": "Copper Sword",
+              "stats": "ATK: 8",
+              "price": 200,
+              "secret": false
+            },
+            {
+              "name": "Iron Sword",
+              "stats": "ATK: 12",
+              "price": 300,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Copper Sword",
+              "stats": "Teaches: Copper Sword",
+              "price": 25,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Copper Dagger",
+              "stats": "Teaches: Copper Dagger",
+              "price": 15,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Copper Axe",
+              "stats": "Teaches: Copper Axe",
+              "price": 30,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Copper Hammer",
+              "stats": "Teaches: Copper Hammer",
+              "price": 35,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Iron Sword",
+              "stats": "Teaches: Iron Sword",
+              "price": 50,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Iron Dagger",
+              "stats": "Teaches: Iron Dagger",
+              "price": 35,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Bronze Sword",
+              "stats": "Teaches: Bronze Sword",
+              "price": 40,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Bronze Dagger",
+              "stats": "Teaches: Bronze Dagger",
+              "price": 25,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Bronze Axe",
+              "stats": "Teaches: Bronze Axe",
+              "price": 45,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Bronze Hammer",
+              "stats": "Teaches: Bronze Hammer",
+              "price": 50,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Steel Sword",
+              "stats": "Teaches: Steel Sword",
+              "price": 75,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Steel Dagger",
+              "stats": "Teaches: Steel Dagger",
+              "price": 55,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Steel Axe",
+              "stats": "Teaches: Steel Axe",
+              "price": 85,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Steel Hammer",
+              "stats": "Teaches: Steel Hammer",
+              "price": 90,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Mithril Sword",
+              "stats": "Teaches: Mithril Sword",
+              "price": 150,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Mithril Dagger",
+              "stats": "Teaches: Mithril Dagger",
+              "price": 120,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Mithril Axe",
+              "stats": "Teaches: Mithril Axe",
+              "price": 160,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Mithril Hammer",
+              "stats": "Teaches: Mithril Hammer",
+              "price": 170,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Titran Sword",
+              "stats": "Teaches: Titran Sword",
+              "price": 250,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Titran Dagger",
+              "stats": "Teaches: Titran Dagger",
+              "price": 200,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Titran Axe",
+              "stats": "Teaches: Titran Axe",
+              "price": 260,
+              "secret": false
+            },
+            {
+              "name": "Recipe: Titran Hammer",
+              "stats": "Teaches: Titran Hammer",
+              "price": 270,
+              "secret": false
+            },
+            {
+              "name": "Copper Ingot",
+              "stats": "Smithing material",
+              "price": 10,
+              "secret": false
+            },
+            {
+              "name": "Iron Ingot",
+              "stats": "Smithing material",
+              "price": 20,
+              "secret": false
+            },
+            {
+              "name": "Bronze Ingot",
+              "stats": "Smithing material",
+              "price": 30,
+              "secret": false
+            },
+            {
+              "name": "Steel Ingot",
+              "stats": "Smithing material",
+              "price": 50,
+              "secret": false
+            },
+            {
+              "name": "Oak Plank",
+              "stats": "Smithing material",
+              "price": 8,
+              "secret": false
+            },
+            {
+              "name": "Ash Plank",
+              "stats": "Smithing material",
+              "price": 12,
+              "secret": false
+            },
+            {
+              "name": "Yew Plank",
+              "stats": "Smithing material",
+              "price": 18,
+              "secret": false
+            },
+            {
+              "name": "old Pickaxe",
+              "stats": "ATK: 4",
+              "price": 20,
+              "secret": false
+            },
+            {
+              "name": "Enchanted Blade",
+              "stats": "ATK: 12",
+              "price": 100,
+              "secret": true,
+              "quest_required": "wolves_menace"
+            }
+          ],
+          "buy_prices": {
+            "weapons": 0.5,
+            "armor": 0.4,
+            "default": 0.3
+          }
+        },
+        "available_quests": [
+          {
+            "id": "guard_advice",
+            "name": "Guard's Advice",
+            "description": "I've been hearing rumors from the merchants. Ask Aldric what he knows about the wolves. He'll have more details than I do.",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Ask Aldric about the wolves",
+                "type": "talk_topic",
+                "target": "wolves",
+                "npc": "aldric",
+                "current": 0
+              }
+            ],
+            "completion_npc": "aldric",
+            "completion_topic": "wolves",
+            "keywords": [
+              "wolves",
+              "aldric",
+              "guard",
+              "ask",
+              "advice",
+              "problem"
+            ],
+            "rewards": {
+              "gold": 5,
+              "reputation": 2
+            }
+          },
+          {
+            "id": "wolves_menace",
+            "name": "Wolves Menace",
+            "description": "The wolves in the forest have been getting bolder. Kill 5 of them and I'll reward you handsomely.",
+            "prerequisites": [
+              "guard_advice"
+            ],
+            "steps": [
+              {
+                "description": "Kill 5 wolves in the forest",
+                "type": "kill",
+                "target": "wolf",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Return to Grim",
+                "type": "talk",
+                "target": "blacksmith",
+                "current": 0
+              }
+            ],
+            "keywords": [
+              "wolves",
+              "forest",
+              "danger",
+              "hunt",
+              "kill",
+              "reward"
+            ],
+            "rewards": {
+              "gold": 50,
+              "item": "Enchanted Blade",
+              "reputation": 10
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "meadow",
+      "name": "Meadow",
+      "race": "human",
+      "subtype": "bartender",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "village"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "a friendly bartender",
+        "known_name": "Meadow",
+        "full_name": "Meadow, the tavern keeper",
+        "description": "A warm-hearted woman with a ready smile and a towel over her shoulder."
+      },
+      "attributes": {
+        "strength": 100,
+        "dexterity": 110,
+        "knowledge": 110,
+        "constitution": 120,
+        "observation": 120,
+        "willpower": 50,
+        "reactiveness": 50,
+        "arcana": 50
+      },
+      "skills": {
+        "barter": 50,
+        "cooking": 70,
+        "negotiation": 40
+      },
+      "techniques": [],
+      "schedule": [
+        {
+          "from": 8,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 22,
+          "to": 8,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 500,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 400,
+          "respect": 500,
+          "friendship": 400,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 600,
+          "respect": 500,
+          "friendship": 600,
+          "fear": 0
+        },
+        "bertha": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 500,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "village_gossip": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "gossip_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "Plenty of talk these days. The merchants are restless."
+              ]
+            }
+          ]
+        },
+        "traveler_stories": {
+          "importance": 500,
+          "stages": [
+            {
+              "id": "story_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "Travelers passing through always have interesting tales to tell."
+              ]
+            }
+          ]
+        },
+        "forest_rumors": {
+          "importance": 600,
+          "stages": [
+            {
+              "id": "rumor_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "I've heard strange noises coming from the forest at night."
+              ]
+            }
+          ]
+        },
+        "old_legends": {
+          "importance": 400,
+          "stages": [
+            {
+              "id": "legend_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "They say treasure is buried beneath the village. Old ruins to the north."
+              ]
+            }
+          ]
+        },
+        "mystery_brew": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "brew_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I'm working on a special brew. Just need one rare ingredient from the deep forest."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "mystery_ingredient",
+          "learn_preserving",
+          "learn_alchemy"
+        ],
+        "progresses": [],
+        "completes": [
+          "mystery_ingredient",
+          "learn_preserving",
+          "learn_alchemy"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "mug_of_ale",
+          "honey_mead",
+          "hearty_stew"
+        ],
+        "hidden_for_sale": [
+          "mystery_brew"
+        ]
+      },
+      "conversation": {
+        "personality": "cheerful",
+        "first_greeting": "The bartender polishes a mug with a warm smile. 'Name's Meadow. Welcome to my tavern! What'll it be? We've got ale, mead, and stories.'",
+        "greeting": "Meadow polishes a mug. 'What'll it be? We've got ale, mead, and stories.'",
+        "farewell": "Meadow waves. 'Come back anytime! New stories every night.'",
+        "dialogue_interest": [
+          "ale",
+          "mead",
+          "drink",
+          "story",
+          "gossip",
+          "tavern",
+          "rest"
+        ],
+        "dialogue_bored": [
+          "violence",
+          "fighting",
+          "weapons",
+          "politics"
+        ]
+      },
+      "world": {
+        "job": "bartender",
+        "shop": {
+          "items": [
+            {
+              "name": "Mug of Ale",
+              "stats": "Restores 5 HP, temporary morale boost",
+              "price": 2,
+              "secret": false
+            },
+            {
+              "name": "Honey Mead",
+              "stats": "Restores 10 HP, temporary strength boost",
+              "price": 5,
+              "secret": false
+            },
+            {
+              "name": "Hearty Stew",
+              "stats": "Restores 15 HP",
+              "price": 8,
+              "secret": false
+            },
+            {
+              "name": "old Sickle",
+              "stats": "ATK: 4",
+              "price": 20,
+              "secret": false
+            },
+            {
+              "name": "Mystery Brew",
+              "stats": "Random effect",
+              "price": 15,
+              "secret": true,
+              "quest_required": "mystery_ingredient"
+            }
+          ],
+          "buy_prices": {
+            "drinks": 0.3,
+            "food": 0.4,
+            "default": 0.2
+          }
+        },
+        "active_quest": {
+          "name": "Mystery Ingredient",
+          "description": "I'm trying to brew something special but I need a rare ingredient from the deep forest.",
+          "steps": [
+            {
+              "description": "Find the Moonflower in the deep forest",
+              "type": "collect",
+              "target": "moonflower",
+              "count": 3,
+              "current": 0
+            },
+            {
+              "description": "Return the flowers to Meadow",
+              "type": "talk",
+              "target": "bartender",
+              "current": 0
+            }
+          ],
+          "rewards": {
+            "gold": 40,
+            "item": "Mystery Brew",
+            "reputation": 8
+          }
+        },
+        "available_quests": [
+          {
+            "id": "mystery_ingredient",
+            "name": "Mystery Ingredient",
+            "description": "I'm trying to brew something special but I need a rare ingredient from the deep forest.",
+            "giver": "meadow",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Find the Moonflower in the deep forest",
+                "type": "collect",
+                "target": "moonflower",
+                "count": 3,
+                "current": 0
+              },
+              {
+                "description": "Return the flowers to Meadow",
+                "type": "talk",
+                "target": "bartender",
+                "current": 0
+              }
+            ],
+            "completion_npc": "meadow",
+            "completion_topic": "flower",
+            "keywords": [
+              "brew",
+              "potion",
+              "ingredient",
+              "flower",
+              "forest",
+              "help",
+              "quest"
+            ],
+            "rewards": {
+              "gold": 30,
+              "items": [
+                "healing_potion"
+              ],
+              "reputation": {
+                "actor": {
+                  "meadow": 20
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_preserving",
+            "name": "Lesson: Preserving",
+            "description": "Learn to preserve food and ingredients at the kitchen.",
+            "giver": "meadow",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Bring 15 berries to Meadow",
+                "type": "deliver",
+                "target": "berry",
+                "count": 15
+              },
+              {
+                "description": "Bring 10 herbs to Meadow",
+                "type": "deliver",
+                "target": "herb",
+                "count": 10
+              },
+              {
+                "description": "Speak to Meadow",
+                "type": "talk",
+                "target": "meadow"
+              }
+            ],
+            "completion_npc": "meadow",
+            "completion_topic": "preserving",
+            "keywords": [],
+            "rewards": {
+              "technique": "preserving",
+              "reputation": {
+                "actor": {
+                  "meadow": 100
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_alchemy",
+            "name": "Lesson: Alchemy",
+            "description": "Learn to brew potions and elixirs at the cauldron.",
+            "giver": "meadow",
+            "prerequisites": [
+              "learn_preserving"
+            ],
+            "steps": [
+              {
+                "description": "Bring 5 yellow mash to Meadow",
+                "type": "deliver",
+                "target": "yellow_mash",
+                "count": 5
+              },
+              {
+                "description": "Bring 3 healing potions to Meadow",
+                "type": "deliver",
+                "target": "healing_potion",
+                "count": 3
+              },
+              {
+                "description": "Speak to Meadow",
+                "type": "talk",
+                "target": "meadow"
+              }
+            ],
+            "completion_npc": "meadow",
+            "completion_topic": "alchemy",
+            "keywords": [],
+            "rewards": {
+              "technique": "alchemy",
+              "reputation": {
+                "actor": {
+                  "meadow": 150
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Thorin Ironvein",
+      "name": "Thorin Ironvein",
+      "race": "dwarf",
+      "subtype": "guild_master",
+      "max_distance": 0,
+      "languages": {
+        "speak": [
+          "common",
+          "dwarvish"
+        ],
+        "understand": [
+          "common",
+          "dwarvish",
+          "goblin"
+        ]
+      },
+      "factions": [
+        "adventure_guild"
+      ],
+      "appearance": {
+        "unknown_name": "a dwarf in guild robes",
+        "known_name": "Thorin Ironvein",
+        "full_name": "Thorin Ironvein, Guild Master",
+        "description": "A stout dwarf with a magnificent braided beard and piercing blue eyes. He wears formal guild robes over his armor."
+      },
+      "attributes": {
+        "strength": 130,
+        "dexterity": 90,
+        "knowledge": 150,
+        "constitution": 140,
+        "observation": 120,
+        "willpower": 100,
+        "reactiveness": 80,
+        "arcana": 60
+      },
+      "skills": {
+        "leadership": 90,
+        "appraisal": 75,
+        "negotiation": 85
+      },
+      "techniques": [],
+      "schedule": [
+        {
+          "from": 8,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "adventure_guild"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "adventure_guild"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "adventure_guild"
+        },
+        {
+          "from": 22,
+          "to": 8,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 500,
+          "respect": 600,
+          "friendship": 400,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 600,
+          "respect": 500,
+          "friendship": 450,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 350,
+          "fear": 0
+        },
+        "bertha": {
+          "trust": 300,
+          "respect": 200,
+          "friendship": 250,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 700,
+          "respect": 600,
+          "friendship": 500,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "goblin_camp": {
+          "importance": 900,
+          "stages": [
+            {
+              "id": "goblin_camp_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "The goblin camp to the north has been causing trouble. Their chief leads a ruthless band."
+              ]
+            },
+            {
+              "id": "goblin_camp_2",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "The goblin shamans wield dark magic. They must be eliminated before they grow stronger."
+              ]
+            }
+          ]
+        },
+        "adventure_guild": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "guild_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "The guild pays well for goblin ears. Bring me as many as you can carry."
+              ]
+            }
+          ]
+        },
+        "bounties": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "bounty_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I have bounties on the goblin chief and shamans. Dead or alive, though dead is easier."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "goblin_chief_bounty",
+          "shaman_hunt",
+          "goblin_ears_trade"
+        ],
+        "progresses": [],
+        "completes": [
+          "goblin_chief_bounty",
+          "shaman_hunt"
+        ]
+      },
+      "shop": null,
+      "conversation": {
+        "personality": "authoritative",
+        "first_greeting": "The dwarf looks up from his ledger, his beard twitching. 'Ah, another adventurer! I am Thorin Ironvein, Guild Master. Looking for work?'",
+        "greeting": "Thorin looks up from his ledger, his beard twitching. 'Ah, another adventurer! Looking for work?'",
+        "farewell": "Thorin nods. 'May your blade be sharp and your purse heavy. Return when you have more ears!'",
+        "dialogue_interest": [
+          "goblin",
+          "bounty",
+          "quest",
+          "reward",
+          "gold",
+          "ear",
+          "camp",
+          "danger"
+        ],
+        "dialogue_bored": [
+          "weather",
+          "gossip",
+          "politics",
+          "farming"
+        ]
+      },
+      "world": {
+        "job": "guild_master",
+        "shop": null,
+        "available_quests": [
+          {
+            "id": "goblin_chief_bounty",
+            "name": "Chief's Bounty",
+            "description": "The goblin chief has been terrorizing the region. Bring me his head and you'll be richly rewarded.",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Slay the Goblin Chief in his tent",
+                "type": "kill",
+                "target": "goblin_chief",
+                "count": 1,
+                "current": 0
+              },
+              {
+                "description": "Return to Thorin with proof",
+                "type": "talk",
+                "target": "guild_master",
+                "current": 0
+              }
+            ],
+            "keywords": [
+              "goblin",
+              "chief",
+              "bounty",
+              "kill",
+              "reward",
+              "gold"
+            ],
+            "rewards": {
+              "gold": 100,
+              "item": "chief_axe",
+              "reputation": 25
+            }
+          },
+          {
+            "id": "shaman_hunt",
+            "name": "Shaman Hunt",
+            "description": "The goblin shamans are dark magic users. We need them eliminated before they summon something worse.",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Kill 4 goblin shamans in the camp",
+                "type": "kill",
+                "target": "goblin_shaman",
+                "count": 4,
+                "current": 0
+              },
+              {
+                "description": "Return to Thorin",
+                "type": "talk",
+                "target": "guild_master",
+                "current": 0
+              }
+            ],
+            "keywords": [
+              "goblin",
+              "shaman",
+              "hunt",
+              "kill",
+              "magic",
+              "reward"
+            ],
+            "rewards": {
+              "gold": 75,
+              "reputation": 15
+            }
+          },
+          {
+            "id": "goblin_ears_trade",
+            "name": "Ears for Gold",
+            "description": "Bring me goblin ears and I'll pay you 1 gold per ear. No questions asked.",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Collect goblin ears from any goblin",
+                "type": "collect",
+                "target": "goblin_ear",
+                "count": 1,
+                "current": 0
+              },
+              {
+                "description": "Return ears to Thorin",
+                "type": "talk",
+                "target": "guild_master",
+                "current": 0
+              }
+            ],
+            "repeatable": true,
+            "keywords": [
+              "goblin",
+              "ear",
+              "trade",
+              "gold",
+              "repeatable"
+            ],
+            "rewards": {
+              "gold": 1,
+              "reputation": 1
+            }
+          }
+        ]
+      },
+      "is_hostile": false,
+      "hp": 80,
+      "max_hp": 80,
+      "behaviors": {
+        "hostile": false,
+        "aggressive": false,
+        "flee_threshold": 0.0
+      },
+      "relationships": {
+        "player": "friendly",
+        "human": "friendly",
+        "goblin": "hostile",
+        "wolf": "neutral"
+      },
+      "spawn_locations": [
+        "adventure_guild"
+      ],
+      "respawn_time": 300,
+      "is_alive": true
+    },
+    {
+      "id": "Father_Benedict",
+      "name": "Father Benedict",
+      "race": "human",
+      "subtype": "priest",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "church"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "a robed priest",
+        "known_name": "Father Benedict",
+        "full_name": "Father Benedict, the village priest",
+        "description": "A kind-faced priest in simple robes. He carries a wooden staff and radiates a gentle warmth."
+      },
+      "attributes": {
+        "strength": 40,
+        "dexterity": 50,
+        "knowledge": 80,
+        "constitution": 60,
+        "observation": 70,
+        "willpower": 90,
+        "reactiveness": 50,
+        "arcana": 85
+      },
+      "skills": {
+        "melee": 20,
+        "stealth": 30,
+        "perception": 60
+      },
+      "techniques": [
+        "heal",
+        "bless",
+        "purify",
+        "divine_shield",
+        "holy_light",
+        "resurrection"
+      ],
+      "schedule": [
+        {
+          "from": 6,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "church"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "church"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "church"
+        },
+        {
+          "from": 22,
+          "to": 6,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 350,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 400,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 600,
+          "respect": 500,
+          "friendship": 500,
+          "fear": 0
+        },
+        "bertha": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 300,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 400,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "village_blessings": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "blessing_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "The church offers free healing to all who seek it. No payment required."
+              ]
+            }
+          ]
+        },
+        "graveyard_secrets": {
+          "importance": 600,
+          "stages": [
+            {
+              "id": "graveyard_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "Those who fall in battle awaken in the graveyard, restored by divine light."
+              ]
+            }
+          ]
+        },
+        "divine_arts": {
+          "importance": 1000,
+          "stages": [
+            {
+              "id": "divine_intro",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I am a priest of the Divine Light, keeper of the sacred healing arts.",
+                "The Divine Light grants us power to heal the wounded, protect the faithful, and smite the unholy.",
+                "Heal restores life. Bless strengthens the spirit. Purify cleanses corruption.",
+                "Divine Shield guards against harm. Holy Light banishes darkness. Resurrection conquers death itself.",
+                "All divine techniques require holy water - blessed water from the church altar.",
+                "Come, my child. Let me teach you the ways of the Light."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "learn_heal",
+          "learn_bless",
+          "learn_purify",
+          "learn_divine_shield",
+          "learn_holy_light",
+          "learn_resurrection"
+        ],
+        "progresses": [],
+        "completes": [
+          "learn_heal",
+          "learn_bless",
+          "learn_purify",
+          "learn_divine_shield",
+          "learn_holy_light",
+          "learn_resurrection"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "holy_water",
+          "consecrated_holy_water"
+        ],
+        "hidden_for_sale": []
+      },
+      "conversation": {
+        "personality": "kind",
+        "first_greeting": "The priest smiles warmly, his eyes gentle. 'Welcome, my child. I am Father Benedict, servant of the Divine Light. The light is always here for those who seek it.'",
+        "greeting": "Father Benedict smiles warmly. 'Welcome, child. The light of the Divine is always here for you.'",
+        "farewell": "May the Divine watch over you, my child. Return whenever you need healing.",
+        "dialogue_interest": [
+          "heal",
+          "blessing",
+          "church",
+          "prayer",
+          "help",
+          "hurt",
+          "wounded"
+        ],
+        "dialogue_bored": [
+          "violence",
+          "weapons",
+          "fighting",
+          "greed"
+        ],
+        "topics": {
+          "heal": {
+            "greeting": "Father Benedict nods with compassion. 'I sense the weight of your wounds, my child. Come, let the Divine light restore you.'",
+            "farewell": "You are fully restored. Go in peace, and may your path be blessed.",
+            "keywords": [
+              "heal",
+              "hurt",
+              "wounded",
+              "restore",
+              "help",
+              "blessing",
+              "light"
+            ],
+            "action": "heal_player"
+          }
+        }
+      },
+      "world": {
+        "job": "priest",
+        "shop": {
+          "visible_for_sale": [
+            "holy_water",
+            "consecrated_holy_water"
+          ],
+          "hidden_for_sale": []
+        },
+        "specialty": "divine_techniques",
+        "teaching_style": "spiritual",
+        "available_quests": [
+          {
+            "id": "learn_heal",
+            "name": "Lesson: Heal",
+            "description": "Learn the basic healing technique from Father Benedict.",
+            "giver": "father_benedict",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Speak to Father Benedict about healing",
+                "type": "talk",
+                "target": "father_benedict"
+              }
+            ],
+            "completion_npc": "father_benedict",
+            "completion_topic": "heal",
+            "keywords": [],
+            "rewards": {
+              "technique": "heal",
+              "reputation": {
+                "actor": {
+                  "father_benedict": 25
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_bless",
+            "name": "Lesson: Bless",
+            "description": "Father Benedict will teach you Bless, a divine technique that enhances combat abilities.",
+            "giver": "father_benedict",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Pray 10 times",
+                "type": "action_count",
+                "target": "pray",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to Father Benedict",
+                "type": "talk",
+                "target": "father_benedict",
+                "current": 0
+              }
+            ],
+            "completion_npc": "father_benedict",
+            "completion_topic": "bless",
+            "keywords": [
+              "divine",
+              "bless",
+              "holy",
+              "learn",
+              "benedict"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [
+                "holy_water"
+              ],
+              "technique": "bless",
+              "reputation": {
+                "actor": {
+                  "father_benedict": 50
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_purify",
+            "name": "Lesson: Purify",
+            "description": "Father Benedict will teach you Purify, a technique to remove negative effects.",
+            "giver": "father_benedict",
+            "prerequisites": [
+              "learn_bless"
+            ],
+            "steps": [
+              {
+                "description": "Remove 10 negative status effects",
+                "type": "stat",
+                "target": "status_effects_removed",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to Father Benedict",
+                "type": "talk",
+                "target": "father_benedict",
+                "current": 0
+              }
+            ],
+            "completion_npc": "father_benedict",
+            "completion_topic": "purify",
+            "keywords": [
+              "divine",
+              "purify",
+              "cleanse",
+              "learn",
+              "benedict"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "purify",
+              "reputation": {
+                "actor": {
+                  "father_benedict": 75
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_divine_shield",
+            "name": "Lesson: Divine Shield",
+            "description": "Father Benedict will teach you Divine Shield, a protective barrier of holy light.",
+            "giver": "father_benedict",
+            "prerequisites": [
+              "learn_purify"
+            ],
+            "steps": [
+              {
+                "description": "Absorb 100 damage with shields",
+                "type": "stat",
+                "target": "damage_absorbed",
+                "count": 100,
+                "current": 0
+              },
+              {
+                "description": "Speak to Father Benedict",
+                "type": "talk",
+                "target": "father_benedict",
+                "current": 0
+              }
+            ],
+            "completion_npc": "father_benedict",
+            "completion_topic": "divine_shield",
+            "keywords": [
+              "divine",
+              "shield",
+              "protection",
+              "learn",
+              "benedict"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "divine_shield",
+              "reputation": {
+                "actor": {
+                  "father_benedict": 100
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_holy_light",
+            "name": "Lesson: Holy Light",
+            "description": "Father Benedict will teach you Holy Light, a damaging spell effective against undead and demons.",
+            "giver": "father_benedict",
+            "prerequisites": [
+              "learn_divine_shield"
+            ],
+            "steps": [
+              {
+                "description": "Defeat 15 undead creatures",
+                "type": "kill",
+                "target": "undead",
+                "count": 15,
+                "current": 0
+              },
+              {
+                "description": "Speak to Father Benedict",
+                "type": "talk",
+                "target": "father_benedict",
+                "current": 0
+              }
+            ],
+            "completion_npc": "father_benedict",
+            "completion_topic": "holy_light",
+            "keywords": [
+              "divine",
+              "holy",
+              "light",
+              "attack",
+              "learn",
+              "benedict"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "holy_light",
+              "reputation": {
+                "actor": {
+                  "father_benedict": 125
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_resurrection",
+            "name": "Lesson: Resurrection",
+            "description": "Father Benedict will teach you Resurrection, the most sacred divine technique that can restore life to the fallen.",
+            "giver": "father_benedict",
+            "prerequisites": [
+              "learn_holy_light"
+            ],
+            "steps": [
+              {
+                "description": "Revive 5 fallen allies",
+                "type": "stat",
+                "target": "allies_revived",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to Father Benedict",
+                "type": "talk",
+                "target": "father_benedict",
+                "current": 0
+              }
+            ],
+            "completion_npc": "father_benedict",
+            "completion_topic": "resurrection",
+            "keywords": [
+              "divine",
+              "resurrection",
+              "revive",
+              "life",
+              "learn",
+              "benedict"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [
+                "consecrated_holy_water"
+              ],
+              "technique": "resurrection",
+              "reputation": {
+                "actor": {
+                  "father_benedict": 200
+                }
+              }
+            }
+          }
+        ]
+      },
+      "is_hostile": false,
+      "hp": 60,
+      "max_hp": 60,
+      "behaviors": {
+        "hostile": false,
+        "aggressive": false,
+        "flee_threshold": 0.0
+      },
+      "relationships": {
+        "player": "friendly",
+        "human": "friendly",
+        "goblin": "neutral",
+        "wolf": "neutral"
+      },
+      "spawn_locations": [
+        "church"
+      ],
+      "respawn_time": 300,
+      "is_alive": true
+    },
+    {
+      "id": "Seraphina",
+      "name": "Seraphina",
+      "race": "human",
+      "subtype": "swordmaster",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "adventure_guild"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "a tall woman in practical leather armor",
+        "known_name": "Seraphina",
+        "full_name": "Seraphina, Blade of the Guild",
+        "description": "A tall, athletic woman with silver-streaked hair and piercing blue eyes. She wears practical leather armor and carries an elegant longsword at her hip. Her posture speaks of years of disciplined training."
+      },
+      "attributes": {
+        "strength": 150,
+        "dexterity": 180,
+        "knowledge": 140,
+        "constitution": 130,
+        "observation": 170,
+        "willpower": 120,
+        "reactiveness": 160,
+        "arcana": 80
+      },
+      "skills": {
+        "melee": 200,
+        "swordsmanship": 250,
+        "perception": 150,
+        "teaching": 120
+      },
+      "techniques": [
+        "draw_cut",
+        "riposte",
+        "sword_dance",
+        "perfect_cut",
+        "whirlwind"
+      ],
+      "schedule": [
+        {
+          "from": 9,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "adventure_guild"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 17,
+          "map_id": "village",
+          "node_id": "adventure_guild"
+        },
+        {
+          "from": 17,
+          "to": 9,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 500,
+          "respect": 600,
+          "friendship": 400,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 400,
+          "respect": 500,
+          "friendship": 300,
+          "fear": 0
+        },
+        "player": {
+          "trust": 0,
+          "respect": 0,
+          "friendship": 0,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "sword_arts": {
+          "importance": 1000,
+          "stages": [
+            {
+              "id": "sword_arts_intro",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I am a master of the sword. I can teach you the ancient techniques of bladesmanship.",
+                "Each technique requires dedication and practice to master.",
+                "Draw Cut teaches precision. Riposte teaches counter-attack. Perfect Cut teaches armor penetration.",
+                "Come to me when you are ready to learn, and I will set you on the path."
+              ]
+            }
+          ]
+        },
+        "training_methods": {
+          "importance": 900,
+          "stages": [
+            {
+              "id": "training_intro",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "To learn Draw Cut, you must prove your skill with accumulated sword damage.",
+                "To learn Riposte, you must demonstrate versatility against many foes.",
+                "To learn Perfect Cut, you must show patience and precision.",
+                "To learn Whirlwind, you must prove your mastery in chaotic combat."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "learn_draw_cut",
+          "learn_riposte",
+          "learn_perfect_cut",
+          "learn_whirlwind"
+        ],
+        "progresses": [],
+        "completes": [
+          "learn_draw_cut",
+          "learn_riposte",
+          "learn_perfect_cut",
+          "learn_whirlwind"
+        ]
+      },
+      "shop": null,
+      "conversation": {
+        "personality": "disciplined",
+        "first_greeting": "the tall woman nods respectfully, her hand resting lightly on her sword hilt. 'I am Seraphina, Blade of the Guild. Master of the sword arts. What brings you here?'",
+        "greeting": "Seraphina nods respectfully, her hand resting lightly on her sword hilt. 'I am Seraphina, master of the blade. What brings you to the guild?'",
+        "farewell": "She gives a slight bow. 'Train hard, and the blade will serve you well.'",
+        "dialogue_interest": [
+          "sword",
+          "technique",
+          "training",
+          "combat",
+          "skill",
+          "learn"
+        ],
+        "dialogue_bored": [
+          "gossip",
+          "politics",
+          "money"
+        ]
+      },
+      "world": {
+        "job": "swordmaster",
+        "location": "adventure_guild",
+        "specialty": "sword_techniques",
+        "teaching_style": "practical",
+        "available_quests": [
+          {
+            "id": "learn_draw_cut",
+            "name": "Lesson: Draw Cut",
+            "description": "Seraphina will teach you Draw Cut, a swift drawing strike that excels against marked targets. To learn this technique, you must demonstrate proficiency with your sword by dealing 1000 total damage in combat.",
+            "giver": "swordswoman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Deal 1000 damage with sword attacks",
+                "type": "stat",
+                "target": "total_sword_damage",
+                "count": 1000,
+                "current": 0
+              },
+              {
+                "description": "Speak to Seraphina to learn Draw Cut",
+                "type": "talk",
+                "target": "swordswoman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "swordswoman",
+            "completion_topic": "draw_cut",
+            "keywords": [
+              "sword",
+              "technique",
+              "draw",
+              "cut",
+              "learn",
+              "seraphina",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "draw_cut",
+              "reputation": {
+                "actor": {
+                  "swordswoman": 50
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_riposte",
+            "name": "Lesson: Riposte",
+            "description": "Seraphina will teach you Riposte, a counter-attack technique that taunts your opponent. To master this, you must prove your adaptability by defeating 20 different creature types.",
+            "giver": "swordswoman",
+            "prerequisites": [
+              "learn_draw_cut"
+            ],
+            "steps": [
+              {
+                "description": "Defeat 20 different types of creatures",
+                "type": "kill_unique",
+                "target": "creature_types",
+                "count": 20,
+                "current": 0
+              },
+              {
+                "description": "Speak to Seraphina to learn Riposte",
+                "type": "talk",
+                "target": "swordswoman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "swordswoman",
+            "completion_topic": "riposte",
+            "keywords": [
+              "sword",
+              "technique",
+              "riposte",
+              "counter",
+              "learn",
+              "seraphina",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "riposte",
+              "reputation": {
+                "actor": {
+                  "swordswoman": 75
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_perfect_cut",
+            "name": "Lesson: Perfect Cut",
+            "description": "Seraphina will teach you Perfect Cut, a precisely aimed strike that bypasses armor. This technique requires immense patience and precision. Practice your form by striking the ancient oak tree in the village graveyard 100 times.",
+            "giver": "swordswoman",
+            "prerequisites": [
+              "learn_riposte"
+            ],
+            "steps": [
+              {
+                "description": "Practice striking the old oak tree 100 times in the graveyard",
+                "type": "action_count",
+                "target": "attack_old_oak",
+                "count": 100,
+                "current": 0
+              },
+              {
+                "description": "Speak to Seraphina to learn Perfect Cut",
+                "type": "talk",
+                "target": "swordswoman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "swordswoman",
+            "completion_topic": "perfect_cut",
+            "keywords": [
+              "sword",
+              "technique",
+              "perfect",
+              "cut",
+              "armor",
+              "learn",
+              "seraphina",
+              "training",
+              "precision"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "perfect_cut",
+              "reputation": {
+                "actor": {
+                  "swordswoman": 100
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_whirlwind",
+            "name": "Lesson: Whirlwind",
+            "description": "Seraphina will teach you Whirlwind, a devastating spinning attack that strikes all nearby enemies. This advanced technique requires mastery of chaos in combat. Defeat 3 or more enemies simultaneously on 10 separate occasions to prove your readiness.",
+            "giver": "swordswoman",
+            "prerequisites": [
+              "learn_perfect_cut"
+            ],
+            "steps": [
+              {
+                "description": "Defeat 3+ enemies at once on 10 occasions",
+                "type": "stat",
+                "target": "multi_kill_count",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to Seraphina to learn Whirlwind",
+                "type": "talk",
+                "target": "swordswoman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "swordswoman",
+            "completion_topic": "whirlwind",
+            "keywords": [
+              "sword",
+              "technique",
+              "whirlwind",
+              "aoe",
+              "mastery",
+              "learn",
+              "seraphina",
+              "training",
+              "chaos"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "whirlwind",
+              "reputation": {
+                "actor": {
+                  "swordswoman": 150
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Eldric",
+      "name": "Eldric the Arcane",
+      "race": "human",
+      "subtype": "archmage",
+      "languages": {
+        "speak": [
+          "common",
+          "arcane"
+        ],
+        "understand": [
+          "common",
+          "arcane",
+          "elvish"
+        ]
+      },
+      "factions": [
+        "adventure_guild",
+        "mage_council"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "an elderly man in ornate robes",
+        "known_name": "Eldric",
+        "full_name": "Eldric the Arcane, Master of the Guild",
+        "description": "An elderly man with a long white beard and piercing blue eyes. He wears ornate blue robes embroidered with silver runes, and carries an ornate staff that glows with arcane energy."
+      },
+      "attributes": {
+        "strength": 60,
+        "dexterity": 100,
+        "knowledge": 200,
+        "constitution": 80,
+        "observation": 170,
+        "willpower": 180,
+        "reactiveness": 90,
+        "arcana": 250
+      },
+      "skills": {
+        "arcane_lore": 250,
+        "teaching": 150,
+        "alchemy": 120,
+        "enchanting": 180
+      },
+      "techniques": [
+        "magic_missile",
+        "mana_shield",
+        "teleport",
+        "arcane_sight",
+        "arcane_explosion",
+        "reality_tear"
+      ],
+      "schedule": [
+        {
+          "from": 5,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "arcane_tower"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "library"
+        },
+        {
+          "from": 14,
+          "to": 17,
+          "map_id": "village",
+          "node_id": "arcane_tower"
+        },
+        {
+          "from": 17,
+          "to": 5,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 600,
+          "respect": 700,
+          "friendship": 500,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 500,
+          "respect": 600,
+          "friendship": 400,
+          "fear": 0
+        },
+        "seraphina": {
+          "trust": 700,
+          "respect": 800,
+          "friendship": 600,
+          "fear": 0
+        },
+        "player": {
+          "trust": 0,
+          "respect": 0,
+          "friendship": 0,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "arcane_arts": {
+          "importance": 1000,
+          "stages": [
+            {
+              "id": "arcane_intro",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I am Eldric, master of the arcane arts. I can teach you the fundamentals of magic.",
+                "Arcane magic requires focus - a staff or wand - and runestones to channel power.",
+                "Staves amplify spell damage, while wands reduce cooldowns. Choose your path wisely.",
+                "Each technique requires dedication. Come to me when you are ready to begin your training."
+              ]
+            }
+          ]
+        },
+        "magic_theory": {
+          "importance": 900,
+          "stages": [
+            {
+              "id": "magic_basics",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "Magic Missile is your first spell - a reliable bolt of arcane energy.",
+                "Mana Shield provides protection by creating a barrier of pure magic.",
+                "Arcane Sight reveals hidden auras and enhances your perception.",
+                "Teleport allows instant movement, but requires precise control."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "learn_magic_missile",
+          "learn_mana_shield",
+          "learn_arcane_sight",
+          "learn_teleport",
+          "learn_arcane_explosion",
+          "learn_reality_tear"
+        ],
+        "progresses": [],
+        "completes": [
+          "learn_magic_missile",
+          "learn_mana_shield",
+          "learn_arcane_sight",
+          "learn_teleport",
+          "learn_arcane_explosion",
+          "learn_reality_tear"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "runestone",
+          "greater_runestone",
+          "oak_wand",
+          "ash_wand",
+          "yew_wand",
+          "oak_staff",
+          "ash_staff",
+          "yew_staff"
+        ],
+        "hidden_for_sale": [
+          "ancient_archmage_staff"
+        ]
+      },
+      "conversation": {
+        "personality": "wise",
+        "first_greeting": "The archmage smiles warmly, his staff glowing with soft blue light. 'Ah, a seeker of arcane knowledge. I am Eldric the Arcane, master of this tower. What brings you here?'",
+        "greeting": "Eldric smiles warmly, his staff glowing with soft blue light. 'Ah, a seeker of arcane knowledge. I am Eldric. What brings you to the church?'",
+        "farewell": "He nods thoughtfully. 'May your studies be fruitful, and your runestones plentiful.'",
+        "dialogue_interest": [
+          "magic",
+          "arcane",
+          "spell",
+          "runestone",
+          "staff",
+          "wand",
+          "learn",
+          "technique"
+        ],
+        "dialogue_bored": [
+          "weapons",
+          "armor",
+          "fighting",
+          "gossip"
+        ]
+      },
+      "world": {
+        "job": "archmage",
+        "location": "arcane_tower",
+        "specialty": "arcane_techniques",
+        "teaching_style": "scholarly",
+        "available_quests": [
+          {
+            "id": "learn_magic_missile",
+            "name": "Lesson: Magic Missile",
+            "description": "Eldric will teach you Magic Missile, a fundamental arcane spell that launches a bolt of energy guaranteed to strike your target. To learn this, you must study the arcane arts by reading 5 arcane texts or scrolls.",
+            "giver": "archmage",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Collect 5 arcane texts or scrolls",
+                "type": "collect",
+                "target": "arcane_text",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to Eldric to learn Magic Missile",
+                "type": "talk",
+                "target": "archmage",
+                "current": 0
+              }
+            ],
+            "completion_npc": "archmage",
+            "completion_topic": "magic_missile",
+            "keywords": [
+              "magic",
+              "missile",
+              "arcane",
+              "spell",
+              "learn",
+              "eldric",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [
+                "runestone",
+                "oak_wand"
+              ],
+              "technique": "magic_missile",
+              "reputation": {
+                "actor": {
+                  "archmage": 50
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_mana_shield",
+            "name": "Lesson: Mana Shield",
+            "description": "Eldric will teach you Mana Shield, a defensive spell that creates a protective barrier of arcane energy. To master this, you must demonstrate control over your arcane reserves by casting 20 spells without being interrupted.",
+            "giver": "archmage",
+            "prerequisites": [
+              "learn_magic_missile"
+            ],
+            "steps": [
+              {
+                "description": "Cast 20 arcane spells",
+                "type": "stat",
+                "target": "spells_cast",
+                "count": 20,
+                "current": 0
+              },
+              {
+                "description": "Speak to Eldric to learn Mana Shield",
+                "type": "talk",
+                "target": "archmage",
+                "current": 0
+              }
+            ],
+            "completion_npc": "archmage",
+            "completion_topic": "mana_shield",
+            "keywords": [
+              "magic",
+              "shield",
+              "defense",
+              "arcane",
+              "spell",
+              "learn",
+              "eldric",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "mana_shield",
+              "reputation": {
+                "actor": {
+                  "archmage": 75
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_arcane_sight",
+            "name": "Lesson: Arcane Sight",
+            "description": "Eldric will teach you Arcane Sight, a perception spell that reveals hidden magical auras. To master this, you must demonstrate keen observation by identifying 15 hidden objects or secrets in the world.",
+            "giver": "archmage",
+            "prerequisites": [
+              "learn_mana_shield"
+            ],
+            "steps": [
+              {
+                "description": "Find 15 hidden objects or secrets",
+                "type": "stat",
+                "target": "hidden_objects_found",
+                "count": 15,
+                "current": 0
+              },
+              {
+                "description": "Speak to Eldric to learn Arcane Sight",
+                "type": "talk",
+                "target": "archmage",
+                "current": 0
+              }
+            ],
+            "completion_npc": "archmage",
+            "completion_topic": "arcane_sight",
+            "keywords": [
+              "magic",
+              "sight",
+              "perception",
+              "arcane",
+              "spell",
+              "learn",
+              "eldric",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "arcane_sight",
+              "reputation": {
+                "actor": {
+                  "archmage": 100
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_teleport",
+            "name": "Lesson: Teleport",
+            "description": "Eldric will teach you Teleport, a movement spell that allows instant short-distance travel. To master this, you must demonstrate spatial awareness by exploring 10 different locations in the world.",
+            "giver": "archmage",
+            "prerequisites": [
+              "learn_arcane_sight"
+            ],
+            "steps": [
+              {
+                "description": "Explore 10 different locations",
+                "type": "explore",
+                "target": "location",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to Eldric to learn Teleport",
+                "type": "talk",
+                "target": "archmage",
+                "current": 0
+              }
+            ],
+            "completion_npc": "archmage",
+            "completion_topic": "teleport",
+            "keywords": [
+              "magic",
+              "teleport",
+              "movement",
+              "arcane",
+              "spell",
+              "learn",
+              "eldric",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "teleport",
+              "reputation": {
+                "actor": {
+                  "archmage": 125
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_arcane_explosion",
+            "name": "Lesson: Arcane Explosion",
+            "description": "Eldric will teach you Arcane Explosion, a powerful area-of-effect spell that unleashes a burst of arcane energy on all nearby enemies. To master this, you must demonstrate mastery of area control by defeating 5 groups of 3 or more enemies simultaneously.",
+            "giver": "archmage",
+            "prerequisites": [
+              "learn_teleport"
+            ],
+            "steps": [
+              {
+                "description": "Defeat 5 groups of 3+ enemies with area attacks",
+                "type": "stat",
+                "target": "aoe_kills",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to Eldric to learn Arcane Explosion",
+                "type": "talk",
+                "target": "archmage",
+                "current": 0
+              }
+            ],
+            "completion_npc": "archmage",
+            "completion_topic": "arcane_explosion",
+            "keywords": [
+              "magic",
+              "explosion",
+              "aoe",
+              "arcane",
+              "spell",
+              "learn",
+              "eldric",
+              "training"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [],
+              "technique": "arcane_explosion",
+              "reputation": {
+                "actor": {
+                  "archmage": 150
+                }
+              }
+            }
+          },
+          {
+            "id": "learn_reality_tear",
+            "name": "Lesson: Reality Tear",
+            "description": "Eldric will teach you Reality Tear, the most devastating arcane spell that tears a rift in reality itself. This forbidden technique requires absolute mastery. To prove your readiness, you must defeat 3 boss-level creatures.",
+            "giver": "archmage",
+            "prerequisites": [
+              "learn_arcane_explosion"
+            ],
+            "steps": [
+              {
+                "description": "Defeat 3 boss-level creatures",
+                "type": "kill",
+                "target": "boss",
+                "count": 3,
+                "current": 0
+              },
+              {
+                "description": "Speak to Eldric to learn Reality Tear",
+                "type": "talk",
+                "target": "archmage",
+                "current": 0
+              }
+            ],
+            "completion_npc": "archmage",
+            "completion_topic": "reality_tear",
+            "keywords": [
+              "magic",
+              "reality",
+              "tear",
+              "powerful",
+              "arcane",
+              "spell",
+              "learn",
+              "eldric",
+              "training",
+              "mastery"
+            ],
+            "rewards": {
+              "gold": 0,
+              "items": [
+                "greater_runestone"
+              ],
+              "technique": "reality_tear",
+              "reputation": {
+                "actor": {
+                  "archmage": 200
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "huntsman",
+      "name": "Ben",
+      "race": "human",
+      "subtype": "hunter",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common",
+          "goblin"
+        ]
+      },
+      "factions": [
+        "hunter_guild"
+      ],
+      "max_distance": 0,
+      "appearance": {
+        "unknown_name": "a rugged hunter",
+        "known_name": "Huntsman",
+        "full_name": "Huntsman, Master Tracker",
+        "description": "A weathered hunter with keen eyes and a scar across his cheek. He moves with quiet grace and carries an array of traps and tracking tools."
+      },
+      "attributes": {
+        "strength": 80,
+        "dexterity": 120,
+        "knowledge": 90,
+        "constitution": 100,
+        "observation": 140,
+        "willpower": 85,
+        "reactiveness": 110,
+        "arcana": 40
+      },
+      "skills": {
+        "tracking": 95,
+        "trap_crafting": 90,
+        "stealth": 85,
+        "survival": 80
+      },
+      "techniques": [
+        "death_mark",
+        "track_prey",
+        "bear_trap",
+        "silent_step",
+        "large_trap",
+        "pacify_prey",
+        "loot"
+      ],
+      "schedule": [
+        {
+          "from": 6,
+          "to": 10,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 10,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 22,
+          "to": 6,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 400,
+          "respect": 500,
+          "friendship": 350,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 450,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 600,
+          "respect": 500,
+          "friendship": 550,
+          "fear": 0
+        },
+        "thorin": {
+          "trust": 700,
+          "respect": 600,
+          "friendship": 500,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "hunting_techniques": {
+          "importance": 900,
+          "stages": [
+            {
+              "id": "hunting_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "I can teach you the art of the hunt. Track prey, set traps, and strike from the shadows."
+              ]
+            }
+          ]
+        },
+        "wilderness": {
+          "importance": 800,
+          "stages": [
+            {
+              "id": "wilderness_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "The wilderness is unforgiving. Learn to move silently and you'll have the advantage."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "learn_death_mark",
+          "learn_track_prey",
+          "learn_bear_trap",
+          "learn_silent_step",
+          "learn_large_trap",
+          "learn_pacify_prey",
+          "learn_loot"
+        ],
+        "completes": [
+          "learn_death_mark",
+          "learn_track_prey",
+          "learn_bear_trap",
+          "learn_silent_step",
+          "learn_large_trap",
+          "learn_pacify_prey",
+          "learn_loot"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "hunting_trap",
+          "bear_trap_kit"
+        ]
+      },
+      "conversation": {
+        "personality": "gruff",
+        "first_greeting": "The Huntsman nods at you, his eyes sharp and alert. 'Name's Ben. I'm the huntsman. Looking to learn the ways of the hunt?'",
+        "greeting": "Ben nods at you, his eyes sharp and alert. 'Looking to learn the ways of the hunt?'",
+        "farewell": "Ben gives you a respectful nod. 'May your aim be true and your steps silent.'",
+        "dialogue_interest": [
+          "hunt",
+          "track",
+          "trap",
+          "prey",
+          "stealth",
+          "survival",
+          "wilderness"
+        ],
+        "dialogue_bored": [
+          "politics",
+          "gossip",
+          "refinement",
+          "luxury"
+        ]
+      },
+      "world": {
+        "job": "hunter",
+        "location": "tavern",
+        "specialty": "hunting_techniques",
+        "available_quests": [
+          {
+            "id": "learn_death_mark",
+            "name": "Learn Death Mark",
+            "description": "The hunter will teach you Death Mark, a technique to mark targets for increased damage.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Defeat 10 creatures",
+                "type": "kill",
+                "target": "creature",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "death_mark",
+            "keywords": [
+              "hunter",
+              "death",
+              "mark",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "death_mark",
+              "reputation": 50
+            }
+          },
+          {
+            "id": "learn_track_prey",
+            "name": "Learn Track Prey",
+            "description": "Learn to track prey from the huntsman.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Track 5 creatures in the wild",
+                "type": "explore",
+                "target": "forest",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "track_prey",
+            "keywords": [
+              "hunter",
+              "track",
+              "prey",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "track_prey",
+              "reputation": 50
+            }
+          },
+          {
+            "id": "learn_bear_trap",
+            "name": "Learn Bear Trap",
+            "description": "Learn to craft and use bear traps.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Set 5 traps in hunting grounds",
+                "type": "craft",
+                "target": "bear_trap",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "bear_trap",
+            "keywords": [
+              "hunter",
+              "bear",
+              "trap",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "bear_trap",
+              "reputation": 50
+            }
+          },
+          {
+            "id": "learn_silent_step",
+            "name": "Learn Silent Step",
+            "description": "Learn to move silently like a hunter.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Sneak past 10 enemies undetected",
+                "type": "stealth",
+                "target": "enemy",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "silent_step",
+            "keywords": [
+              "hunter",
+              "silent",
+              "step",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "silent_step",
+              "reputation": 50
+            }
+          },
+          {
+            "id": "learn_large_trap",
+            "name": "Learn Large Trap",
+            "description": "Learn to craft larger, more effective traps.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Craft 5 large traps",
+                "type": "craft",
+                "target": "large_trap",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "large_trap",
+            "keywords": [
+              "hunter",
+              "large",
+              "trap",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "large_trap",
+              "reputation": 50
+            }
+          },
+          {
+            "id": "learn_pacify_prey",
+            "name": "Learn Pacify Prey",
+            "description": "Learn to pacify prey before the kill.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Use calming techniques on 5 creatures",
+                "type": "use",
+                "target": "calm",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "pacify_prey",
+            "keywords": [
+              "hunter",
+              "pacify",
+              "prey",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "pacify_prey",
+              "reputation": 50
+            }
+          },
+          {
+            "id": "learn_loot",
+            "name": "Learn Loot",
+            "description": "Learn to find better loot from your kills.",
+            "giver": "huntsman",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Loot 10 creatures",
+                "type": "loot",
+                "target": "creature",
+                "count": 10,
+                "current": 0
+              },
+              {
+                "description": "Speak to the huntsman",
+                "type": "talk",
+                "target": "huntsman",
+                "current": 0
+              }
+            ],
+            "completion_npc": "huntsman",
+            "completion_topic": "loot",
+            "keywords": [
+              "hunter",
+              "loot",
+              "learn"
+            ],
+            "rewards": {
+              "gold": 0,
+              "technique": "loot",
+              "reputation": 50
+            }
+          }
+        ]
+      },
+      "is_hostile": false,
+      "hp": 100,
+      "max_hp": 100,
+      "behaviors": {
+        "hostile": false,
+        "aggressive": false,
+        "flee_threshold": 0.0
+      },
+      "relationships": {
+        "player": "friendly",
+        "human": "friendly",
+        "goblin": "hostile",
+        "wolf": "neutral"
+      },
+      "spawn_locations": [
+        "tavern"
+      ],
+      "respawn_time": 300,
+      "is_alive": true
+    },
+    {
+      "id": "bertha",
+      "name": "Bertha",
+      "race": "human",
+      "subtype": "farmer",
+      "languages": {
+        "speak": [
+          "common"
+        ],
+        "understand": [
+          "common"
+        ]
+      },
+      "factions": [
+        "village"
+      ],
+      "appearance": {
+        "unknown_name": "a farmer at her stall",
+        "known_name": "Bertha",
+        "full_name": "Bertha, the farmer",
+        "description": "A sturdy woman with dirt under her nails and a basket of vegetables at her side."
+      },
+      "attributes": {
+        "strength": 120,
+        "dexterity": 100,
+        "knowledge": 100,
+        "constitution": 140,
+        "observation": 100,
+        "willpower": 50,
+        "reactiveness": 50,
+        "arcana": 50
+      },
+      "skills": {
+        "farming": 80,
+        "cooking": 50,
+        "barter": 40
+      },
+      "techniques": [],
+      "schedule": [
+        {
+          "from": 8,
+          "to": 12,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "map_id": "village",
+          "node_id": "tavern"
+        },
+        {
+          "from": 14,
+          "to": 18,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 18,
+          "to": 22,
+          "map_id": "village",
+          "node_id": "market"
+        },
+        {
+          "from": 22,
+          "to": 8,
+          "map_id": null,
+          "node_id": null
+        }
+      ],
+      "relations": {
+        "grim": {
+          "trust": 300,
+          "respect": 200,
+          "friendship": 300,
+          "fear": 0
+        },
+        "aldric": {
+          "trust": 300,
+          "respect": 400,
+          "friendship": 250,
+          "fear": 0
+        },
+        "elias": {
+          "trust": 400,
+          "respect": 300,
+          "friendship": 350,
+          "fear": 0
+        },
+        "meadow": {
+          "trust": 500,
+          "respect": 400,
+          "friendship": 500,
+          "fear": 0
+        }
+      },
+      "knowledge": {
+        "farming": {
+          "importance": 700,
+          "stages": [
+            {
+              "id": "farm_1",
+              "visibility": "eager",
+              "conditions": [],
+              "facts": [
+                "The fields produce good harvests. Autumn is the busiest season."
+              ]
+            }
+          ]
+        },
+        "seasons": {
+          "importance": 500,
+          "stages": [
+            {
+              "id": "season_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "Spring planting, autumn harvest. Winter is harsh in these parts."
+              ]
+            }
+          ]
+        },
+        "herbs": {
+          "importance": 600,
+          "stages": [
+            {
+              "id": "herb_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "Healing herbs near the old oak tree. The apothecary pays well for them."
+              ]
+            }
+          ]
+        },
+        "village_history": {
+          "importance": 400,
+          "stages": [
+            {
+              "id": "history_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "This village was founded over 300 years ago. Settlers came from the south."
+              ]
+            }
+          ]
+        },
+        "forest_plants": {
+          "importance": 500,
+          "stages": [
+            {
+              "id": "plant_1",
+              "visibility": "normal",
+              "conditions": [],
+              "facts": [
+                "The forest has many useful plants if you know where to look."
+              ]
+            }
+          ]
+        }
+      },
+      "quests": {
+        "starts": [
+          "herb_collection"
+        ],
+        "progresses": [],
+        "completes": [
+          "herb_collection"
+        ]
+      },
+      "shop": {
+        "visible_for_sale": [
+          "fresh_bread",
+          "apple",
+          "cheese_wheel",
+          "herb_bundle"
+        ],
+        "hidden_for_sale": []
+      },
+      "conversation": {
+        "personality": "friendly",
+        "first_greeting": "The farmer looks up from her vegetables with a warm smile. 'Hello there! I'm Bertha, the village farmer. Looking for fresh produce?'",
+        "greeting": "Bertha looks up from her vegetables. 'Hello there! Looking for fresh produce?'",
+        "farewell": "Bertha smiles. 'Take care, and come back for the freshest goods in town!'",
+        "dialogue_interest": [
+          "farm",
+          "vegetable",
+          "harvest",
+          "season",
+          "weather",
+          "nature"
+        ],
+        "dialogue_bored": [
+          "violence",
+          "fighting",
+          "weapons",
+          "politics"
+        ]
+      },
+      "world": {
+        "job": "farmer",
+        "shop": {
+          "items": [
+            {
+              "name": "Fresh Bread",
+              "stats": "Restores 8 HP",
+              "price": 1,
+              "secret": false
+            },
+            {
+              "name": "Apple",
+              "stats": "Restores 5 HP",
+              "price": 1,
+              "secret": false
+            },
+            {
+              "name": "Cheese Wheel",
+              "stats": "Restores 12 HP",
+              "price": 3,
+              "secret": false
+            },
+            {
+              "name": "Herb Bundle",
+              "stats": "Crafting ingredient",
+              "price": 4,
+              "secret": false
+            }
+          ],
+          "buy_prices": {
+            "food": 0.4,
+            "default": 0.3
+          }
+        },
+        "active_quest": {
+          "name": "Herb Collection",
+          "description": "I need someone to gather some rare herbs from the forest for my special recipes.",
+          "steps": [
+            {
+              "description": "Find 5 Healing Herbs in the forest",
+              "type": "collect",
+              "target": "healing_herb",
+              "count": 5,
+              "current": 0
+            },
+            {
+              "description": "Return the herbs to Bertha",
+              "type": "talk",
+              "target": "farmer",
+              "current": 0
+            }
+          ],
+          "rewards": {
+            "gold": 20,
+            "item": "Herb Bundle",
+            "reputation": 5
+          }
+        },
+        "available_quests": [
+          {
+            "id": "herb_collection",
+            "name": "Herb Collection",
+            "description": "I need someone to gather some rare herbs from the forest for my special recipes.",
+            "giver": "bertha",
+            "prerequisites": [],
+            "steps": [
+              {
+                "description": "Find 5 Healing Herbs in the forest",
+                "type": "collect",
+                "target": "healing_herb",
+                "count": 5,
+                "current": 0
+              },
+              {
+                "description": "Return the herbs to Bertha",
+                "type": "talk",
+                "target": "farmer",
+                "current": 0
+              }
+            ],
+            "completion_npc": "bertha",
+            "completion_topic": "herb",
+            "keywords": [
+              "herb",
+              "plant",
+              "forest",
+              "gather",
+              "help",
+              "quest",
+              "recipe"
+            ],
+            "rewards": {
+              "gold": 40,
+              "items": [
+                "minor_healing_potion"
+              ],
+              "reputation": {
+                "actor": {
+                  "meadow": 30
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "mystery_ingredient",
+  "title": "Mystery Ingredient",
+  "giver": "meadow",
+  "participants": ["meadow"],
+  "prerequisites": [],
+  "description": "I'm trying to brew something special but I need a rare ingredient from the deep forest.",
+  "completion_conditions": [
+    { "type": "collect", "target": "moonflower", "count": 3 },
+    { "type": "talk", "target": "meadow", "topic": "flower" }
+  ],
+    "rewards": {
+      "gold": 30,
+      "items": ["healing_potion"],
+      "reputation": { "actor": { "meadow": 20 } }
+    },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["brew", "potion", "ingredient", "flower", "forest", "help", "quest"],
+  "steps": [
+    {"description": "Find the Moonflower in the deep forest", "type": "collect", "target": "moonflower", "count": 3, "current": 0},
+    {"description": "Return the flowers to Meadow", "type": "talk", "target": "bartender", "current": 0}
+  ],
+  "completion_npc": "meadow",
+  "completion_topic": "flower"
+}

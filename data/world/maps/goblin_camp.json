@@ -1,0 +1,207 @@
+{
+  "id": "goblin_camp",
+  "name": "Goblin Camp",
+  "description": "A ramshackle goblin camp hidden in the forest. Crude tents, totem poles, and the stench of unwashed bodies fill the air.",
+  "nodes": {
+    "forest_path": {
+      "id": "forest_path",
+      "name": "Forest Path",
+      "description": "A narrow dirt path winds through dense pine trees. You hear distant cackling and the clink of crude metalwork.",
+      "exits": { "north": "camp_perimeter", "south": "overworld_entrance" },
+      "entities": ["tree_stump", "broken_arrow"],
+      "tags": ["wilderness", "approach", "neutral"],
+      "discovery_text": "The trees grow closer together here. You spot movement in the undergrowth.",
+      "ambient_text": "Branches creak overhead. Something watches from the shadows."
+    },
+    "camp_perimeter": {
+      "id": "camp_perimeter",
+      "name": "Camp Perimeter",
+      "description": "Crude wooden spikes ring the camp. A rope strung with bells serves as a primitive alarm system. Two goblin sentries lounge near a smoldering fire.",
+      "exits": { "south": "forest_path", "north": "mess_hall", "east": "watch_tower", "west": "trap_line" },
+      "entities": ["ash_tree","spike_barrier", "alarm_bells", "guard_fire"],
+      "tags": ["goblin", "danger", "combat"],
+      "discovery_text": "You push through the undergrowth and see the camp ahead. The smell hits you first - rot and unwashed fur.",
+      "ambient_text": "A goblin sentry scratches himself and belches loudly."
+    },
+    "watch_tower": {
+      "id": "watch_tower",
+      "name": "Rickety Watchtower",
+      "description": "A wobbly wooden tower made from scavenged lumber. A goblin with a horn keeps watch, scanning the treeline. The view from the top is excellent.",
+      "exits": { "west": "camp_perimeter" },
+      "entities": ["lookout_post", "horn", "scouting_gear"],
+      "tags": ["goblin", "danger", "vantage"],
+      "discovery_text": "A goblin in a crow's nest spots you and barks a warning!",
+      "ambient_text": "The tower groans in the wind. A horn blares in the distance."
+    },
+    "trap_line": {
+      "id": "trap_line",
+      "name": "Trap Line",
+      "description": "A series of crude pitfalls and snares cover the ground. Some are covered with leaves and branches. A few contain the remains of less lucky intruders.",
+      "exits": { "east": "camp_perimeter", "north": "storage_hut" },
+      "entities": ["tin_deposit", "spike_pit", "snare_trap", "rotting_bones"],
+      "tags": ["goblin", "danger", "trap"],
+      "discovery_text": "You carefully step over a hidden pit. Your boots sink into something soft and foul.",
+      "ambient_text": "A trapped rabbit squeals piteously somewhere nearby."
+    },
+    "mess_hall": {
+      "id": "mess_hall",
+      "name": "Mess Hall",
+      "description": "A large tent supported by wooden poles. Crude benches and tables fill the space. A fire pit in the center cooks a questionable stew. Goblins crowd around, fighting over portions.",
+      "exits": { "south": "camp_perimeter", "north": "chiefs_tent", "east": "kitchen", "west": "armory" },
+      "entities": ["fire_pit", "cooking_pots", "benches", "stew_cauldron"],
+      "tags": ["goblin", "social", "food"],
+      "discovery_text": "The smell of rotten meat and fungus stew assaults your nose. Goblins turn to stare, grease dripping from their chins.",
+      "ambient_text": "Grunts and arguments fill the air. Someone throws a bone."
+    },
+    "kitchen": {
+      "id": "kitchen",
+      "name": "Kitchen Area",
+      "description": "An open-air cooking area with several spits and drying racks. Rat and bird carcasses hang from poles. A goblin chef stirs a bubbling pot with a suspicious grin.",
+      "exits": { "west": "mess_hall" },
+      "entities": ["spit_roast", "drying_rack", "mystery_stew", "spice_rack"],
+      "tags": ["goblin", "food", "craft"],
+      "discovery_text": "A goblin chef offers you a bowl of 'special stew' with a toothy grin.",
+      "ambient_text": "Grease pops in the fire. Something sizzles unpleasantly."
+    },
+    "armory": {
+      "id": "armory",
+      "name": "Armory",
+      "description": "A sturdy tent filled with racks of poorly maintained weapons. Rusty swords, dented shields, and bows with warped strings. A goblin smith hammers away at a red-hot blade.",
+      "exits": { "east": "mess_hall", "north": "training_ground" },
+      "entities": ["weapon_rack", "anvil", "scrap_metal", "shield_pile"],
+      "tags": ["goblin", "craft", "weapons"],
+      "discovery_text": "Crude weapons hang on every surface. The smith looks up and growls.",
+      "ambient_text": "Hammer on anvil rings out. Sparks fly in the dim light."
+    },
+    "training_ground": {
+      "id": "training_ground",
+      "name": "Training Ground",
+      "description": "A cleared area with practice dummies and archery targets. Several goblins spar with wooden sticks, while others practice throwing daggers at straw targets.",
+      "exits": { "south": "armory", "east": "chiefs_tent", "north": "shaman_hut" },
+      "entities": ["practice_dummy", "archery_target", "weapon_rack", "training_dummies"],
+      "tags": ["goblin", "training", "combat"],
+      "discovery_text": "Goblin warriors train here. They pause to eye you suspiciously between exercises.",
+      "ambient_text": "The thud of wooden practice weapons. Shouts of encouragement in guttural goblin."
+    },
+    "chiefs_tent": {
+      "id": "chiefs_tent",
+      "name": "Chief's Tent",
+      "description": "A larger, more elaborate tent decorated with trophies and skulls. Furs and stolen goods are piled in corners. The goblin chief sits on a crude throne, flanked by elite guards.",
+      "exits": { "south": "mess_hall", "west": "training_ground", "east": "treasure_hoard" },
+      "entities": ["throne", "trophy_rack", "stolen_goods", "chief_chest"],
+      "tags": ["goblin", "chief", "boss", "treasure"],
+      "discovery_text": "The chief's tent. Skulls of past victims hang from the entrance. This is the heart of goblin power.",
+      "ambient_text": "The chief grunts and gestures for you to approach. Guards shift their weight."
+    },
+    "treasure_hoard": {
+      "id": "treasure_hoard",
+      "name": "Treasure Hoard",
+      "description": "A pit dug into the ground, lined with stolen goods. Coins, jewelry, and weapons glint in the torchlight. A few goblins argue over a shiny trinket.",
+      "exits": { "west": "chiefs_tent", "north": "shaman_hut" },
+      "entities": ["coin_pile", "jewelry", "stolen_weapons", "gemstone"],
+      "tags": ["goblin", "treasure", "loot"],
+      "discovery_text": "A hoard of stolen treasure! Goblins guard it jealously, eyes darting between you and their riches.",
+      "ambient_text": "Coins clink together. A goblin clutches a shiny bauble to its chest."
+    },
+    "shaman_hut": {
+      "id": "shaman_hut",
+      "name": "Shaman's Hut",
+      "description": "A strange tent filled with hanging herbs, bones, and totems. The goblin shaman chants around a smoldering brazier. Strange symbols are painted on the walls.",
+      "exits": { "south": "training_ground", "west": "treasure_hoard", "east": "spirit_grove" },
+      "entities": ["brazier", "totem_pole", "herb_rack", "ritual_circle"],
+      "tags": ["goblin", "shaman", "magic", "ritual"],
+      "discovery_text": "The shaman's hut reeks of strange herbs. The shaman eyes you with glowing red eyes.",
+      "ambient_text": "Incense smoke curls upward. A low chant fills the air."
+    },
+    "spirit_grove": {
+      "id": "spirit_grove",
+      "name": "Spirit Grove",
+      "description": "A small clearing where the goblins worship their dark deities. Crude totem poles carved with grotesque faces stand around a blood-stained altar. The trees here seem twisted and wrong.",
+      "exits": { "west": "shaman_hut" },
+      "entities": ["spirit_bark_deposit","totem_pole", "blood_altar", "offering_bowl", "spirit_tree"],
+      "tags": ["goblin", "ritual", "dark", "dangerous"],
+      "discovery_text": "A dark grove where goblins make blood offerings. The air feels heavy with malice.",
+      "ambient_text": "Wind moans through the twisted trees. Something watches from the darkness."
+    },
+    "storage_hut": {
+      "id": "storage_hut",
+      "name": "Storage Hut",
+      "description": "A cluttered hut filled with stolen supplies. Crates, barrels, and sacks are stacked haphazardly. Food stores, tools, and miscellaneous loot fill every corner.",
+      "exits": { "south": "trap_line", "east": "animal_pen" },
+      "entities": ["crate", "barrel", "food_sack", "supply_rack"],
+      "tags": ["goblin", "storage", "loot"],
+      "discovery_text": "Stolen goods from nearby villages are stored here. A goblin guard naps in the corner.",
+      "ambient_text": "A rat scurries between crates. The smell of grain and rot mixes."
+    },
+    "animal_pen": {
+      "id": "animal_pen",
+      "name": "Animal Pen",
+      "description": "A fenced area where the goblins keep their mounts and livestock. Several scrawny wolves pace in cages, while giant rats nest in the corners. The ground is muddy and fouled.",
+      "exits": { "west": "storage_hut", "north": "healing_hut" },
+      "entities": ["wolf_cage", "rat_nest", "feeding_trough", "fence"],
+      "tags": ["goblin", "animals", "danger"],
+      "discovery_text": "Goblin wolves snarl and snap at you through their cages. The rats here are the size of small dogs.",
+      "ambient_text": "Wolves howl. Rats squeak. The smell is unbearable."
+    },
+    "healing_hut": {
+      "id": "healing_hut",
+      "name": "Healing Hut",
+      "description": "A hut where the goblin healer tends to wounded warriors. Herbs hang from the ceiling, and crude bandages cover the floor. The healer herself is missing an ear and has a scar across her face.",
+      "exits": { "south": "animal_pen", "east": "prisoner_pit" },
+      "entities": ["herb_rack", "healing_salves", "bandage_supply", "healing_station"],
+      "tags": ["goblin", "heal", "medicine"],
+      "discovery_text": "The goblin healer glares at you, a knife in one hand and a strange herb in the other.",
+      "ambient_text": "Herbs crumble underfoot. A wounded goblin moans in the corner."
+    },
+    "prisoner_pit": {
+      "id": "prisoner_pit",
+      "name": "Prisoner Pit",
+      "description": "A deep pit dug into the ground where captives are held. Several emaciated figures huddle in the corner. The walls are too steep to climb without help.",
+      "exits": { "west": "healing_hut", "north": "escape_tunnel" },
+      "entities": ["pit_wall", "prisoner_cage", "manacles", "filth"],
+      "tags": ["goblin", "prison", "rescue"],
+      "discovery_text": "Captives stare up at you with hollow eyes. One whispers 'Help us' before a guard kicks them silent.",
+      "ambient_text": "Whimpering from the pit. The stench of human waste and despair."
+    },
+    "escape_tunnel": {
+      "id": "escape_tunnel",
+      "name": "Escape Tunnel",
+      "description": "A narrow, winding tunnel leading away from the camp. It's partially collapsed in places and smells of damp earth. This is the goblins' emergency escape route.",
+      "exits": { "south": "prisoner_pit", "north": "forest_clearing" },
+      "entities": ["collapsed_section", "tunnel_fungus", "goblin_tracks"],
+      "tags": ["goblin", "escape", "tunnel"],
+      "discovery_text": "A hidden tunnel! The goblins use this to flee if attacked. It leads deeper into the forest.",
+      "ambient_text": "Dripping water echoes. Your footsteps are muffled in the dirt."
+    },
+    "forest_clearing": {
+      "id": "forest_clearing",
+      "name": "Forest Clearing",
+      "description": "A small clearing on the other side of the camp. The trees here are older and the undergrowth thicker. A hidden cache of supplies is tucked under a fallen log.",
+      "exits": { "south": "escape_tunnel", "east": "ritual_circle", "west": "overworld_approach" },
+      "entities": ["green_berry_bush", "fallen_log", "hidden_cache", "survival_supplies", "campfire_remains"],
+      "tags": ["wilderness", "hidden", "loot"],
+      "discovery_text": "A quiet clearing away from the goblins. Someone has hidden supplies here for travelers.",
+      "ambient_text": "Birds chirp. For a moment, you forget you're in goblin territory."
+    },
+    "ritual_circle": {
+      "id": "ritual_circle",
+      "name": "Ritual Circle",
+      "description": "A stone circle deep in the forest, used for dark rituals. Symbols are carved into the stones, and the ground is stained dark with old blood. The air crackles with dark energy.",
+      "exits": { "west": "forest_clearing" },
+      "entities": ["tin_deposit","standing_stones", "blood_stain", "ritual_site", "dark_energy"],
+      "tags": ["goblin", "ritual", "dark_magic", "dangerous"],
+      "discovery_text": "Ancient stones carved with runes. This place feels wrong, as if the forest itself recoils.",
+      "ambient_text": "The wind dies. The stones seem to watch you. A cold dread settles in your stomach."
+    },
+    "overworld_approach": {
+      "id": "overworld_approach",
+      "name": "Overworld Approach",
+      "description": "The path back to the main roads. The forest begins to thin here, and you can see the village in the distance. Time to leave before more goblins arrive.",
+      "exits": { "east": "forest_clearing", "south": "overworld_entrance" },
+      "entities": ["trail_marker", "abandoned_cart", "warning_sign"],
+      "tags": ["wilderness", "safe", "travel"],
+      "discovery_text": "The path back to civilization. You can see the village smoke in the distance.",
+      "ambient_text": "Birdsong returns. The oppressive weight of the camp lifts from your shoulders."
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "fountain": {
+    "id": "fountain",
+    "name": "Stone Fountain",
+    "category": "landmark",
+    "map_id": "village",
+    "node_id": "village_center",
+    "description": "A weathered stone fountain with clear, flowing water.",
+    "interactable": true,
+    "actions": ["examine", "drink"]
+  },
+  "notice_board": {
+    "id": "notice_board",
+    "name": "Village Notice Board",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "village_center",
+    "description": "A wooden board where villagers post messages and requests.",
+    "interactable": true,
+    "actions": ["read"]
+  },
+  "furnace": {
+  "id": "furnace",
+  "name": "Furnace",
+  "category": "structure",
+  "map_id": "village",
+  "node_id": "blacksmith",
+  "station_type": "furnace",
+  "description": "A blazing furnace used to heat metal for forging.",
+  "interactable": true,
+  "actions": ["examine"]
+  },
+
+  "mortar": {
+    "id": "mortar",
+    "name": "Mortar and Pestle",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "apothecary",
+    "station_type": "mortar",
+    "description": "A sturdy mortar and pestle used to grind herbs, minerals, and other ingredients.",
+    "interactable": true,
+    "actions": ["examine"]
+  },
+
+  "saw_table": {
+    "id": "saw_table",
+    "name": "Saw Table",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "saw_table",
+    "station_type": "saw_table",
+    "description": "A large woodworking table fitted with a saw for cutting timber into useful shapes.",
+    "interactable": true,
+    "actions": ["examine"]
+  },
+
+  "workbench": {
+    "id": "workbench",
+    "name": "Workbench",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "market",
+    "station_type": "workbench",
+    "description": "A well-used workbench covered with tools, marks, and signs of countless projects.",
+    "interactable": true,
+    "actions": ["examine"]
+  },
+
+  "forge": {
+    "id": "forge",
+    "name": "Blacksmith Forge",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "blacksmith",
+    "description": "A roaring coal forge, hot enough to melt iron.",
+    "interactable": true,
+    "actions": ["use", "examine"]
+  },
+  "anvil": {
+    "id": "anvil",
+    "name": "Blacksmith Anvil",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "blacksmith",
+    "station_type": "anvil",
+    "description": "A heavy iron anvil, scarred from countless hammer blows.",
+    "interactable": true,
+    "actions": ["examine"]
+  },
+  "weapon_rack": {
+    "id": "weapon_rack",
+    "name": "Weapon Rack",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "blacksmith",
+    "description": "A wooden rack displaying various weapons.",
+    "interactable": true,
+    "actions": ["examine", "take"],
+    "contains": [
+      {"id": "copper_axe", "name": "Copper Axe", "chance": 1.0},
+      {"id": "copper_sword", "name": "Copper Sword", "chance": 1.0},
+      {"id": "oak_bow", "name": "Oak Bow", "chance": 1.0}
+    ]
+  },
+  "bar": {
+    "id": "bar",
+    "name": "Tavern Bar",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "tavern",
+    "description": "A long wooden bar, polished smooth by years of use.",
+    "interactable": true,
+    "actions": ["examine", "order"]
+  },
+  "tables": {
+    "id": "tables",
+    "name": "Tavern Tables",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "tavern",
+    "description": "Rough-hewn wooden tables where patrons relax.",
+    "interactable": true,
+    "actions": ["sit"]
+  },
+  "fireplace": {
+    "id": "fireplace",
+    "name": "Tavern Fireplace",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "tavern",
+    "description": "A large stone fireplace, a warm glow emanating from within.",
+    "interactable": true,
+    "actions": ["examine"]
+  },
+  "stalls": {
+    "id": "stalls",
+    "name": "Market Stalls",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "market",
+    "description": "Various market stalls displaying goods for sale.",
+    "interactable": true,
+    "actions": ["examine"]
+  },
+  "crates": {
+    "id": "crates",
+    "name": "Market Crates",
+    "category": "structure",
+    "map_id": "village",
+    "node_id": "market",
+    "description": "Wooden crates filled with fresh produce and other goods.",
+    "interactable": true,
+    "actions": ["examine"]
+  }
+}

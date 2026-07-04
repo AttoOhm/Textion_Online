@@ -1,0 +1,28 @@
+{
+  "id": "learn_reality_tear",
+  "title": "Lesson: Reality Tear",
+  "giver": "archmage",
+  "participants": ["archmage"],
+  "prerequisites": ["learn_arcane_explosion"],
+  "description": "Eldric will teach you Reality Tear, the most devastating arcane spell that tears a rift in reality itself. This forbidden technique requires absolute mastery. To prove your readiness, you must defeat 3 boss-level creatures.",
+  "completion_conditions": [
+    { "type": "kill", "target": "boss", "count": 3 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": ["greater_runestone"],
+    "technique": "reality_tear",
+    "reputation": { "actor": { "archmage": 200 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["magic", "reality", "tear", "powerful", "arcane", "spell", "learn", "eldric", "training", "mastery"],
+  "steps": [
+    {"description": "Defeat 3 boss-level creatures", "type": "kill", "target": "boss", "count": 3, "current": 0},
+    {"description": "Speak to Eldric to learn Reality Tear", "type": "talk", "target": "archmage", "current": 0}
+  ],
+  "completion_npc": "archmage",
+  "completion_topic": "reality_tear"
+}

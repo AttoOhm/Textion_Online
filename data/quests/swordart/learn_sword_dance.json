@@ -1,0 +1,28 @@
+{
+  "id": "learn_sword_dance",
+  "title": "Lesson: Sword Dance",
+  "giver": "swordswoman",
+  "participants": ["swordswoman"],
+  "prerequisites": ["learn_whirlwind"],
+  "description": "Seraphina will teach you Sword Dance, an advanced 3-step sequence. Perform 10 successful multi-step techniques to prove your readiness.",
+  "completion_conditions": [
+    { "type": "stat", "target": "multi_step_techniques", "count": 10 }
+  ],
+  "rewards": {
+    "gold": 0,
+    "items": [],
+    "technique": "sword_dance",
+    "reputation": { "actor": { "swordswoman": 200 } }
+  },
+  "failure_conditions": {
+    "time_limit": null,
+    "reputation_min": {}
+  },
+  "keywords": ["sword", "dance", "learn", "seraphina"],
+  "steps": [
+    {"description": "Perform 10 multi-step sword techniques", "type": "stat", "target": "multi_step_techniques", "count": 10, "current": 0},
+    {"description": "Speak to Seraphina to learn Sword Dance", "type": "talk", "target": "swordswoman", "current": 0}
+  ],
+  "completion_npc": "swordswoman",
+  "completion_topic": "sword_dance"
+}
