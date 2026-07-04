@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MMORPG</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#c0c0c0;font:14px/1.4 monospace;height:100vh;overflow:hidden;display:flex;flex-direction:column}
+#layout{display:flex;flex:1;overflow:hidden}
+#main-col{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#sidebar{width:340px;display:flex;flex-direction:column;border-left:1px solid #333;overflow-y:auto}
+.win{background:#111;border:1px solid #333;margin:4px;display:flex;flex-direction:column;overflow:hidden}
+.win-hdr{background:#1a1a1a;padding:3px 8px;color:#aaa;border-bottom:1px solid #333;font-size:12px;text-transform:uppercase;letter-spacing:1px;display:flex;justify-content:space-between;align-items:center}
+.win-hdr .title{flex:1}
+.win-body{flex:1;overflow-y:auto;padding:6px 8px;white-space:pre-wrap}
+#world{flex:1;margin:4px}
+#world .win-body{font:14px/1.5 monospace}
+#input{display:flex;padding:4px;gap:4px;border-top:1px solid #333;background:#111;margin:0 4px 4px 4px}
+#input input{flex:1;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:6px 8px;font:14px monospace;outline:0}
+#input input:focus{border-color:#666}
+#input button{background:#333;border:1px solid #555;color:#c0c0c0;padding:4px 12px;cursor:pointer;font:13px monospace}
+#input button:hover{background:#444}
+.win-body::-webkit-scrollbar{width:6px}
+.win-body::-webkit-scrollbar-track{background:#111}
+.win-body::-webkit-scrollbar-thumb{background:#333}
+.chat-msg{margin:2px 0}
+.npc-msg{color:#8af}
+.plr-msg{color:#8f8}
+.sys-msg{color:#888}
+.chat-in{display:flex;gap:4px;padding:4px;border-top:1px solid #333}
+.chat-in input{flex:1;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:4px 6px;font:13px monospace;outline:0}
+.chat-in input:focus{border-color:#666}
+.chat-in button{background:#333;border:1px solid #555;color:#c0c0c0;padding:2px 8px;cursor:pointer}
+.xbtn{background:0;border:0;color:#666;cursor:pointer;font-size:14px;padding:0 4px}
+.xbtn:hover{color:#f44}
+.hide{display:none!important}
+.tick-sep{border-top:1px dashed #333;margin:8px 0;padding-top:4px;color:#555}
+.tick-header{color:#fa0;font-weight:bold;margin-bottom:4px}
+.tick-narration{color:#9a9;font-style:italic;margin-bottom:6px}
+.tick-exits{color:#8af;margin-top:4px}
+.tick-exits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px 12px;margin-top:4px}
+.tick-exit{cursor:pointer;color:#8af}
+.tick-exit:hover{color:#fff;text-decoration:underline}
+.popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;z-index:1000}
+.popup-box{background:#1a1a1a;border:1px solid #555;border-radius:4px;padding:16px;min-width:300px;max-width:500px}
+.popup-box h3{color:#fa0;margin-bottom:10px;font-size:14px}
+.popup-box .cmd-item{padding:4px 8px;cursor:pointer;color:#aaa}
+.popup-box .cmd-item:hover{background:#333;color:#fff}
+.popup-box .cmd-item b{color:#8f8}
+.popup-box .close-btn{background:#333;border:1px solid #555;color:#c0c0c0;padding:4px 12px;cursor:pointer;margin-top:10px}
+</style>
+</head>
+<body>
+<div id="login-screen" class="popup-overlay" style="display:flex">
+<div class="popup-box" style="min-width:400px;max-width:600px">
+<h3 style="color:#fa0;margin-bottom:15px;font-size:16px">Medieval Fantasy MMORPG</h3>
+
+<div id="account-login-step">
+<p style="color:#aaa;margin-bottom:10px">Account ID:</p>
+<input id="account-id-input" type="text" placeholder="Account ID..." style="width:100%;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:8px;font:14px monospace;margin-bottom:10px"/>
+<p style="color:#aaa;margin-bottom:10px">Password:</p>
+<input id="password-input" type="password" placeholder="Password..." style="width:100%;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:8px;font:14px monospace;margin-bottom:10px"/>
+<div id="login-error" style="color:#f88;font-size:12px;margin-bottom:10px;display:none"></div>
+<div style="display:flex;gap:10px;margin-bottom:10px">
+<button id="login-account-btn" style="flex:1;background:#333;border:1px solid #555;color:#c0c0c0;padding:8px;cursor:pointer">Login</button>
+<button id="create-account-btn" style="flex:1;background:#333;border:1px solid #555;color:#c0c0c0;padding:8px;cursor:pointer">Create Account</button>
+</div>
+</div>
+
+<div id="create-account-step" style="display:none">
+<p style="color:#aaa;margin-bottom:10px">Create New Account</p>
+<p style="color:#888;margin-bottom:10px;font-size:12px">Account ID (3-20 characters):</p>
+<input id="new-account-id" type="text" placeholder="Account ID..." style="width:100%;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:8px;font:14px monospace;margin-bottom:10px"/>
+<p style="color:#888;margin-bottom:10px;font-size:12px">Password (min 4 characters):</p>
+<input id="new-password" type="password" placeholder="Password..." style="width:100%;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:8px;font:14px monospace;margin-bottom:10px"/>
+<div id="create-account-error" style="color:#f88;font-size:12px;margin-bottom:10px;display:none"></div>
+<button id="submit-create-account-btn" style="background:#333;border:1px solid #555;color:#c0c0c0;padding:8px 16px;cursor:pointer;width:100%">Create Account</button>
+<button id="back-to-login-btn" style="background:#333;border:1px solid #555;color:#c0c0c0;padding:8px;cursor:pointer;width:100%;margin-top:10px">Back to Login</button>
+</div>
+
+<div id="char-select-step" style="display:none">
+<p style="color:#aaa;margin-bottom:10px">Select Character:</p>
+<div id="char-list" style="margin-bottom:15px;max-height:300px;overflow-y:auto"></div>
+<button id="create-char-btn" style="background:#333;border:1px solid #555;color:#c0c0c0;padding:8px;cursor:pointer;width:100%;margin-bottom:10px">Create New Character</button>
+<button id="logout-btn" style="background:#333;border:1px solid #555;color:#c0c0c0;padding:8px;cursor:pointer;width:100%">Logout</button>
+</div>
+
+<div id="char-create-step" style="display:none">
+<p style="color:#aaa;margin-bottom:10px">Create New Character</p>
+<p style="color:#888;margin-bottom:10px;font-size:12px">Character Name:</p>
+<input id="char-name-input" type="text" placeholder="Character name..." style="width:100%;background:#1a1a1a;border:1px solid #444;color:#c0c0c0;padding:8px;font:14px monospace;margin-bottom:10px"/>
+<div id="char-name-error" style="color:#f88;font-size:12px;margin-bottom:10px;display:none"></div>
+<p style="color:#888;margin-bottom:10px;font-size:12px">Distribute 140 points among attributes (min 5, max 30 each):</p>
+<div id="attr-allocation" style="margin-bottom:15px"></div>
+<div style="color:#fa0;font-size:12px;margin-bottom:10px">Points remaining: <span id="points-remaining">140</span></div>
+<div id="attr-error" style="color:#f88;font-size:12px;margin-bottom:10px;display:none"></div>
+<button id="submit-create-char-btn" style="background:#333;border:1px solid #555;color:#c0c0c0;padding:8px 16px;cursor:pointer;width:100%" disabled>Create Character</button>
+<button id="back-to-char-select-btn" style="background:#333;border:1px solid #555;color:#c0c0c0;padding:8px;cursor:pointer;width:100%;margin-top:10px">Back</button>
+</div>
+</div>
+</div>
+
+<div id="layout" style="display:none">
+<div id="main-col">
+<div id="world" class="win">
+<div class="win-hdr"><span class="title">World</span><span id="world-time" style="color:#666;font-size:11px"></span></div>
+<div class="win-body" id="world-content"></div>
+</div>
+<div id="input">
+<input id="main-input" type="text" placeholder="Enter command..." autocomplete="off"/>
+<button id="main-btn" onclick="cmd()">Send</button>
+</div>
+</div>
+<div id="sidebar">
+<div id="npc-win" class="win hide" style="flex:none;height:300px">
+<div class="win-hdr"><span class="title" id="npc-title">NPC Chat</span><button class="xbtn" onclick="closeNpc()">x</button></div>
+<div class="win-body" id="npc-body"></div>
+<div class="chat-in">
+<input id="npc-input" type="text" placeholder="Talk..." maxlength="100" autocomplete="off"/>
+<button id="npc-btn">Say</button>
+</div>
+</div>
+<div id="inv-win" class="win hide">
+<div class="win-hdr"><span class="title">Inventory</span><button class="xbtn" onclick="toggleWindow('inv-win')">x</button></div>
+<div class="win-body" id="inv-body"></div>
+</div>
+<div id="jnl-win" class="win hide">
+<div class="win-hdr"><span class="title">Journal</span><button class="xbtn" onclick="toggleWindow('jnl-win')">x</button></div>
+<div class="win-body" id="jnl-body"></div>
+</div>
+<div id="qst-win" class="win hide">
+<div class="win-hdr"><span class="title">Quest Book</span><button class="xbtn" onclick="toggleWindow('qst-win')">x</button></div>
+<div class="win-body" id="qst-body"></div>
+</div>
+<div id="hlp-win" class="win hide">
+<div class="win-hdr"><span class="title">Help / Commands</span><button class="xbtn" onclick="toggleWindow('hlp-win')">x</button></div>
+<div class="win-body" id="hlp-body"></div>
+</div>
+<div id="look-win" class="win hide">
+<div class="win-hdr"><span class="title" id="look-title">Examination</span><button class="xbtn" onclick="toggleWindow('look-win')">x</button></div>
+<div class="win-body" id="look-body"></div>
+</div>
+<div id="inspect-win" class="win hide" style="flex:none;height:300px">
+<div class="win-hdr"><span class="title" id="inspect-target">Inspecting:</span><button class="xbtn" onclick="closeInspect()">x</button></div>
+<div class="win-body" id="inspect-body"></div>
+<div class="chat-in">
+<input id="inspect-input" type="text" placeholder="Type 'take [item]' or 'close'..." maxlength="100" autocomplete="off"/>
+<button id="inspect-btn">Send</button>
+</div>
+</div>
+</div>
+</div>
+<div id="cmd-popup" class="popup-overlay hide">
+<div class="popup-box">
+<h3>Quick Commands</h3>
+<div id="cmd-popup-list"></div>
+<button class="close-btn" onclick="closeCmdPopup()">Close</button>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+<script>
+const socket=io({transports:['websocket','polling']});
+let activeNpc=null;
+let lastLocation=null;
+let lastWorldSeq=0;
+let currentAccountId='';
+let currentCharacterName='';
+
+socket.on("connect",function(){
+  console.log("Connected to server, id="+socket.id);
+  lastWorldSeq = 0;
+  if (currentAccountId && currentCharacterName) {
+    socket.emit("login_character", { name: currentCharacterName });
+  } else {
+    document.getElementById('account-login-step').style.display='block';
+  }
+});
+socket.on("connect_error",function(e){console.log("Connection error:",e)});
+
+function toggleWindow(id){
+  const w=document.getElementById(id);
+  if(w.classList.contains('hide')){
+    w.classList.remove('hide');
+    if(id==='inv-win')socket.emit('get_inventory');
+  }else{
+    w.classList.add('hide');
+  }
+}
+function openWindow(id){document.getElementById(id).classList.remove('hide')}
+function closeNpc(){
+  activeNpc=null;
+  document.getElementById('npc-win').classList.add('hide');
+  document.getElementById('npc-body').innerHTML='';
+  document.getElementById('main-input').focus();
+}
+function closeCmdPopup(){document.getElementById('cmd-popup').classList.add('hide')}
+function showCmdPopup(){
+  const cmds=[
+    {syntax:'look',desc:'Look around'},{syntax:'inventory',desc:'Check inventory'},
+    {syntax:'journal',desc:'View journal'},{syntax:'quests',desc:'View quests'},
+    {syntax:'skills',desc:'View skills'},{syntax:'help',desc:'Show help'},
+    {syntax:'talk to [npc]',desc:'Talk to NPC'},{syntax:'move [location]',desc:'Move to location'},
+    {syntax:'attack [target]',desc:'Attack target'},{syntax:'equip [item]',desc:'Equip item'},
+    {syntax:'use [item]',desc:'Use item'},{syntax:'craft [recipe]',desc:'Craft item'}
+  ];
+  let h='';
+  for(let c of cmds)h+='<div class="cmd-item" onclick="insertCmd(\''+c.syntax+'\')"><b>'+c.syntax+'</b> - '+c.desc+'</div>';
+  document.getElementById('cmd-popup-list').innerHTML=h;
+  document.getElementById('cmd-popup').classList.remove('hide');
+}
+function insertCmd(cmd){
+  document.getElementById('main-input').value=cmd;
+  closeCmdPopup();
+  document.getElementById('main-input').focus();
+}
+function checkLocationChange(d){
+  if(lastLocation && d.location && lastLocation!==d.location && activeNpc){
+    appendNpcMsg('You walked away.','sys');
+    setTimeout(closeNpc,500);
+  }
+  lastLocation=d.location;
+}
+function handleWorldUpdate(d){
+  checkLocationChange(d);
+  const el=document.getElementById('world-content');
+  const wasAtBottom=el.scrollTop+el.clientHeight>=el.scrollHeight-50;
+  if(el.textContent.length>0){
+    const sep=document.createElement('div');
+    sep.className='tick-sep';
+    sep.textContent='-- '+(d.time||'?')+' -- Day '+(d.day||1)+' --';
+    el.appendChild(sep);
+  }
+  const block=document.createElement('div');
+  const header=document.createElement('div');
+  header.className='tick-header';
+  header.textContent=d.location;
+  block.appendChild(header);
+  if(d.narration){const narr=document.createElement('div');narr.className='tick-narration';narr.textContent=d.narration;block.appendChild(narr)}
+  
+  // Build a map of display names to actor IDs for clickable names
+  const actorNameMap = {};
+  if(d.actors_present && d.actors_present.length > 0) {
+    d.actors_present.forEach(function(actor) {
+      actorNameMap[actor.display_name] = actor.actor_id;
+    });
+  }
+  
+  if(d.events&&d.events.length){
+    for(let e of d.events){
+      const ev=document.createElement('div');
+      ev.style.color='#f88';
+      
+      // Check if this event contains an actor name that should be clickable
+      let eventText = e;
+      let foundClickable = false;
+      
+      // Try to find actor names in the event text and make them clickable
+      for(const displayName in actorNameMap) {
+        if(eventText.includes(displayName)) {
+          foundClickable = true;
+          // Replace the display name with a clickable span
+          const parts = eventText.split(displayName);
+          ev.innerHTML = '';
+          for(let i = 0; i < parts.length; i++) {
+            ev.appendChild(document.createTextNode(parts[i]));
+            if(i < parts.length - 1) {
+              const clickableName = document.createElement('span');
+              clickableName.textContent = displayName;
+              clickableName.style.color = '#faa';
+              clickableName.style.cursor = 'pointer';
+              clickableName.style.textDecoration = 'underline';
+              clickableName.onclick = function() {
+                const input = document.getElementById('main-input');
+                const currentValue = input.value.trim();
+                if (currentValue) {
+                  input.value = currentValue + ' ' + displayName;
+                } else {
+                  input.value = displayName;
+                }
+                input.focus();
+              };
+              ev.appendChild(clickableName);
+            }
+          }
+          break;
+        }
+      }
+      
+      // If no clickable name found, just set text content
+      if(!foundClickable) {
+        ev.textContent = e;
+      }
+      block.appendChild(ev);
+    }
+  }
+  if(d.exits&&d.exits.length){
+    const exitsDiv=document.createElement('div');exitsDiv.className='tick-exits';exitsDiv.textContent='Exits:';block.appendChild(exitsDiv);
+    const gridDiv=document.createElement('div');gridDiv.className='tick-exits-grid';
+    for(let x of d.exits){const exitDiv=document.createElement('div');exitDiv.className='tick-exit';exitDiv.textContent='- '+x;exitDiv.onclick=function(){document.getElementById('main-input').value='move '+x;document.getElementById('main-input').focus()};gridDiv.appendChild(exitDiv)}
+    block.appendChild(gridDiv);
+  }
+  el.appendChild(block);
+  document.getElementById('world-time').textContent=d.time;
+  if(wasAtBottom)el.scrollTop=el.scrollHeight;
+}
+function cmd(){
+  const inp=document.getElementById('main-input');
+  const c=inp.value.trim();inp.value='';if(!c)return;
+  if(c==='inventory'||c==='inv'||c==='i'){socket.emit('get_inventory');return}
+  if(c==='journal'||c==='j'){socket.emit('get_journal');return}
+  if(c==='quest-book'||c==='quests'||c==='quest'){socket.emit('get_quests');return}
+  if(c==='help'||c==='commands'||c==='?'){socket.emit('get_help');return}
+  if(c==='skills'){socket.emit('get_skills');return}
+  if(c.startsWith('talk to ')){
+    const npcName=c.substring(8).trim();if(!npcName)return;
+    if(activeNpc&&activeNpc.toLowerCase()!==npcName.toLowerCase())document.getElementById('npc-body').innerHTML='';
+    activeNpc=npcName;
+    openWindow('npc-win');
+    document.getElementById('npc-title').textContent=npcName.charAt(0).toUpperCase()+npcName.slice(1)+' - Chat';
+    socket.emit('world_command',c);
+    setTimeout(function(){document.getElementById('npc-input').focus()},100);
+    return;
+  }
+  socket.emit('world_command',c);
+}
+document.getElementById('main-btn').onclick=cmd;
+document.getElementById('main-input').onkeydown=function(e){if(e.key==='Enter')cmd()};
+
+function appendNpcMsg(text,cls){
+  const b=document.getElementById('npc-body');
+  const div=document.createElement('div');
+  div.className='chat-msg '+(cls==='plr'?'plr-msg':cls==='sys'?'sys-msg':'npc-msg');
+  div.style.color=cls==='plr'?'#8f8':cls==='sys'?'#888':'#8af';
+  div.textContent=text;
+  b.appendChild(div);
+  b.scrollTop=b.scrollHeight;
+}
+function npcChat(){
+  const inp=document.getElementById('npc-input');
+  const m=inp.value.trim();if(!m||!activeNpc)return;inp.value='';
+  appendNpcMsg('You: '+m,'plr');
+  socket.emit('npc_chat',{npcName:activeNpc,message:m});
+}
+document.getElementById('npc-btn').onclick=npcChat;
+document.getElementById('npc-input').onkeydown=function(e){if(e.key==='Enter')npcChat()};
+
+socket.on("world_update",function(d){
+  if(d.seq && d.seq <= lastWorldSeq) return;
+  lastWorldSeq = d.seq || 0;
+  handleWorldUpdate(d);
+});
+socket.on("tick_update",function(d){
+  if (window.tickTimer) {
+    clearInterval(window.tickTimer);
+  }
+  let countdown=20;
+  const el=document.getElementById('world-time');
+  el.textContent='Next tick in '+countdown+'s';
+  window.tickTimer = setInterval(function(){
+    countdown--;
+    if(countdown<=0){
+      clearInterval(window.tickTimer);
+      window.tickTimer = null;
+      el.textContent='Tick!';
+    }else{
+      el.textContent='Next tick in '+countdown+'s';
+    }
+  },1000);
+});
+socket.on("npc_chat_response",function(d){for(let l of d.lines)appendNpcMsg(l,'npc')});
+socket.on("npc_conversation",function(d){appendNpcMsg(d.activity,'sys');appendNpcMsg(d.greeting,'npc')});
+socket.on("command_result",function(d){
+  if(d.error){appendWorldMsg(d.error);return}
+  if(d.message){appendWorldMsg(d.message);return}
+});
+socket.on("inventory_data",function(d){
+  let h="=== CARRIED ITEMS ===\n";
+  let carried=[],equipped=[];
+  if(d.items){
+    for(let i of d.items){
+      if(i.includes("(equipped"))equipped.push(i);
+      else carried.push(i);
+    }
+  }
+  if(carried.length===0)h+="(empty)\n";
+  else for(let i of carried)h+="- "+i+"\n";
+  h+="\n=== EQUIPPED ===\n";
+  if(equipped.length===0)h+="(empty)\n";
+  else for(let i of equipped)h+="- "+i+"\n";
+  h+="\nCoins: "+d.coins;
+  document.getElementById('inv-body').textContent=h;openWindow('inv-win');
+});
+socket.on("shop_data",function(d){
+  let h="SHOP INVENTORY\n";
+  if(!d.items||d.items.length===0)h+="Nothing to see here.\n";
+  else{
+    for(let i of d.items){
+      h+="\n"+i.npc+"'s Stock:\n";
+      h+="  "+i.name+" | "+i.stats+" | "+i.price+" coins\n";
+    }
+  }
+  document.getElementById('inv-body').textContent=h;openWindow('inv-win');
+});
+socket.on("journal_data",function(d){
+  let h="KNOWN LOCATIONS\n";for(let l of d.locations)h+="- "+l+"\n";
+  h+='\nKNOWN PEOPLE\n';if(d.people.length===0)h+="None yet.\n";else for(let p of d.people)h+="- "+p+"\n";
+  h+='\nKNOWN CREATURES\n';if(d.creatures.length===0)h+="None yet.\n";else for(let c of d.creatures)h+="- "+c+"\n";
+  h+='\nKNOWN ITEMS\n';if(d.items.length===0)h+="None yet.\n";else for(let i of d.items)h+="- "+i+"\n";
+  document.getElementById('jnl-body').textContent=h;openWindow('jnl-win');
+});
+let selectedQuestId=null;
+let currentQuestData=null;
+socket.on("quest_data",function(d){
+  currentQuestData=d;
+  selectedQuestId=null;
+  renderQuestBook(d);
+});
+function renderQuestBook(d){
+  let el=document.getElementById('qst-body');
+  el.innerHTML='';
+  let activeH=document.createElement('div');
+  activeH.style.color='#c0c0c0';
+  activeH.style.marginBottom='4px';
+  activeH.textContent='=== ACTIVE QUESTS ===';
+  el.appendChild(activeH);
+  if(!d.active||d.active.length===0){
+    let none=document.createElement('div');
+    none.style.color='#666';
+    none.textContent='none';
+    el.appendChild(none);
+  }else{
+    for(let q of d.active){
+      let qDiv=document.createElement('div');
+      qDiv.style.cursor='pointer';
+      qDiv.style.padding='4px 0';
+      qDiv.style.color=selectedQuestId===q.id?'#fa0':'#aaa';
+      qDiv.textContent='* '+q.name;
+      qDiv.onmouseover=function(){if(selectedQuestId!==q.id)this.style.color='#fff'};
+      qDiv.onmouseout=function(){if(selectedQuestId!==q.id)this.style.color='#aaa'};
+      qDiv.onclick=function(){selectQuest(q.id)};
+      el.appendChild(qDiv);
+    }
+  }
+  let compSpacer=document.createElement('div');
+  compSpacer.style.height='8px';
+  el.appendChild(compSpacer);
+  let compH=document.createElement('div');
+  compH.style.color='#c0c0c0';
+  compH.style.marginBottom='4px';
+  compH.textContent='=== COMPLETED QUESTS ===';
+  el.appendChild(compH);
+  if(!d.completed||d.completed.length===0){
+    let none=document.createElement('div');
+    none.style.color='#666';
+    none.textContent='none';
+    el.appendChild(none);
+  }else{
+    for(let q of d.completed){
+      let qDiv=document.createElement('div');
+      qDiv.style.cursor='pointer';
+      qDiv.style.padding='4px 0';
+      qDiv.style.color=selectedQuestId===q.id?'#fa0':'#888';
+      qDiv.textContent='* '+q.name;
+      qDiv.onmouseover=function(){if(selectedQuestId!==q.id)this.style.color='#fff'};
+      qDiv.onmouseout=function(){if(selectedQuestId!==q.id)this.style.color='#888'};
+      qDiv.onclick=function(){selectQuest(q.id)};
+      el.appendChild(qDiv);
+    }
+  }
+  if(selectedQuestId){
+    let note='';
+    if(d.notes&&d.notes[selectedQuestId])note=d.notes[selectedQuestId];
+    let qTitle='';
+    let allQs=[];
+    if(d.active)for(let q of d.active)allQs.push(q);
+    if(d.completed)for(let q of d.completed)allQs.push(q);
+    for(let q of allQs){if(q.id===selectedQuestId){qTitle=q.name;break}}
+    let sep=document.createElement('div');
+    sep.style.borderTop='1px solid #333';
+    sep.style.marginTop='10px';
+    sep.style.paddingTop='8px';
+    el.appendChild(sep);
+    let titleDiv=document.createElement('div');
+    titleDiv.style.color='#888';
+    titleDiv.style.fontSize='11px';
+    titleDiv.style.marginBottom='4px';
+    titleDiv.textContent='Notes for '+qTitle;
+    el.appendChild(titleDiv);
+    let ta=document.createElement('textarea');
+    ta.style.width='100%';
+    ta.style.height='60px';
+    ta.style.background='#1a1a1a';
+    ta.style.border='1px solid #444';
+    ta.style.color='#c0c0c0';
+    ta.style.padding='4px';
+    ta.style.font='12px monospace';
+    ta.style.resize='vertical';
+    ta.value=note;
+    ta.placeholder='Write your notes here...';
+    el.appendChild(ta);
+    let saveBtn=document.createElement('button');
+    saveBtn.textContent='Save Note';
+    saveBtn.style.marginTop='6px';
+    saveBtn.style.background='#333';
+    saveBtn.style.border='1px solid #555';
+    saveBtn.style.color='#c0c0c0';
+    saveBtn.style.padding='4px 12px';
+    saveBtn.style.cursor='pointer';
+    saveBtn.style.font='12px monospace';
+    saveBtn.onclick=function(){socket.emit('save_quest_note',{questId:selectedQuestId,note:ta.value})};
+    el.appendChild(saveBtn);
+  }
+  openWindow('qst-win');
+}
+function selectQuest(questId){
+  selectedQuestId=questId;
+  if(currentQuestData)renderQuestBook(currentQuestData);
+}
+socket.on("note_saved",function(d){
+  if(d.success){
+    appendWorldMsg('[Note saved]');
+    socket.emit('get_quests');
+  }
+});
+socket.on("help_data",function(d){
+  let h="AVAILABLE COMMANDS\n";
+  for(let cat of d.categories){h+="\n["+cat.name+"]\n";for(let cmd of cat.commands)h+="  "+cmd.syntax+" - "+cmd.desc+"\n"}
+  document.getElementById('hlp-body').textContent=h;openWindow('hlp-win');
+});
+socket.on("skills_data",function(d){
+  let h="";for(let l of d.lines)h+=l+"\n";
+  document.getElementById('hlp-body').textContent=h;openWindow('hlp-win');
+});
+socket.on("look_data",function(d){
+  let h="";
+  h+="=== "+d.name.toUpperCase()+" ===\n\n";
+  h+=d.description+"\n\n";
+  if(d.details && Object.keys(d.details).length>0){
+    h+="--- DETAILS ---\n";
+    for(let key in d.details){
+      if(d.details[key]) h+=key.toUpperCase()+": "+d.details[key]+"\n";
+    }
+    h+="\n";
+  }
+  if(d.attributes && Object.keys(d.attributes).length>0){
+    h+="--- ATTRIBUTES ---\n";
+    for(let key in d.attributes){
+      h+=key.toUpperCase()+": "+d.attributes[key]+"\n";
+    }
+    h+="\n";
+  }
+  if(d.items && d.items.length>0){
+    h+="--- ITEMS ---\n";
+    d.items.forEach(function(item){
+      h+="- "+item+"\n";
+    });
+  }
+  document.getElementById('look-title').textContent=d.name;
+  document.getElementById('look-body').textContent=h;
+  openWindow('look-win');
+});
+function appendWorldMsg(text){
+  const el=document.getElementById('world-content');
+  const block=document.createElement('div');block.style.color='#8f8';block.textContent=text;
+  el.appendChild(block);el.scrollTop=el.scrollHeight;
+}
+const ATTRIBUTES=['strength','dexterity','knowledge','constitution','observation','willpower','reactiveness','arcana'];
+let attrValues={};
+ATTRIBUTES.forEach(a=>attrValues[a]=5);
+const TOTAL_ATTR_POINTS=140;
+
+document.getElementById('login-account-btn').onclick=function(){
+  let accountId=document.getElementById('account-id-input').value.trim();
+  let password=document.getElementById('password-input').value;
+  if(!accountId||!password){showLoginError('Enter account ID and password');return}
+  socket.emit('login_account',{account_id:accountId,password:password});
+};
+
+socket.on('account_logged_in',function(d){
+  if(d.success){
+    currentAccountId=d.account_id;
+    currentCharacterName = null;
+    showCharacterSelect(d.characters);
+  }else{
+    showLoginError(d.error);
+  }
+});
+
+function showLoginError(msg){
+  let el=document.getElementById('login-error');
+  el.textContent=msg;el.style.display='block';
+}
+
+document.getElementById('create-account-btn').onclick=function(){
+  document.getElementById('account-login-step').style.display='none';
+  document.getElementById('create-account-step').style.display='block';
+};
+
+document.getElementById('back-to-login-btn').onclick=function(){
+  document.getElementById('create-account-step').style.display='none';
+  document.getElementById('account-login-step').style.display='block';
+};
+
+document.getElementById('submit-create-account-btn').onclick=function(){
+  let accountId=document.getElementById('new-account-id').value.trim();
+  let password=document.getElementById('new-password').value;
+  if(!accountId||!password){showCreateAccountError('Enter account ID and password');return}
+  socket.emit('create_account',{account_id:accountId,password:password});
+};
+
+socket.on('account_created',function(d){
+  if(d.success){
+    currentAccountId=d.account_id;
+    currentCharacterName = null;
+    showCharacterSelect([]);
+  }else{
+    showCreateAccountError(d.error);
+  }
+});
+
+function showCreateAccountError(msg){
+  let el=document.getElementById('create-account-error');
+  el.textContent=msg;el.style.display='block';
+}
+
+function showCharacterSelect(characters){
+  document.getElementById('account-login-step').style.display='none';
+  document.getElementById('create-account-step').style.display='none';
+  document.getElementById('char-select-step').style.display='block';
+  let charList=document.getElementById('char-list');
+  charList.innerHTML='';
+  if(characters.length===0){
+    charList.innerHTML='<p style="color:#666">No characters yet</p>';
+  }else{
+    characters.forEach(function(c){
+      let div=document.createElement('div');
+      div.className='cmd-item';
+      div.style.padding='8px';
+      div.style.marginBottom='4px';
+      div.innerHTML='<b style="color:#8f8">'+c.name+'</b> - '+c.location;
+      div.onclick=function(){loginCharacter(c.name)};
+      charList.appendChild(div);
+    });
+  }
+}
+
+document.getElementById('create-char-btn').onclick=function(){
+  document.getElementById('char-select-step').style.display='none';
+  document.getElementById('char-create-step').style.display='block';
+  document.getElementById('char-name-input').value='';
+  renderAttributeAllocation();
+};
+
+document.getElementById('back-to-char-select-btn').onclick=function(){
+  document.getElementById('char-create-step').style.display='none';
+  document.getElementById('char-select-step').style.display='block';
+};
+
+document.getElementById('logout-btn').onclick=function(){
+  location.reload();
+};
+
+function loginCharacter(name){
+  currentCharacterName = name;
+  socket.emit('login_character',{name:name});
+}
+
+socket.on('character_logged_in',function(d){
+  if(d.success){
+    document.getElementById('login-screen').style.display='none';
+    document.getElementById('layout').style.display='flex';
+    socket.emit('world_command','look');
+  }else{
+    currentCharacterName = null;
+    alert('Login failed: '+d.error);
+  }
+});
+
+function renderAttributeAllocation(){
+  let container=document.getElementById('attr-allocation');
+  let html='';
+  ATTRIBUTES.forEach(function(attr){
+    html+='<div style="display:flex;align-items:center;margin-bottom:6px">';
+    html+='<span style="width:120px;color:#aaa">'+attr.charAt(0).toUpperCase()+attr.slice(1)+'</span>';
+    html+='<button onclick="changeAttr(\''+attr+'\',-1)" style="background:#333;border:1px solid #555;color:#c0c0c0;width:24px;height:24px;cursor:pointer">-</button>';
+    html+='<span id="attr-'+attr+'" style="width:40px;text-align:center;color:#fa0">'+attrValues[attr]+'</span>';
+    html+='<button onclick="changeAttr(\''+attr+'\',1)" style="background:#333;border:1px solid #555;color:#c0c0c0;width:24px;height:24px;cursor:pointer">+</button>';
+    html+='</div>';
+  });
+  container.innerHTML=html;
+  updatePointsRemaining();
+}
+
+function changeAttr(attr,delta){
+  let newVal=attrValues[attr]+delta;
+  if(newVal<5||newVal>30)return;
+  let total=0;
+  ATTRIBUTES.forEach(a=>{if(a!==attr)total+=attrValues[a]})
+  total+=newVal;
+  if(total>140)return;
+  attrValues[attr]=newVal;
+  document.getElementById('attr-'+attr).textContent=newVal;
+  updatePointsRemaining();
+}
+
+function updatePointsRemaining(){
+  let total=0;
+  ATTRIBUTES.forEach(a=>total+=attrValues[a]);
+  let remaining=140-total;
+  document.getElementById('points-remaining').textContent=remaining;
+  let btn=document.getElementById('submit-create-char-btn');
+  let err=document.getElementById('attr-error');
+  if(remaining===0){
+    btn.disabled=false;
+    err.style.display='none';
+  }else{
+    btn.disabled=true;
+    if(remaining>0){
+      err.textContent='Distribute all 140 points';
+      err.style.display='block';
+    }else{
+      err.textContent='Too many points allocated';
+      err.style.display='block';
+    }
+  }
+}
+
+document.getElementById('submit-create-char-btn').onclick=function(){
+  let charName=document.getElementById('char-name-input').value.trim();
+  if(!charName){showCharNameError('Enter character name');return}
+  let attrs={};
+  ATTRIBUTES.forEach(a=>attrs[a]=attrValues[a]);
+  socket.emit('create_character',{name:charName,attributes:attrs});
+};
+
+socket.on('character_created',function(d){
+  if(d.success){
+    currentCharacterName = d.player_id;
+    document.getElementById('char-create-step').style.display='none';
+    document.getElementById('login-screen').style.display='none';
+    document.getElementById('layout').style.display='flex';
+    socket.emit('world_command','look');
+  }else{
+    currentCharacterName = null;
+    alert('Failed to create character: '+d.error);
+  }
+});
+
+function showCharNameError(msg){
+  let el=document.getElementById('char-name-error');
+  el.textContent=msg;el.style.display='block';
+}
+
+socket.on('inspect_close',function(){
+  closeInspect();
+});
+
+let activeInspect=null;
+function closeInspect(){
+  activeInspect=null;
+  document.getElementById('inspect-win').classList.add('hide');
+  document.getElementById('inspect-body').innerHTML='';
+  document.getElementById('main-input').focus();
+}
+socket.on('inspect_window',function(data){
+  activeInspect=data.target;
+  document.getElementById('inspect-target').textContent='Inspecting: '+data.target;
+  let body=document.getElementById('inspect-body');
+  let items=data.items||[];
+  if(items.length===0){
+    body.textContent='';
+  }else{
+    let text='Items:\n';
+    items.forEach((item,i)=>{
+      let name=item.name||item.id||'unknown';
+      text+=name+'\n';
+    });
+    body.textContent=text;
+  }
+  document.getElementById('inspect-win').classList.remove('hide');
+  document.getElementById('inspect-input').focus();
+});
+function sendInspect(){
+  const inp=document.getElementById('inspect-input');
+  const m=inp.value.trim();if(!m)return;
+  inp.value='';
+  socket.emit('world_command',m);
+}
+document.getElementById('inspect-btn').onclick=sendInspect;
+document.getElementById('inspect-input').onkeydown=function(e){if(e.key==='Enter')sendInspect()};
+</script>
+</body>
+</html>
+
+</parameter>
+<parameter=task_progress>
+- [x] attack [name] command implemented.
+- [x] inspect [name/corpse], take/give [item/name] command implemented.
+- [x] techniques quest and commands are implemented.
+- [x] talk to [npc] command implemented.
+- [x] NPC chat implemented (information, quest, shop).
+- [ ] sell items, runecrafting, and other advanced commands implemented.
